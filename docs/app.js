@@ -17,7 +17,7 @@ function link(url,label,cls=''){return `<a href="#${url}" class="${cls}">${label
 function button(label,action,quizId,cls='btn',extra=''){return `<button class="${cls}" data-action="${action}" data-quiz="${esc(quizId)}" ${extra}>${label}</button>`;}
 function crumb(items){return `<nav class="breadcrumbs" aria-label="Breadcrumb">${items.map((it,i)=>(i?'<span aria-hidden="true">/</span>':'')+(it[1]?link(it[1],esc(it[0])):`<span aria-current="page">${esc(it[0])}</span>`)).join('')}</nav>`;}
 function badge(status,label){return `<span class="pill ${status==='soon'?'soon':''}">${esc(label||(status==='soon'?'Coming soon':'Available now'))}</span>`;}
-function pageTitle(title,description){document.title=`${title} — AP study`;document.querySelector('meta[name="description"]').content=description;}
+function pageTitle(title,description){document.title=`${title} — Page One`;document.querySelector('meta[name="description"]').content=description;}
 function contextForTopic(topic){const unit=units.find(u=>u.id===topic.unitId);return {unit,course:courses.find(c=>c.id===unit.courseId)};}
 function topicCrumbs(t,tail=null){const {unit,course}=contextForTopic(t);return [['Courses','/courses'],[course.shortTitle,`/course/${course.id}`],[`Unit ${unit.number}`,`/unit/${unit.id}`],[`Topic ${t.code}`,tail?`/topic/${t.id}`:null],...(tail?[[tail,null]]:[])];}
 function quizFor(t,type='topic'){return quizzes.find(q=>q.topicId===t.id&&q.quizType===type);}
