@@ -17,19 +17,52 @@ function link(url,label,cls=''){return `<a href="#${url}" class="${cls}">${label
 function button(label,action,quizId,cls='btn',extra=''){return `<button class="${cls}" data-action="${action}" data-quiz="${esc(quizId)}" ${extra}>${label}</button>`;}
 function crumb(items){return `<nav class="breadcrumbs" aria-label="Breadcrumb">${items.map((it,i)=>(i?'<span aria-hidden="true">/</span>':'')+(it[1]?link(it[1],esc(it[0])):`<span aria-current="page">${esc(it[0])}</span>`)).join('')}</nav>`;}
 function badge(status,label){return `<span class="pill ${status==='soon'?'soon':''}">${esc(label||(status==='soon'?'Coming soon':'Available now'))}</span>`;}
-function pageTitle(title,description){document.title=`${title} — AP World History`;document.querySelector('meta[name="description"]').content=description;}
+function pageTitle(title,description){document.title=`${title} — AP study`;document.querySelector('meta[name="description"]').content=description;}
 function contextForTopic(topic){const unit=units.find(u=>u.id===topic.unitId);return {unit,course:courses.find(c=>c.id===unit.courseId)};}
 function topicCrumbs(t,tail=null){const {unit,course}=contextForTopic(t);return [['Courses','/courses'],[course.shortTitle,`/course/${course.id}`],[`Unit ${unit.number}`,`/unit/${unit.id}`],[`Topic ${t.code}`,tail?`/topic/${t.id}`:null],...(tail?[[tail,null]]:[])];}
 function quizFor(t,type='topic'){return quizzes.find(q=>q.topicId===t.id&&q.quizType===type);}
 function quizStart(q,label='Take topic quiz'){const a=attempts[q.id];return a&&!a.complete?link(`/quiz/${q.id}`,`Resume quiz ${arrow}`,'btn'):button(`${label} ${arrow}`,'start',q.id);}
 
-function home(){
- pageTitle('Study and practice','AP World History lessons, key terms, and original practice questions.');
- const ready=topics.filter(t=>t.status==='ready');
- const resume=Object.values(attempts).find(a=>!a.complete&&quizById[a.quizId].quizType==='topic');
- return `<div class="container"><section class="home-top"><div><p class="eyebrow">AP World History: Modern · c. 1200–present</p><h1>Make sense<br>of the world.</h1><p class="home-intro">Pick a topic. Build your understanding. Find out what needs another look.</p><div class="actions">${resume?link(`/quiz/${resume.quizId}`,`Continue your quiz ${arrow}`,'btn'):link(`/topic/${firstTopic.id}`,`Start Topic ${firstTopic.code} ${arrow}`,'btn')}${link('/course/world','View all units','text-link')}</div><p class="free-note">Free access · No account needed</p></div><article class="course-feature"><p class="eyebrow">Unit 01 · c. 1200–1450</p><h2>The Global<br>Tapestry</h2><p class="feature-info">How societies organized power, shared beliefs, and built their economies.</p><div class="feature-topics">${ready.map(t=>link(`/topic/${t.id}`,`<span>${esc(t.code)}</span><strong>${esc(t.title)}</strong>${arrow}`)).join('')}</div><p class="feature-foot">${ready.length} of ${topics.length} topics available</p></article></section><section class="how-section"><div class="section-heading"><h2>Study in three steps.</h2></div><div class="step-grid"><div class="step"><div class="step-index">01</div><div><h3>Learn the story</h3><p>Read the lesson and connect the key ideas.</p></div></div><div class="step"><div class="step-index">02</div><div><h3>Check your understanding</h3><p>Review terms, then work through the questions.</p></div></div><div class="step"><div class="step-index">03</div><div><h3>Review what you missed</h3><p>Use explanations and lesson links to work on weaker concepts.</p></div></div></div></section></div>`;
+function readyTopicsFor(c){
+ const unitIds=new Set(units.filter(u=>u.courseId===c.id).map(u=>u.id));
+ return topics.filter(t=>unitIds.has(t.unitId)&&t.status==='ready');
 }
-function courseList(){pageTitle('Courses','Choose an AP course. Start with AP World History: Modern and an original East Asia lesson.');return `<div class="container">${crumb([['Home','/'],['Courses']])}<div class="page-intro"><p class="eyebrow">Choose your starting point</p><h1>Your course. Your pace.</h1><p>Start with a topic, understand the connections, and test what you know.</p></div><div class="courses-list">${courses.map(c=>`<a class="course-list-card" href="#/course/${esc(c.id)}"><div>${badge(c.status)}<h2>${esc(c.title)}</h2><p>${esc(c.description)}</p><p style="margin-top:.8rem;font-size:.85rem">Unit 1 · ${topics.filter(t=>t.status==='ready').length} topics ready to study</p></div><span class="big-arrow" aria-hidden="true">↗</span></a>`).join('')}</div></div>`;}
+function courseCard(c){
+ const ready=readyTopicsFor(c),available=c.status==='ready'&&ready.length>0;
+ return `<article class="course-feature course-catalog-card" aria-labelledby="course-${esc(c.id)}-title">
+  <div class="catalog-description">${badge(available?'ready':'soon',available?`${ready.length} ${ready.length===1?'topic':'topics'} available`:null)}
+   <h2 id="course-${esc(c.id)}-title">${esc(c.title)}</h2><p class="period">${esc(c.period)}</p><p class="feature-info">${esc(c.description)}</p>
+  </div>
+  <div class="catalog-entry"><p class="eyebrow">${available?'Ready to study':'In development'}</p>
+   <ul class="catalog-topics">${ready.slice(0,3).map(t=>`<li><span>${esc(t.code)}</span>${esc(t.title)}</li>`).join('')}</ul>
+   ${available?link(`/course/${c.id}`,`Open course ${arrow}`,'btn'):badge('soon')}
+   <p class="feature-foot">${available?'More topics are on the way.':'Lessons and practice are being prepared.'}</p>
+  </div>
+ </article>`;
+}
+function coursePreview(){
+ const t=readyTopicsFor(firstCourse)[0],q=quizFor(t),terms=vocabulary.filter(v=>v.topicId===t.id);
+ // These are previews of existing content, not additional course offerings.
+ const cards=`<div class="preview-card preview-course"><span class="preview-label">Your course</span><h3>${esc(firstCourse.title)}</h3><p>${esc(firstCourse.period)}</p><div class="preview-tags"><span>Learn</span><span>Review</span><span>Practice</span></div><div class="preview-foot">One topic at a time.</div></div>
+  <div class="preview-card"><span class="preview-label">Key terms · Topic ${esc(t.code)}</span><h3>Make the<br>ideas stick.</h3><ul class="preview-terms">${terms.slice(0,3).map(v=>`<li>${esc(v.term)}</li>`).join('')}</ul><div class="preview-foot">Review ${terms.length} key terms</div></div>
+  <div class="preview-card"><span class="preview-label">Practice · ${esc(firstCourse.shortTitle)}</span><h3>Check what<br>you know.</h3><p>${esc(t.title)}</p><div class="preview-question-count"><strong>${q.questionIds.length}</strong><span>questions, with<br>answer explanations</span></div><div class="preview-foot">Find what to review next.</div></div>`;
+ return `<aside class="course-preview" aria-label="A preview of learning and practice">
+  <div class="preview-toolbar"><span>Inside a course</span><button type="button" class="preview-pause" data-action="toggle-preview" aria-pressed="false" aria-controls="course-preview-track">Pause animation</button></div>
+  <p class="visually-hidden">Course preview: ${esc(firstCourse.title)}, key terms, and practice questions. Open the course in the Courses section below.</p>
+  <div class="preview-viewport" aria-hidden="true"><div class="preview-track" id="course-preview-track"><div class="preview-group">${cards}</div><div class="preview-group">${cards}</div></div></div>
+  <p class="preview-caption">Learn it. Practice it. Know what to revisit.</p>
+ </aside>`;
+}
+function home(){
+ pageTitle('Study smarter for AP','Free AP lessons, key terms, and practice questions in one place. Choose a course, study a topic, and find what to review next.');
+ const resume=Object.values(attempts).find(a=>!a.complete&&quizById[a.quizId].quizType==='topic');
+ return `<div class="container">
+  <section class="home-top" aria-labelledby="home-title"><div class="home-copy"><p class="eyebrow">A clearer way to study</p><h1 id="home-title">Study smarter<br>for <em>AP.</em></h1><p class="home-intro">Lessons, key terms, and practice in one place. Understand the concepts, test what you know, and find what to review next.</p><div class="actions"><a href="#/?section=courses" class="btn">Browse courses ${arrow}</a>${resume?link(`/quiz/${resume.quizId}`,'Continue your quiz','text-link'):''}</div><p class="free-note">Free access · No account needed</p></div>${coursePreview()}</section>
+  <section class="home-courses" id="courses" aria-labelledby="courses-title"><div class="section-heading"><h2 id="courses-title">Courses</h2>${link('/courses',`View all courses ${arrow}`,'text-link')}</div><div class="course-catalog">${courses.map(courseCard).join('')}</div><p class="catalog-note">Starting with AP World History. More AP courses to come.</p></section>
+  <section class="how-section"><div class="section-heading"><h2>A little learning. A clearer next step.</h2></div><div class="step-grid"><div class="step"><div class="step-index">01</div><div><h3>Understand the idea</h3><p>Short explanations, useful terms, and connections that make the facts stick.</p></div></div><div class="step"><div class="step-index">02</div><div><h3>Put it into practice</h3><p>One question at a time, with an explanation after every answer.</p></div></div><div class="step"><div class="step-index">03</div><div><h3>Know what to revisit</h3><p>See which concepts went well and which deserve another look.</p></div></div></div></section>
+ </div>`;
+}
+function courseList(){pageTitle('Courses','Choose an AP course for lessons, vocabulary, and practice. AP World History is the first course available.');return `<div class="container">${crumb([['Home','/'],['Courses']])}<div class="page-intro"><p class="eyebrow">Choose your starting point</p><h1>Your course. Your pace.</h1><p>Start with a topic, understand the connections, and test what you know.</p></div><div class="courses-list course-catalog">${courses.map(courseCard).join('')}</div></div>`;}
 function coursePage(c){
  pageTitle(c.title,c.description);const list=units.filter(u=>u.courseId===c.id);const readyTopic=topics.find(t=>t.status==='ready'&&list.some(u=>u.id===t.unitId));
  return `<div class="container">${crumb([['Courses','/courses'],[c.shortTitle]])}<div class="page-intro"><p class="eyebrow">${esc(c.period)} · ${list.length} units</p><h1>${esc(c.title)}</h1><p>${esc(c.description)}</p></div><div class="course-layout"><div><div class="section-heading"><h2>Explore the units</h2><small class="muted">Unit 1 is your starting point</small></div><div class="unit-list">${list.map(u=>{const ready=u.status==='ready';return `<${ready?'a':'div'} ${ready?`href="#/unit/${esc(u.id)}"`:''} class="unit-row ${ready?'is-ready':''}"><span class="unit-number">${String(u.number).padStart(2,'0')}</span><div><h3>${esc(u.title)}</h3><p>${esc(u.period)}</p></div><div class="status">${badge(u.status,ready?`${topics.filter(t=>t.unitId===u.id&&t.status==='ready').length} topics ready`:null)}${ready?'<span class="big-arrow" aria-hidden="true">→</span>':''}</div></${ready?'a':'div'}>`;}).join('')}</div></div><aside class="side-note"><p class="eyebrow">Start small</p><h3>One topic is enough for today.</h3><p>Learn how Song China’s government, beliefs, and economy fit together.</p>${readyTopic?link(`/topic/${readyTopic.id}`,`Start Topic ${readyTopic.code} ${arrow}`,'btn'):''}<p style="font-size:.8rem;margin:1rem 0 0">Topics 1.1 and 1.2 are ready. The remaining topics are in progress.</p></aside></div></div>`;
@@ -72,7 +105,7 @@ function resultsPage(q){
  return `<div class="results-wrap">${crumb(topicCrumbs(t,'Results'))}<header class="result-head"><p class="eyebrow">${a.mode==='weak'?'Targeted practice':'Topic '+t.code} · Results</p><div class="result-score" aria-label="${r.correct} out of ${r.total} correct">${r.correct}<span> / ${r.total}</span></div><p>${r.percent}% correct</p><h1>${r.correct===r.total?'You connected the dots.':r.percent>=50?'Your next step is clearer.':'You have a place to start.'}</h1><p>${r.correct===r.total?'Every answer was correct. Try explaining the connections in your own words.':'Use these results to choose what to review, then give those ideas another try.'}</p></header>${a.mode==='weak'?'<p class="result-explainer">These results cover only your targeted practice. Untested areas are not assessed here.</p>':''}<div class="results-grid">${resultGroup('Strong areas',r.strong,r,t)}${resultGroup('Needs practice',r.weak,r,t,true)}</div><p class="result-explainer"><strong>Based on this quiz:</strong> “Strong” means at least 75% correct in a tested area. A few questions are a useful signal, not proof of mastery or a prediction of your AP score.</p><div class="actions">${r.weak.length?button(`Practice weak areas ${arrow}`,'weak',q.id):link(`/topic/${t.id}?section=connections`,`Review connections ${arrow}`,'btn')}${button('Try another quiz','start',q.id,'btn secondary')}</div><p class="reuse-note">This early version reuses the same questions. Retrying changes the order.</p><section class="review-list"><h2>Review your answers</h2>${a.ids.map((id,i)=>{const x=questionById[id],hit=a.answers[id]===x.correctAnswer;return `<details class="review-question"><summary>${hit?'✓':'✗'} ${i+1}. ${esc(x.prompt)}</summary><p><strong>Your answer:</strong> ${esc(x.choices[a.answers[id]])}</p>${!hit?`<p><strong>Correct answer:</strong> ${esc(x.choices[x.correctAnswer])}</p>`:''}<p>${esc(x.explanation)}</p></details>`;}).join('')}</section></div>`;
 }
 function comingSoon(title,back){pageTitle(title+' — Coming soon','This course content is being prepared. Topics 1.1 and 1.2 are available now.');return `<div class="empty-state"><p class="eyebrow">Coming soon</p><h1>${esc(title)}</h1><p>This material isn’t available yet. You can study East Asia or Dar al-Islam and take their topic quizzes now.</p>${link(`/topic/${firstTopic.id}`,`Study Topic ${firstTopic.code} ${arrow}`,'btn')}<p style="margin-top:1.5rem">${link(back,'Back to the overview')}</p></div>`;}
-function missing(){pageTitle('Page not found','Choose a course to continue studying AP World History.');return `<div class="empty-state"><h1>Let’s get you back on track.</h1><p>We couldn’t find that page. Pick a course to continue.</p>${link('/courses',`Browse courses ${arrow}`,'btn')}</div>`;}
+function missing(){pageTitle('Page not found','Choose an AP course to continue studying.');return `<div class="empty-state"><h1>Let’s get you back on track.</h1><p>We couldn’t find that page. Pick a course to continue.</p>${link('/courses',`Browse courses ${arrow}`,'btn')}</div>`;}
 function render(focus=false){
  const {parts,params}=path();let html;
  if(parts.length===0)html=home();
@@ -84,8 +117,9 @@ function render(focus=false){
  else html=missing();
  $('#main').innerHTML=html;
  for(const [id,active] of [['nav-home',!parts.length],['nav-courses',parts.length>0]]){const el=document.getElementById(id);if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');}
- const target=parts[0]==='topic'&&params.get('section');
- if(target&&['learn','terms','connections','practice',...Object.keys(concepts)].includes(target)){
+ const target=(!parts.length||parts[0]==='topic')&&params.get('section');
+ const allowedTargets=!parts.length?['courses']:['learn','terms','connections','practice',...Object.keys(concepts)];
+ if(target&&allowedTargets.includes(target)){
   const el=document.getElementById(target);if(el){el.setAttribute('tabindex','-1');el.focus({preventScroll:true});el.scrollIntoView({block:'start'});}
  }else if(focus){window.scrollTo({top:0,behavior:'instant'});$('#main').focus({preventScroll:true});}
 }
@@ -109,6 +143,10 @@ document.addEventListener('submit',e=>{
 document.addEventListener('click',e=>{
  const skip=e.target.closest('.skip-link');if(skip){e.preventDefault();$('#main').focus();return;}
  const b=e.target.closest('[data-action]');if(!b)return;
+ if(b.dataset.action==='toggle-preview'){
+  const paused=b.closest('.course-preview').toggleAttribute('data-paused');
+  b.setAttribute('aria-pressed',String(paused));return;
+ }
  const q=quizById[b.dataset.quiz];if(!q)return;
  const action=b.dataset.action;
  if(action==='start'){

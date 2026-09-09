@@ -1,6 +1,8 @@
-# AP World History study site
+# AP study platform
 
-A free static study site with complete learning and practice flows for Topics 1.1 (East Asia) and 1.2 (Dar al-Islam). The visible AP Atlas name and logo have been removed. AP World History is a descriptive heading, not a new brand name.
+A free AP study platform, starting with AP World History: Modern. That first course has complete learning and practice flows for Topics 1.1 (East Asia) and 1.2 (Dar al-Islam). The platform is not limited to World History. The visible AP Atlas name and logo have been removed; “AP study” is a descriptive placeholder, not a final brand name.
+
+The homepage has an introduction on the left and a rightward-moving course preview on the right, followed by a separate full-width Courses section and study steps. Each course uses one large, slightly rounded card with an explicit Open course button. The preview illustrates existing content, supports pausing, and becomes static for reduced-motion preferences. Course cards and availability counts are scoped to each course.
 
 ## Structure and hosting
 
@@ -42,3 +44,5 @@ Questions and fictional study scenarios are not official College Board questions
 ## Verification for this update
 
 JavaScript syntax, module imports, local asset references, content relationships, and page-template generation passed. Engine checks exercised all 1,296 correct/incorrect patterns across the two topic quizzes and two quick checks, including locked answers, completion, valid saved states, and weak-area retries. Topic 1.2 question and vocabulary counts and review anchors were checked. Browser visual and interaction testing was not performed.
+
+The homepage correction was checked with template and event-handler checks for section order, course entry buttons, the Courses anchor, pause/resume state, and Topic 1.2 navigation. Rightward animation and reduced-motion rules were checked in the stylesheet; this was not a browser-rendered visual test.
