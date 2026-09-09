@@ -17,11 +17,16 @@
 .home-copy,.course-preview{min-width:0}
 .home-top h1{font-size:clamp(3rem,5.5vw,4.8rem);line-height:1.08}
 .home-intro{max-width:430px;font-size:1.1rem}
-.course-preview{border:1px solid var(--line);border-radius:10px;background:var(--soft);overflow:hidden}
-.preview-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;padding:1rem 1.25rem;font-size:.875rem;color:var(--green)}
-.preview-pause{border:1px solid #b8c9bd;border-radius:5px;background:transparent;color:var(--green);font-size:.875rem;padding:.4rem .65rem;min-height:40px}
-.preview-pause:hover,.preview-pause[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--white)}
-.preview-viewport{overflow:hidden;padding:.5rem 0 1rem}
+.course-preview{position:relative;overflow:hidden}
+.preview-toolbar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:0 .75rem .75rem 1rem;font-size:.875rem;color:var(--green)}
+.preview-pause{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;padding:0;border:1px solid rgba(21,62,53,.2);border-radius:50%;background:rgba(255,255,255,.58);color:var(--green);box-shadow:0 7px 22px rgba(24,46,41,.1);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .15s,border-color .15s,transform .15s}
+.preview-pause:hover{background:rgba(255,255,255,.82);border-color:rgba(21,62,53,.35);transform:translateY(-1px)}
+.preview-pause[aria-pressed="true"]{background:rgba(21,62,53,.75);border-color:rgba(21,62,53,.25);color:var(--white)}
+.preview-icon{grid-area:1/1;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.preview-icon-play{display:none;fill:currentColor;stroke:currentColor}
+.preview-pause[aria-pressed="true"] .preview-icon-pause{display:none}
+.preview-pause[aria-pressed="true"] .preview-icon-play{display:block}
+.preview-viewport{overflow:hidden;padding:.5rem 0 1rem;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%)}
 .preview-track{display:flex;width:max-content;animation:course-preview-right 32s linear infinite}
 .preview-group{display:flex;flex:none;gap:1rem;padding-right:1rem}
 .preview-card{flex:0 0 300px;width:300px;min-height:325px;display:flex;flex-direction:column;padding:1.6rem;border:1px solid var(--line);border-radius:8px;background:var(--white)}
@@ -40,9 +45,9 @@
 .preview-question-count{display:flex;align-items:center;gap:1rem;margin:0 0 1.5rem}
 .preview-question-count strong{font-family:var(--serif);font-size:3.5rem;line-height:1;font-weight:500}
 .preview-question-count span{font-size:.875rem;color:var(--muted)}
-.preview-caption{padding:0 1.25rem 1.25rem;margin:0;font-size:.875rem;color:var(--muted)}
+.preview-caption{padding:0 1rem;margin:0;font-size:.875rem;color:var(--muted)}
 @keyframes course-preview-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-.course-preview:hover .preview-track,.course-preview:focus-within .preview-track,.course-preview[data-paused] .preview-track{animation-play-state:paused}
+.course-preview[data-paused] .preview-track{animation-play-state:paused}
 .home-courses{padding:2rem 0 3rem;border-top:1px solid var(--line);scroll-margin-top:1rem}
 .home-courses:focus{outline:none}
 .home-courses:focus-visible{outline:2px solid #b98227;outline-offset:8px}
