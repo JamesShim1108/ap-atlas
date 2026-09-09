@@ -1,37 +1,44 @@
-# AP Atlas V0.1
+# AP World History study site
 
-Free AP study platform with a complete AP World Topic 1.1 sample flow.
+A free static study site with complete learning and practice flows for Topics 1.1 (East Asia) and 1.2 (Dar al-Islam). The visible AP Atlas name and logo have been removed. AP World History is a descriptive heading, not a new brand name.
 
-## Structure
+## Structure and hosting
 
-The site uses plain static HTML, CSS, and JavaScript modules, with no installation or build step. Serve the dist directory through an HTTP static server; opening index.html directly from the filesystem is not supported by browser module security.
+GitHub Pages serves the `docs` folder from `main`. No installation or build step is required. JavaScript modules require an HTTP server rather than opening index.html directly from the filesystem.
 
-- dist/content.js: course, unit, topic, lesson, term, connection, quiz, and question records.
-- dist/engine.js: scoring, answer locking, attempt validation, shuffle, and concept-based retries.
-- dist/app.js: reusable course, unit, topic, quiz, and result views with hash navigation.
-- dist/styles.css: responsive academic theme.
-- .openai/hosting.json: Sites identity and static output configuration.
+- `docs/index.html`: shared header, footer, and metadata.
+- `docs/content.js`: course records and assembled content exports.
+- `docs/topic-1-2.js`: original Dar al-Islam lesson, vocabulary, connections, and questions.
+- `docs/engine.js`: scoring, answer locking, attempt validation, shuffle, and concept-based retries.
+- `docs/app.js`: reusable course, unit, lesson, quiz, and result views.
+- `docs/styles.css`: responsive design using the existing cream and green palette.
 
-Content is separate from presentation. Add records with stable IDs and relationships. Each ready topic needs a lesson plus topic and quick quizzes. Mark unfinished content as soon. Update homepage featured content when changing the initial course. Keep labels and learning-time estimates accurate.
+## Content scope
 
-## Current scope
+Nine units and seven Unit 1 topics are listed. Topics 1.1 and 1.2 are available; the other topics, unit study guide, and unit practice remain clearly marked as forthcoming. Unit 1 as a whole is not complete.
 
-Nine AP World units and seven Unit 1 topics are listed. Only Topic 1.1 has lesson content: four concept sections, eight terms, four connections, three quick checks, and eight quiz questions. Other content is clearly unavailable. Unit study guide and unit practice are reserved for later.
+Topic 1.1 has four lesson sections, eight terms, four connections, three quick checks, and eight quiz questions. Topic 1.2 has five sections, fourteen terms, five connections, three quick checks, and ten quiz questions. Its sections cover political change, religion and society, religious diffusion, intellectual innovation, and exchange. Lesson and quiz counts are derived from the records.
 
-Quiz state lives only in sessionStorage in the visitor's browser tab, with in-memory fallback. There are no accounts, analytics, payments, uploads, or backend records. Closing the tab ends the study session. Do not describe this as cross-device saved progress or mastery tracking. Weak-area practice reuses questions and replaces the current quiz attempt. A repeated topic quiz changes question order, not the question pool.
+Each ready topic must have a lesson and both quick and topic quizzes. Every question needs a unique ID, a valid concept, four choices, a correct answer, and an explanation. Each concept's review link must point to a section in that topic's lesson.
 
-Strong areas require at least 75% correct among answered questions in that concept; untested areas are not assessed. This is a small-sample practice signal, not an AP score prediction. All scoring is local and is not intended for secure assessment.
+## State and scoring
 
-## Content provenance and review
+Quiz state remains in sessionStorage in the visitor's browser tab, with an in-memory fallback. The legacy storage key is intentionally retained so changing the visible branding does not erase active attempts. There are no accounts or cross-device records. Closing the tab ends the session.
 
-Original explanations and questions were authored from class-reference themes and checked against the public 2026 AP World framework and Columbia University's Asia for Educators materials. The source PDFs are deliberately outside the repository and deployment; they are not redistributed.
+Weak-area practice reuses questions associated with weaker concepts and replaces the current topic attempt. Restarting shuffles question order, not the question pool. A strong area requires at least 75% correct among tested questions in that concept. Untested areas are not assessed. This small-sample feedback is not an AP score prediction or proof of mastery.
 
-References used: the uploaded Unit 1 AMSCO scan (Topic 1.1 pages successfully extracted through page 9), Tang/Song/Mongols lecture notes, and the public links listed in the lesson. Unit 2 is outside this release. Class slides label Song rule as ending around 1200; the lesson corrects the dynasty range to 960–1279. Other imprecise claims in the class references were not reproduced. Questions and study scenarios are original, not official College Board questions or historical quotations.
+## Provenance
 
-Student review is still needed before presenting this sample as a finished course. Retain the trademark disclaimer and avoid College Board branding.
+Lessons and questions are original. Source PDFs are not included in the repository or published site.
 
-## Verification performed
+- Topic 1.1 references the class Unit 1 reading, Tang/Song/Mongols slides, the public AP framework, and Columbia University's Asia for Educators resources listed in the lesson.
+- Topic 1.2 references the uploaded AMSCO Unit 1 reading, printed pages 15–19 (PDF pages 12–16), and the 2026 AP framework, printed pages 40–41.
+- Unit 2 and the Tang/Song/Mongols slides are outside the Dar al-Islam lesson's scope.
 
-JavaScript syntax and local asset/import checks passed. Scoring was exercised for all 256 possible correct/incorrect patterns of the 8-question quiz, including duplicate submission rejection, state validation after every step, targeted concept selection, all-correct empty retry behavior, restart, and malformed saved-state rejection. Browser visual and interaction testing was not performed in this creation pass.
+Chronology is distinguished from background: the great Seljuk empire predates the main period, successor states continued after 1200, Baghdad's fall in 1258 did not end scholarship everywhere, and the framework's A’ishah al-Ba’uniyyah example is explicitly labeled as later than 1450. Religious coexistence is distinguished from equal legal status. Broad or misleading generalizations from the reading are not reproduced.
 
-The site is initially published privately for its owner to review. Public audience changes are separate from publishing the source.
+Questions and fictional study scenarios are not official College Board questions or historical quotations. The College Board trademark disclaimer remains in the footer.
+
+## Verification for this update
+
+JavaScript syntax, module imports, local asset references, content relationships, and page-template generation passed. Engine checks exercised all 1,296 correct/incorrect patterns across the two topic quizzes and two quick checks, including locked answers, completion, valid saved states, and weak-area retries. Topic 1.2 question and vocabulary counts and review anchors were checked. Browser visual and interaction testing was not performed.
