@@ -1,6 +1,6 @@
 # Page One
 
-Page One is a free AP study platform, starting with AP World History: Modern. That first course has complete learning and practice flows for Topics 1.1 (East Asia) and 1.2 (Dar al-Islam). The platform is not limited to World History.
+Page One is a free study platform for courses, starting with AP World History: Modern. That first course has complete learning and practice flows for Topics 1.1 (East Asia) and 1.2 (Dar al-Islam); additional subjects can be added over time.
 
 The homepage has an introduction on the left and a rightward-moving course preview on the right, followed by a separate full-width Courses section and study steps. Each course uses one large, slightly rounded card with an explicit Open course button. The preview illustrates existing content, supports pausing, and becomes static for reduced-motion preferences. Course cards and availability counts are scoped to each course.
 

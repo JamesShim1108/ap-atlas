@@ -144,6 +144,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .choice:hover:has(input:not(:disabled)) { background: #e4ede5; }
 .choice:has(input:checked) { background: var(--soft); }
 .choice:has(input:focus-visible) { outline-color: var(--focus); }
+
+/* Keep topic reading on a continuous surface over the graph-paper page. */
+.lesson-grid > article {
+ background: var(--white);
+ border: 1px solid var(--line);
+ border-radius: 8px;
+ padding: clamp(20px, 3vw, 40px);
+}
+.lesson-section { background: transparent; }
+.sources { padding-top: 16px; }
+@media (max-width: 700px) {
+ .lesson-grid > article { padding: 20px; }
+}
 .choice-letter { background: var(--paper); }
 .choice.correct, .choice.correct:has(input:checked), .answer-feedback { background: #e2eee3; }
 .choice.incorrect, .choice.incorrect:has(input:checked), .answer-feedback.wrong { background: var(--red-bg); }
