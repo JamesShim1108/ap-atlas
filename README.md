@@ -25,7 +25,7 @@ Each ready topic must have a lesson and both quick and topic quizzes. Every ques
 
 ## State and scoring
 
-Quiz state remains in sessionStorage in the visitor's browser tab, with an in-memory fallback. The legacy storage key is intentionally retained so changing the visible branding does not erase active attempts. There are no accounts or cross-device records. Closing the tab ends the session.
+Quiz state remains in sessionStorage in the visitor's browser tab, with an in-memory fallback. There are no accounts or cross-device records. Closing the tab ends the session.
 
 Weak-area practice reuses questions associated with weaker concepts and replaces the current topic attempt. Restarting shuffles question order, not the question pool. A strong area requires at least 75% correct among tested questions in that concept. Untested areas are not assessed. This small-sample feedback is not an AP score prediction or proof of mastery.
 

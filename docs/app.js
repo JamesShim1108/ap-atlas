@@ -6,8 +6,7 @@ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const arrow='<span aria-hidden="true">→</span>';
 const firstCourse=courses.find(c=>c.status==='ready');
 const firstTopic=topics.find(t=>t.status==='ready');
-// Keep the existing storage key so a branding change does not erase active quizzes.
-const key='ap-atlas-attempts-v1';
+const key='page-one-attempts-v1';
 let attempts={},storageOK=true;
 try{const parsed=JSON.parse(sessionStorage.getItem(key)||'{}');for(const [id,a] of Object.entries(parsed??{})){if(validateAttempt(a)&&id===a.quizId)attempts[id]=a;}sessionStorage.setItem(key,JSON.stringify(attempts));}catch{storageOK=false;}
 function save(){try{sessionStorage.setItem(key,JSON.stringify(attempts));}catch{storageOK=false;}}
