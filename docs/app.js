@@ -30,6 +30,7 @@ function readyTopicsFor(c){
 function courseCard(c){
  const ready=readyTopicsFor(c),available=c.status==='ready'&&ready.length>0;
  return `<article class="course-feature course-catalog-card" aria-labelledby="course-${esc(c.id)}-title">
+  <div class="catalog-number" aria-hidden="true"><span>COURSE</span><strong>${String(courses.indexOf(c)+1).padStart(2,'0')}</strong></div>
   <div class="catalog-description">${badge(available?'ready':'soon',available?`${ready.length} ${ready.length===1?'topic':'topics'} available`:null)}
    <h2 id="course-${esc(c.id)}-title">${esc(c.title)}</h2><p class="period">${esc(c.period)}</p><p class="feature-info">${esc(c.description)}</p>
   </div>
@@ -42,7 +43,7 @@ function courseCard(c){
 }
 function coursePreview(){
  const courseDescription='Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present.';
- const cards=Array.from({length:7},(_,i)=>`<div class="preview-card preview-course${i===4?' is-active':''}"><span class="preview-label">Available course</span><h3>${esc(firstCourse.title)}</h3><p class="preview-period">${esc(firstCourse.period)}</p><p class="preview-description">${esc(courseDescription)}</p><div class="preview-foot">Topics 1.1 and 1.2 available now</div></div>`).join('');
+ const cards=Array.from({length:7},(_,i)=>`<div class="preview-card preview-course${i===4?' is-active':''}"><div class="preview-meta"><span class="preview-code">${esc(firstCourse.shortTitle)}</span><span class="preview-label">Available now</span></div><h3>${esc(firstCourse.title)}</h3><p class="preview-period">${esc(firstCourse.period)}</p><p class="preview-description">${esc(courseDescription)}</p><div class="preview-foot">Topics 1.1 and 1.2 available now</div></div>`).join('');
  return `<aside class="course-preview" aria-label="Available courses">
   <div class="preview-toolbar"><span></span><button type="button" class="preview-pause" data-action="toggle-preview" aria-pressed="false" aria-controls="course-preview-track" aria-label="Pause animation" title="Pause animation"><svg class="preview-icon preview-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6v12M16 6v12"/></svg><svg class="preview-icon preview-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 9 6-9 6Z"/></svg></button></div>
   <p class="visually-hidden">Course preview: ${esc(firstCourse.title)}. More AP courses will be added later.</p>
@@ -54,8 +55,8 @@ function home(){
  pageTitle('Study smarter for AP','Free AP lessons, key terms, and practice questions in one place. Choose a course, study a topic, and find what to review next.');
  const resume=Object.values(attempts).find(a=>!a.complete&&quizById[a.quizId].quizType==='topic');
  return `<div class="container">
-  <section class="home-top" aria-labelledby="home-title"><div class="home-copy"><p class="eyebrow">A clearer way to study</p><h1 id="home-title">Study smarter<br>for <em>AP.</em></h1><p class="home-intro">Lessons, key terms, and practice in one place. Understand the concepts, test what you know, and find what to review next.</p><div class="actions"><a href="#/?section=courses" class="btn">Browse courses ${arrow}</a>${resume?link(`/quiz/${resume.quizId}`,'Continue your quiz','text-link'):''}</div><p class="free-note">Free access · No account needed</p></div>${coursePreview()}</section>
-  <section class="home-courses" id="courses" aria-labelledby="courses-title"><div class="section-heading"><h2 id="courses-title">Courses</h2>${link('/courses',`View all courses ${arrow}`,'text-link')}</div><div class="course-catalog">${courses.map(courseCard).join('')}</div><p class="catalog-note">Starting with AP World History. More AP courses to come.</p></section>
+  <section class="home-top" aria-labelledby="home-title"><div class="home-copy"><p class="eyebrow">A little learning, every day</p><h1 id="home-title">AP courses.<br><em>Your pace.</em></h1><p class="home-intro">Lessons, key terms, and practice in one place. Understand the concepts, test what you know, and find what to review next.</p><div class="actions"><a href="#/?section=courses" class="btn">Browse courses ${arrow}</a>${resume?link(`/quiz/${resume.quizId}`,'Continue your quiz','text-link'):''}</div><p class="free-note">Free access · No account needed</p></div>${coursePreview()}</section>
+  <section class="home-courses" id="courses" aria-labelledby="courses-title"><div class="section-heading"><h2 id="courses-title">Find your next chapter</h2>${link('/courses',`View all courses ${arrow}`,'text-link')}</div><div class="course-catalog">${courses.map(courseCard).join('')}</div><p class="catalog-note">Starting with AP World History. More AP courses to come.</p></section>
   <section class="how-section"><div class="section-heading"><h2>A little learning. A clearer next step.</h2></div><div class="step-grid"><div class="step"><div class="step-index">01</div><div><h3>Understand the idea</h3><p>Short explanations, useful terms, and connections that make the facts stick.</p></div></div><div class="step"><div class="step-index">02</div><div><h3>Put it into practice</h3><p>One question at a time, with an explanation after every answer.</p></div></div><div class="step"><div class="step-index">03</div><div><h3>Know what to revisit</h3><p>See which concepts went well and which deserve another look.</p></div></div></div></section>
  </div>`;
 }
