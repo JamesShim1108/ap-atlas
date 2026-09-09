@@ -42,7 +42,7 @@ function courseCard(c){
 }
 function coursePreview(){
  const courseDescription='Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present.';
- const cards=Array.from({length:7},(_,i)=>`<div class="preview-card preview-course${i===2?' is-active':''}"><span class="preview-label">Available course</span><h3>${esc(firstCourse.title)}</h3><p class="preview-period">${esc(firstCourse.period)}</p><p class="preview-description">${esc(courseDescription)}</p><div class="preview-foot">Topics 1.1 and 1.2 available now</div></div>`).join('');
+ const cards=Array.from({length:7},(_,i)=>`<div class="preview-card preview-course${i===4?' is-active':''}"><span class="preview-label">Available course</span><h3>${esc(firstCourse.title)}</h3><p class="preview-period">${esc(firstCourse.period)}</p><p class="preview-description">${esc(courseDescription)}</p><div class="preview-foot">Topics 1.1 and 1.2 available now</div></div>`).join('');
  return `<aside class="course-preview" aria-label="Available courses">
   <div class="preview-toolbar"><span>Courses</span><button type="button" class="preview-pause" data-action="toggle-preview" aria-pressed="false" aria-controls="course-preview-track" aria-label="Pause animation" title="Pause animation"><svg class="preview-icon preview-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6v12M16 6v12"/></svg><svg class="preview-icon preview-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 9 6-9 6Z"/></svg></button></div>
   <p class="visually-hidden">Course preview: ${esc(firstCourse.title)}. More AP courses will be added later.</p>
@@ -111,7 +111,7 @@ function stopCoursePreview(){
 function initCoursePreview(){
  const preview=$('.course-preview'),viewport=preview?.querySelector('.preview-viewport'),track=preview?.querySelector('.preview-track');
  if(!preview||!viewport||!track)return;
- const cards=[...track.querySelectorAll('.preview-card')];let index=2;
+ const cards=[...track.querySelectorAll('.preview-card')];let index=4;
  const activate=()=>cards.forEach((card,i)=>card.classList.toggle('is-active',i===index));
  const center=(instant=false)=>{
   track.classList.toggle('is-resetting',instant);
@@ -124,9 +124,9 @@ function initCoursePreview(){
  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
  previewTimer=setInterval(()=>{
   if(preview.hasAttribute('data-paused'))return;
-  index+=1;activate();center();
-  if(index===4)previewResetTimer=setTimeout(()=>{index=2;activate();center(true);},650);
- },1800);
+  index-=1;activate();center();
+  if(index===2)previewResetTimer=setTimeout(()=>{index=4;activate();center(true);},650);
+ },3600);
 }
 function render(focus=false){
  stopCoursePreview();
