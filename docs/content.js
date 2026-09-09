@@ -1,3 +1,4 @@
+import {topic12Concepts,topic12Lesson,topic12Vocabulary,topic12Connections,topic12Questions,topic12Quizzes} from './topic-1-2.js';
 // Content records are independent of the page templates and quiz engine.
 // Add courses, units and topics here; only mark content ready after review.
 export const courses = [{id:'world',title:'AP World History: Modern',shortTitle:'AP World',description:'Understand the people, ideas, and connections that shaped the world from c. 1200 to the present.',status:'ready',period:'c. 1200–present'}];
@@ -80,3 +81,12 @@ export const quizzes=[
  {id:'world-1-1-quiz',courseId:'world',unitId:'world-1',topicId:'world-1-1',title:'East Asia topic quiz',quizType:'topic',questionIds:['q1','q2','q3','q4','q5','q6','q7','q8']},
  {id:'world-1-1-quick',courseId:'world',unitId:'world-1',topicId:'world-1-1',title:'East Asia quick practice',quizType:'quick',questionIds:['k1','k2','k3']}
 ];
+
+// Topic 1.2 uses the same lesson, quiz, and review flow as Topic 1.1.
+Object.assign(concepts,topic12Concepts);
+lessons['world-1-2']=topic12Lesson;
+vocabulary.push(...topic12Vocabulary);
+connections.push(...topic12Connections);
+questions.push(...topic12Questions);
+quizzes.push(...topic12Quizzes);
+Object.assign(topics.find(t=>t.id==='world-1-2'),{status:'ready',summary:'Regional Muslim states, connected communities, and the movement of ideas across Afro-Eurasia.'});
