@@ -42,12 +42,11 @@ function courseCard(c){
 }
 function coursePreview(){
  const courseDescription='Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present.';
- const card=`<div class="preview-card preview-course"><span class="preview-label">Available course</span><h3>${esc(firstCourse.title)}</h3><p class="preview-period">${esc(firstCourse.period)}</p><p class="preview-description">${esc(courseDescription)}</p><div class="preview-foot">Topics 1.1 and 1.2 available now</div></div>`;
- const cards=card.repeat(3);
+ const cards=Array.from({length:7},(_,i)=>`<div class="preview-card preview-course${i===2?' is-active':''}"><span class="preview-label">Available course</span><h3>${esc(firstCourse.title)}</h3><p class="preview-period">${esc(firstCourse.period)}</p><p class="preview-description">${esc(courseDescription)}</p><div class="preview-foot">Topics 1.1 and 1.2 available now</div></div>`).join('');
  return `<aside class="course-preview" aria-label="Available courses">
   <div class="preview-toolbar"><span>Courses</span><button type="button" class="preview-pause" data-action="toggle-preview" aria-pressed="false" aria-controls="course-preview-track" aria-label="Pause animation" title="Pause animation"><svg class="preview-icon preview-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6v12M16 6v12"/></svg><svg class="preview-icon preview-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 9 6-9 6Z"/></svg></button></div>
   <p class="visually-hidden">Course preview: ${esc(firstCourse.title)}. More AP courses will be added later.</p>
-  <div class="preview-viewport" aria-hidden="true"><div class="preview-track" id="course-preview-track"><div class="preview-group">${cards}</div><div class="preview-group">${cards}</div></div></div>
+  <div class="preview-viewport" aria-hidden="true"><div class="preview-track" id="course-preview-track">${cards}</div></div>
   <p class="preview-caption">AP World History is available now. More AP courses are coming.</p>
  </aside>`;
 }
@@ -104,7 +103,33 @@ function resultsPage(q){
 }
 function comingSoon(title,back){pageTitle(title+' — Coming soon','This course content is being prepared. Topics 1.1 and 1.2 are available now.');return `<div class="empty-state"><p class="eyebrow">Coming soon</p><h1>${esc(title)}</h1><p>This material isn’t available yet. You can study East Asia or Dar al-Islam and take their topic quizzes now.</p>${link(`/topic/${firstTopic.id}`,`Study Topic ${firstTopic.code} ${arrow}`,'btn')}<p style="margin-top:1.5rem">${link(back,'Back to the overview')}</p></div>`;}
 function missing(){pageTitle('Page not found','Choose an AP course to continue studying.');return `<div class="empty-state"><h1>Let’s get you back on track.</h1><p>We couldn’t find that page. Pick a course to continue.</p>${link('/courses',`Browse courses ${arrow}`,'btn')}</div>`;}
+let previewTimer=null,previewResetTimer=null,previewObserver=null;
+function stopCoursePreview(){
+ clearInterval(previewTimer);clearTimeout(previewResetTimer);previewObserver?.disconnect();
+ previewTimer=previewResetTimer=previewObserver=null;
+}
+function initCoursePreview(){
+ const preview=$('.course-preview'),viewport=preview?.querySelector('.preview-viewport'),track=preview?.querySelector('.preview-track');
+ if(!preview||!viewport||!track)return;
+ const cards=[...track.querySelectorAll('.preview-card')];let index=2;
+ const activate=()=>cards.forEach((card,i)=>card.classList.toggle('is-active',i===index));
+ const center=(instant=false)=>{
+  track.classList.toggle('is-resetting',instant);
+  const card=cards[index],x=viewport.clientWidth/2-(card.offsetLeft+card.offsetWidth/2);
+  track.style.transform=`translate3d(${x}px,0,0)`;
+  if(instant)requestAnimationFrame(()=>requestAnimationFrame(()=>track.classList.remove('is-resetting')));
+ };
+ activate();center(true);
+ previewObserver=new ResizeObserver(()=>center(true));previewObserver.observe(viewport);
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ previewTimer=setInterval(()=>{
+  if(preview.hasAttribute('data-paused'))return;
+  index+=1;activate();center();
+  if(index===4)previewResetTimer=setTimeout(()=>{index=2;activate();center(true);},650);
+ },3600);
+}
 function render(focus=false){
+ stopCoursePreview();
  const {parts,params}=path();let html;
  if(parts.length===0)html=home();
  else if(parts.length===1&&parts[0]==='courses')html=courseList();
@@ -114,6 +139,7 @@ function render(focus=false){
  else if(parts.length===2&&['quiz','results'].includes(parts[0])){const q=quizById[parts[1]];html=q&&q.quizType==='topic'?(parts[0]==='quiz'?quizPage(q):resultsPage(q)):missing();}
  else html=missing();
  $('#main').innerHTML=html;
+ initCoursePreview();
  for(const [id,active] of [['nav-home',!parts.length],['nav-courses',parts.length>0]]){const el=document.getElementById(id);if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');}
  const target=(!parts.length||parts[0]==='topic')&&params.get('section');
  const allowedTargets=!parts.length?['courses']:['learn','terms','connections','practice',...Object.keys(concepts)];
