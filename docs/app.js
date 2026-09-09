@@ -41,16 +41,14 @@ function courseCard(c){
  </article>`;
 }
 function coursePreview(){
- const t=readyTopicsFor(firstCourse)[0],q=quizFor(t),terms=vocabulary.filter(v=>v.topicId===t.id);
- // These are previews of existing content, not additional course offerings.
- const cards=`<div class="preview-card preview-course"><span class="preview-label">Your course</span><h3>${esc(firstCourse.title)}</h3><p>${esc(firstCourse.period)}</p><div class="preview-tags"><span>Learn</span><span>Review</span><span>Practice</span></div><div class="preview-foot">One topic at a time.</div></div>
-  <div class="preview-card"><span class="preview-label">Key terms · Topic ${esc(t.code)}</span><h3>Make the<br>ideas stick.</h3><ul class="preview-terms">${terms.slice(0,3).map(v=>`<li>${esc(v.term)}</li>`).join('')}</ul><div class="preview-foot">Review ${terms.length} key terms</div></div>
-  <div class="preview-card"><span class="preview-label">Practice · ${esc(firstCourse.shortTitle)}</span><h3>Check what<br>you know.</h3><p>${esc(t.title)}</p><div class="preview-question-count"><strong>${q.questionIds.length}</strong><span>questions, with<br>answer explanations</span></div><div class="preview-foot">Find what to review next.</div></div>`;
- return `<aside class="course-preview" aria-label="A preview of learning and practice">
-  <div class="preview-toolbar"><span>Inside a course</span><button type="button" class="preview-pause" data-action="toggle-preview" aria-pressed="false" aria-controls="course-preview-track" aria-label="Pause animation" title="Pause animation"><svg class="preview-icon preview-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6v12M16 6v12"/></svg><svg class="preview-icon preview-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 9 6-9 6Z"/></svg></button></div>
-  <p class="visually-hidden">Course preview: ${esc(firstCourse.title)}, key terms, and practice questions. Open the course in the Courses section below.</p>
+ const courseDescription='Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present.';
+ const card=`<div class="preview-card preview-course"><span class="preview-label">Available course</span><h3>${esc(firstCourse.title)}</h3><p class="preview-period">${esc(firstCourse.period)}</p><p class="preview-description">${esc(courseDescription)}</p><div class="preview-foot">Topics 1.1 and 1.2 available now</div></div>`;
+ const cards=card.repeat(3);
+ return `<aside class="course-preview" aria-label="Available courses">
+  <div class="preview-toolbar"><span>Courses</span><button type="button" class="preview-pause" data-action="toggle-preview" aria-pressed="false" aria-controls="course-preview-track" aria-label="Pause animation" title="Pause animation"><svg class="preview-icon preview-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6v12M16 6v12"/></svg><svg class="preview-icon preview-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 9 6-9 6Z"/></svg></button></div>
+  <p class="visually-hidden">Course preview: ${esc(firstCourse.title)}. More AP courses will be added later.</p>
   <div class="preview-viewport" aria-hidden="true"><div class="preview-track" id="course-preview-track"><div class="preview-group">${cards}</div><div class="preview-group">${cards}</div></div></div>
-  <p class="preview-caption">Learn it. Practice it. Know what to revisit.</p>
+  <p class="preview-caption">AP World History is available now. More AP courses are coming.</p>
  </aside>`;
 }
 function home(){
