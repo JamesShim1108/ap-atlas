@@ -31,7 +31,7 @@ test('Unit 1 is complete and every concept has a review destination', () => {
   }
 });
 
-test('Question pools are unique, complete, and point to real concepts', () => {
+test('Question pools are unique, complete and point to real concepts', () => {
   assert.equal(new Set(questions.map(question => question.id)).size, questions.length);
   for (const question of questions) {
     assert.ok(concepts[question.concept], question.id);
