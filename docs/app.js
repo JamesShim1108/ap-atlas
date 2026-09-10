@@ -105,7 +105,7 @@ function resultGroup(title,keys,r,needs=false){
  return `<section class="result-panel ${needs?'needs':''}"><h2><span aria-hidden="true">${needs?'△':'✓'}</span>${title}</h2>${keys.length?keys.map(k=>`<div class="result-item"><div class="result-item-line"><span>${esc(concepts[k].title)}</span><span>${r.tags[k].correct} / ${r.tags[k].total}</span></div><p>Correct in this quiz</p>${link(`/topic/${concepts[k].topicId}?section=${concepts[k].section}`,`${needs?'Review this concept':'Revisit the lesson'} ${arrow}`)}</div>`).join(''):`<p class="result-empty">${needs?'All tested areas met the practice threshold. Keep connecting the ideas.':'No tested area reached the threshold yet. Use the lesson links to work through the concepts.'}</p>`}</section>`;
 }
 function resultsPage(q){
- const a=attempts[q.id],ctx=quizContext(q);
+ const a=attempts[q.id],ctx=quizContext(q)
  pageTitle('Your quiz results',`See your results and concepts to review for ${ctx.label}.`);
  if(!a||!a.complete)return `<div class="results-wrap">${crumb(ctx.crumbs('Results'))}<div class="empty-state"><h1>${a?'Finish your quiz first.':'Start with a quiz.'}</h1><p>${a?'Continue where you left off.':'There are no completed results in this tab yet.'}</p>${a?link(`/quiz/${q.id}`,'Continue quiz '+arrow,'btn'):button('Start quiz '+arrow,'start',q.id)}</div></div>`;
  const r=summarize(a),review=ctx.t?`/topic/${ctx.t.id}?section=connections`:`/guide/${ctx.u.id}`;
