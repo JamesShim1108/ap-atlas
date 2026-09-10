@@ -126,7 +126,7 @@ function initCoursePreview(){
   if(preview.hasAttribute('data-paused'))return;
   index-=1;activate();center();
   if(index===2)previewResetTimer=setTimeout(()=>{index=4;activate();center(true);},650);
- },1800);
+ },2400);
 }
 function render(focus=false){
  stopCoursePreview();
