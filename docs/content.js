@@ -1,4 +1,7 @@
 import {topic12Concepts,topic12Lesson,topic12Vocabulary,topic12Connections,topic12Questions,topic12Quizzes} from './topic-1-2.js';
+import {additionalLessons,additionalVocabulary,additionalConnections} from './unit-1-topics.js';
+import {additionalQuestions,additionalQuizzes} from './unit-1-questions.js';
+import {topicGuides,sourcesFor} from './unit-1-support.js';
 // Content records are independent of the page templates and quiz engine.
 // Add courses, units and topics here; only mark content ready after review.
 export const courses = [{id:'world',title:'AP World History: Modern',shortTitle:'AP World',description:'Understand the people, ideas, and connections that shaped the world from c. 1200 to the present.',status:'ready',period:'c. 1200–present'}];
@@ -20,7 +23,7 @@ export const lessons={
   context:'Around 1200, the Southern Song governed much of southern China. The Song dynasty lasted from 960 to 1279; the broader topic continues through Mongol Yuan rule and into the Ming period. Use Song China as a starting point, not as the ruler of this entire timeline.',
   sections:[
    {id:'governance',title:'How do you govern a huge territory?',paragraphs:[
-    'An emperor could not personally collect every tax or settle every local dispute. An imperial bureaucracy, a network of appointed officials—carried out those jobs. The Song expanded this system, building on institutions developed under earlier dynasties.',
+    'An emperor could not personally collect every tax or settle every local dispute. An imperial bureaucracy, a network of appointed officials, carried out those jobs. The Song expanded this system, building on institutions developed under earlier dynasties.',
     'Civil service examinations tested knowledge of Confucian writings and helped select officials. Success could give an educated man a path into government beyond inherited noble rank. But preparation required time, teachers, and books, giving wealthy families a major advantage. Women were excluded from the examination route.',
     'The scholar-gentry gained influence through education, government service, and often landownership. The important connection: exams tied political opportunity to a shared set of ideas, while unequal access to education preserved social hierarchy.'
    ],takeaway:'An exam-based system offered some social mobility. It did not give everyone an equal opportunity or make imperial China a democracy.'},
@@ -42,7 +45,7 @@ export const lessons={
    ],takeaway:'Cultural influence does not, by itself, prove political control. Look for adaptation as well as similarity.'}
   ],
   sources:[
-   {label:'College Board: AP World History: Modern course framework (2026), Topic 1.1',url:'https://apcentral.collegeboard.org/media/pdf/ap-world-history-modern-course-and-exam-description-effective-fall-2026.pdf'},
+   {label:'College Board: AP World History: Modern course framework (2026), Topic 1.1',url:'https://apcentral.collegeboard.org/media/pdf/ap-world-history-modern-course-and-exam-description.pdf'},
    {label:'Columbia University, Asia for Educators: Rice cultivation',url:'https://afe.easia.columbia.edu/songdynasty-module/tech-rice.html'},
    {label:'Columbia University, Asia for Educators: Commercialization in Song China',url:'https://afe.easia.columbia.edu/songdynasty-module/econ-rev-commercial.html'}
   ]
@@ -90,3 +93,49 @@ connections.push(...topic12Connections);
 questions.push(...topic12Questions);
 quizzes.push(...topic12Quizzes);
 Object.assign(topics.find(t=>t.id==='world-1-2'),{status:'ready',summary:'Regional Muslim states, connected communities, and the movement of ideas across Afro-Eurasia.'});
+
+// Complete Unit 1 using the same reusable lesson and assessment records.
+Object.assign(lessons,additionalLessons);
+vocabulary.push(...additionalVocabulary);
+connections.push(...additionalConnections);
+questions.push(...additionalQuestions);
+quizzes.push(...additionalQuizzes);
+const summaries={
+ 'world-1-3':'Hindu, Buddhist, and Muslim communities; inland kingdoms and maritime states.',
+ 'world-1-4':'Maya cities, Mexica tribute, Inca labor, and diverse North American communities.',
+ 'world-1-5':'African kingdoms and cities, connected by agriculture, commerce, and varied beliefs.',
+ 'world-1-6':'Religious institutions, divided political authority, and changing agricultural societies.',
+ 'world-1-7':'Compare authority, resources, and beliefs using precise evidence and historical reasoning.'
+};
+for(const t of topics){
+ if(lessons[t.id]){t.status='ready';t.summary=summaries[t.id]||t.summary;}
+ const lesson=lessons[t.id];if(!lesson)continue;
+ lesson.guide=topicGuides[t.id];
+ for(const s of lesson.sections){concepts[s.id]??={title:s.title,section:s.id};concepts[s.id].topicId=t.id;}
+}
+lessons['world-1-1'].sources.unshift({label:'Class reading: AMSCO Unit 1, supplied PDF pages 3-11; Tang/Song/Mongols class slides. Earlier dynasties provide background.'});
+lessons['world-1-2'].sources=[{label:'Class reading: AMSCO Unit 1, supplied PDF pages 12-16; The Rise/Spread of Islam class slides for earlier context.'},...sourcesFor('ced')];
+for(const lesson of Object.values(lessons))lesson.sources.push({label:'Class framework: Early Religions + InSPECT, slides 5-17. InSPECT categories inform the reading guide and writing exercise.'});
+
+// Supplement existing lessons where the full unit framework needs more detail.
+const east=lessons['world-1-1'];
+east.sections.find(s=>s.id==='beliefs').paragraphs.splice(3,0,
+ 'Buddhist branches shared important teachings but developed different institutions and practices. Theravada traditions became prominent in Sri Lanka and much of mainland Southeast Asia, with a strong monastic tradition. Mahayana traditions, influential in China and Korea, emphasized the bodhisattva ideal of helping other beings toward liberation. Tibetan Buddhism drew on Mahayana and Vajrayana practices, including ritual and teacher lineages. These broad labels contain considerable diversity.');
+east.sections.find(s=>s.id==='economy').paragraphs.push(
+ 'Manufacturing and technical knowledge reinforced these changes. Iron and steel production supplied tools and other goods; printing made texts more available to readers; and the compass supported navigation. Porcelain and textiles reached distant buyers. This growth relied heavily on peasant and artisanal labor and should not be confused with the later factory-based Industrial Revolution.');
+east.sections.find(s=>s.id==='influence').paragraphs.push(
+ 'Heian Japan had earlier adapted Chinese writing, court institutions, and Buddhist learning while developing a distinctive literary culture. By around 1200, military governments and warrior elites were increasingly important. In Korea and Vietnam, local elites similarly shaped borrowed institutions. Diplomatic tribute and cultural influence should not be assumed to mean direct Chinese rule.');
+east.minutes=10;
+vocabulary.push(...[
+ ['theravada','Theravada Buddhism','A Buddhist tradition with a strong monastic heritage, prominent in Sri Lanka and much of mainland Southeast Asia.'],
+ ['mahayana','Mahayana Buddhism','A family of Buddhist traditions emphasizing the bodhisattva ideal, influential in East Asia.'],
+ ['tibetan','Tibetan Buddhism','Buddhist traditions associated with Tibet that include Mahayana and Vajrayana teachings and practices.'],
+ ['artisan','Artisanal labor','Skilled craft production, important to the manufacture of textiles, ceramics, and other goods.']
+].map(([id,term,definition])=>({id,term,definition,topicId:'world-1-1'})));
+const islamBeliefs=lessons['world-1-2'].sections.find(s=>s.id==='islam-beliefs');
+islamBeliefs.paragraphs.push('Judaism emphasized one God, covenant, and religious law, with communal learning and worship supporting Jewish identity across dispersed communities. Christianity centered on Jesus, salvation, scripture, and church communities. Sunni and Shi’a traditions reflected different views of legitimate leadership and religious authority within Islam. These differences mattered, but did not prevent all cooperation across religious boundaries.');
+
+quizzes.push({id:'world-1-practice',courseId:'world',unitId:'world-1',title:'Unit 1 practice',quizType:'unit',questionIds:[
+ 'q1','q5','q7','islam-q1','islam-q4','islam-q8',
+ ...Object.keys(additionalLessons).flatMap(id=>[`${id}-q1`,`${id}-q4`,`${id}-q6`])
+]});

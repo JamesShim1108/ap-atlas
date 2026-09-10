@@ -37,7 +37,7 @@ export function validateAttempt(a){
  const quiz=quizById[a.quizId];
  if(!a.ids.every(id=>quiz.questionIds.includes(id))||!Number.isInteger(a.index)||a.index<0||a.index>=a.ids.length||typeof a.complete!=='boolean'||!a.answers||typeof a.answers!=='object'||Array.isArray(a.answers))return false;
  if(a.mode!=='weak' && (a.ids.length!==quiz.questionIds.length || (a.mode==='quick')!==(quiz.quizType==='quick')))return false;
- if(a.mode==='weak'&&quiz.quizType!=='topic')return false;
+ if(a.mode==='weak'&&!['topic','unit'].includes(quiz.quizType))return false;
  if(!Object.entries(a.answers).every(([id,v])=>a.ids.includes(id)&&Number.isInteger(v)&&v>=0&&v<questionById[id].choices.length))return false;
  if(!a.ids.slice(0,a.index).every(id=>Object.hasOwn(a.answers,id)))return false;
  if(a.ids.slice(a.index+1).some(id=>Object.hasOwn(a.answers,id)))return false;
