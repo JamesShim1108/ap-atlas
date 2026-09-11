@@ -9,14 +9,14 @@ export const bank = {
       skillTag: "Continuity and change",
       prompt: "Which statement best describes Dar al-Islam around 1200–1450?",
       choices: [
-        "One caliph directly governed every Muslim community.",
+        "Political authority divided among regional states, and each developed isolated religious law and scholarly networks.",
         "Muslim political authority divided among states while religious and cultural links persisted.",
-        "The fall of one dynasty ended Islam throughout Afro-Eurasia.",
-        "Regional rulers abandoned all earlier Islamic institutions.",
+        "The Abbasid caliph continued appointing most regional rulers, although sultans commanded local armies and taxes.",
+        "New Turkic states restored political unity by replacing Arabic and Persian traditions with one shared government.",
       ],
       correctAnswer: 1,
       explanation:
-        "New states held political power, yet religious practices, legal traditions, commerce, and learning connected communities across their borders. Dar al-Islam was not a single empire.",
+        "New states held political power, yet religious practices, legal traditions, commerce, and learning connected communities across their borders. Political fragmentation did not mean cultural isolation or continued direct Abbasid control.",
       topicId: "world-1-2",
     },
     {
@@ -28,14 +28,14 @@ export const bank = {
         "A military ruler commands an army and controls taxation while recognizing the religious prestige of a caliph in Baghdad.",
       prompt: "Which development does this situation best illustrate?",
       choices: [
-        "The disappearance of Muslim rule from the Middle East",
-        "Government by elected merchant assemblies",
-        "An equal sharing of authority among every religious community",
+        "The caliph retained control of taxation while granting the sultan only ceremonial religious authority",
+        "Merchant elites replaced military rulers and caliphs as the main source of political legitimacy",
+        "Regional military rulers gained authority by abolishing the caliphate and rejecting all Abbasid institutions",
         "A distinction between a sultan’s political power and a caliph’s religious prestige",
       ],
       correctAnswer: 3,
       explanation:
-        "Seljuk rulers illustrate how sultans could hold practical military and political authority while Abbasid caliphs retained religious status. This is a change in the organization of power, not the end of Muslim government.",
+        "Seljuk rulers illustrate how sultans could hold practical military and political authority while Abbasid caliphs retained religious prestige. The tempting reverse arrangement assigns each figure the wrong kind of authority.",
       topicId: "world-1-2",
     },
     {
@@ -46,13 +46,13 @@ export const bank = {
       prompt: "How could the pilgrimage to Mecca help connect Muslim societies?",
       choices: [
         "It brought believers from different regions into contact through a shared religious practice.",
-        "It required all participating states to merge their governments.",
-        "It removed all differences in language and local custom.",
-        "It replaced commercial travel between cities.",
+        "It chiefly allowed rulers to negotiate alliances among independent Muslim states.",
+        "It imposed one legal interpretation on every Muslim region.",
+        "It strengthened regional sultans by letting each supervise a separate pilgrimage.",
       ],
       correctAnswer: 0,
       explanation:
-        "Pilgrimage joined a shared religious obligation with travel and encounters across regions. Shared practice did not erase cultural differences or create a unified government.",
+        "Pilgrimage joined a shared religious obligation with travel and encounters across regions. Its unifying effect came from participation in the same practice, not political negotiations, one universal legal interpretation, or separate regional pilgrimages.",
       topicId: "world-1-2",
     },
     {
@@ -64,14 +64,14 @@ export const bank = {
         "Records from a Muslim-ruled city show Jewish and Christian communities maintaining worship and participating in trade, while facing special taxes and legal restrictions.",
       prompt: "Which conclusion accounts for all the evidence?",
       choices: [
-        "Religious communities had identical legal rights.",
-        "Religious diversity made economic cooperation impossible.",
+        "Religious minorities gained legal equality because their commercial activity made special taxes unnecessary.",
+        "Economic cooperation occurred only after Jewish and Christian residents abandoned public worship.",
         "Religious coexistence could operate alongside unequal legal status.",
-        "Every resident had converted to Islam.",
+        "Non-Muslims maintained worship but were excluded from the city’s commercial life by legal restrictions.",
       ],
       correctAnswer: 2,
       explanation:
-        "The evidence includes both continuing communal life and restrictions. It supports neither full equality nor the claim that all coexistence was impossible. Conditions varied by place and ruler.",
+        "The evidence includes continuing worship and trade as well as taxes and legal restrictions. A complete conclusion must recognize both coexistence and inequality instead of using one part of the evidence to erase the other.",
       topicId: "world-1-2",
     },
     {
@@ -83,14 +83,14 @@ export const bank = {
         "A port community gradually adopts Islamic practices through contact with visiting merchants and a local Sufi teacher. No new army has taken control of the port.",
       prompt: "Which process best explains this change?",
       choices: [
-        "Political unification under the Abbasids",
+        "Commercial contact that prepared the port for conversion after its conquest by an Abbasid army",
         "Religious diffusion through commerce and teaching",
-        "A compulsory conversion ordered by conquering soldiers",
-        "The end of long-distance exchange",
+        "State-sponsored conversion led by a local ruler seeking closer relations with Muslim merchants",
+        "Migration by Muslim merchants that replaced the port’s existing population and religious traditions",
       ],
       correctAnswer: 1,
       explanation:
-        "The scenario gives evidence of trade and religious teaching, not military conquest. These contacts could support conversion even without a new Muslim government.",
+        "The scenario gives evidence of trade and Sufi teaching but explicitly excludes military conquest. Contact could support gradual religious diffusion without state sponsorship or the replacement of the local population.",
       topicId: "world-1-2",
     },
     {
@@ -101,14 +101,14 @@ export const bank = {
       prompt:
         "Why should a historian distinguish the expansion of Muslim rule from the spread of Islam?",
       choices: [
-        "Muslim merchants never traveled outside Muslim-ruled states.",
-        "Political conquest always produced immediate religious uniformity.",
-        "Sufi teachers primarily collected imperial taxes.",
+        "The expansion of Muslim rule describes religious conversion, whereas the spread of Islam describes changing state borders.",
+        "Military conquest created Islamic states, while merchants affected commerce without influencing religious belief.",
+        "Islam could spread through trade beyond state borders, but Muslim rulers governed only communities that had already converted.",
         "A Muslim government could rule non-Muslims, and Islam could spread beyond its political borders.",
       ],
       correctAnswer: 3,
       explanation:
-        "Political control and personal or communal religious change are different processes. The Delhi Sultanate ruled many non-Muslim subjects, while trading and teaching networks could carry Islam beyond state boundaries.",
+        "Political control and religious change are different processes. Muslim states could rule non-Muslim subjects, while merchants and teachers could carry Islam beyond those states; neither process required the other to be complete.",
       topicId: "world-1-2",
     },
     {
@@ -120,13 +120,13 @@ export const bank = {
         "Which example most clearly illustrates intellectual innovation in the Islamic world?",
       choices: [
         "Al-Tusi developing mathematical and astronomical work at an observatory",
-        "An army collecting taxes after occupying a city",
-        "A ruler replacing one governor with another",
-        "A caravan carrying an unchanged manuscript to a new town",
+        "Physicians in Cairo copying established medical manuals for storage in a hospital library",
+        "Scholars in Baghdad translating Greek philosophical works into Arabic without adding new commentary",
+        "Merchants carrying Indian mathematical texts to new scholarly markets across Dar al-Islam",
       ],
       correctAnswer: 0,
       explanation:
-        "Al-Tusi’s mathematical and astronomical work added to knowledge. Carrying a manuscript is intellectual transfer; innovation specifically involves developing new methods, explanations, or findings.",
+        "Al-Tusi’s mathematical and astronomical work added to knowledge. Copying, translating, and transporting texts are important forms of preservation or transfer, but innovation specifically develops new methods, explanations, or findings.",
       topicId: "world-1-2",
     },
     {
@@ -138,14 +138,14 @@ export const bank = {
         "A student claims that the Mongol capture of Baghdad in 1258 ended intellectual activity everywhere in the Islamic world.",
       prompt: "Which evidence most directly challenges the claim?",
       choices: [
-        "Abbasid caliphs had supported scholars before 1200.",
-        "Baghdad was an important city before its conquest.",
+        "Abbasid caliphs had supported translation and scholarship in Baghdad before the Mongol conquest.",
+        "Ibn Rushd produced philosophical commentaries in al-Andalus during the twelfth century.",
         "Al-Tusi conducted astronomical work under Mongol patronage, and Ibn Khaldun wrote in a later century.",
-        "Some Muslim rulers had Turkic backgrounds.",
+        "Baghdad’s libraries contained works produced in earlier centuries.",
       ],
       correctAnswer: 2,
       explanation:
-        "The claim concerns all intellectual activity after 1258. Evidence of later scholarship directly contradicts it. Evidence only from before the conquest would not establish what happened afterward.",
+        "The claim concerns all intellectual activity after 1258, so evidence of later scholarship directly contradicts it. The other choices establish earlier achievements but do not prove that new intellectual work continued afterward.",
       topicId: "world-1-2",
     },
     {
@@ -156,14 +156,14 @@ export const bank = {
       prompt:
         "Which sequence best explains one route of intellectual exchange through Iberia?",
       choices: [
-        "Latin translation → the end of all Arabic scholarship → universal literacy",
-        "Military conquest → identical beliefs → no need for translation",
-        "Political division → total isolation → disappearance of written knowledge",
+        "Greek texts → translation from Latin into Arabic in Iberia → replacement of Arabic scholarship by European universities",
+        "Arabic texts and commentaries → direct adoption by European scholars without translation → identical interpretations",
+        "European texts → translation into Arabic → use limited to Muslim rulers and excluded from Iberian scholarly communities",
         "Arabic texts and commentaries → translation into Latin → wider use by European scholars",
       ],
       correctAnswer: 3,
       explanation:
-        "Translation allowed additional readers to study earlier works and Arabic commentaries. It expanded access and debate; it did not require religious uniformity or end scholarship in the source language.",
+        "Translation from Arabic into Latin allowed additional European readers to study earlier works and Arabic commentaries. Exchange widened access and debate rather than eliminating translation, producing identical interpretations, or restricting texts to rulers.",
       topicId: "world-1-2",
     },
     {
@@ -175,13 +175,13 @@ export const bank = {
         "What useful comparison links Islamic intellectual exchange with Chinese cultural influence in Korea and Japan?",
       choices: [
         "Both involved receiving societies adopting and adapting ideas across political boundaries.",
-        "Both required every receiving society to become a province of one empire.",
-        "Both prevented local traditions from shaping borrowed ideas.",
-        "Both spread ideas only through military conquest.",
+        "Both crossed borders, but receiving societies copied foreign ideas without local adaptation.",
+        "Both required conquest and political control before cultural exchange could occur.",
+        "Both remained limited to rulers and scholars and did not reshape local traditions.",
       ],
       correctAnswer: 0,
       explanation:
-        "In both cases, cultural influence crossed political borders and involved local choices. Contact and adaptation help explain the similarities without assuming one government controlled every society.",
+        "In both cases, cultural influence crossed political borders and involved local choices. The key distinction is that receiving societies adapted ideas; exchange did not require conquest, exact copying, or direct imperial rule.",
       topicId: "world-1-2",
     },
     {

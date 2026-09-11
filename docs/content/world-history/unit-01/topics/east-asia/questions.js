@@ -11,14 +11,14 @@ export const bank = {
       prompt:
         "Why did examinations on Confucian writings help the Song government maintain its authority?",
       choices: [
-        "They trained all citizens to vote for the emperor.",
-        "They removed the need for officials in distant provinces.",
+        "They recruited officials mainly for military experience, reducing the dynasty’s reliance on civilian administrators.",
+        "They gave wealthy provincial families the right to appoint officials who owed loyalty to local elites.",
         "They helped recruit officials whose education reinforced ideas of hierarchy and duty.",
-        "They reserved government office exclusively for hereditary nobles.",
+        "They made the emperor’s authority depend on approval from officials selected by regional assemblies.",
       ],
       correctAnswer: 2,
       explanation:
-        "The examinations connected recruitment with Confucian ideas about ethical conduct and relationships. Officials carried these ideas into administration; the system did not create elections or eliminate bureaucracy.",
+        "The examinations connected recruitment with Confucian ideas about ethical conduct and hierarchy. They trained civilian administrators loyal to the imperial system rather than military officers, hereditary appointees, or elected representatives.",
     },
     {
       id: "q2",
@@ -31,13 +31,13 @@ export const bank = {
       prompt: "Which conclusion is best supported by this situation?",
       choices: [
         "Examinations offered a route to office, but resources affected a candidate’s opportunities.",
-        "Examination results depended only on inherited noble titles.",
-        "Every social group had the same chance of gaining a government post.",
-        "Confucian education had no relationship to government service.",
+        "Only hereditary nobles could sit for the exams, so preparation did not matter.",
+        "Family wealth, rather than exam performance, directly determined official scores.",
+        "Because the exams rewarded merit, unequal preparation did not affect mobility.",
       ],
       correctAnswer: 0,
       explanation:
-        "Testing knowledge could create opportunities beyond noble birth, while unequal access to preparation favored wealthy families. This is a limit on equal opportunity, not evidence that exams did not matter.",
+        "Testing knowledge could create opportunities beyond noble birth, while unequal access to preparation favored wealthy families. Wealth influenced preparation and opportunity, but it did not legally restrict the exams to nobles or directly determine a candidate’s score.",
     },
     {
       id: "q3",
@@ -48,14 +48,14 @@ export const bank = {
       prompt:
         "Which description best captures continuity and change in Neo-Confucian thought?",
       choices: [
-        "It rejected family obligations and replaced them with elected leadership.",
+        "It preserved Confucian social hierarchy but rejected Buddhist and Daoist ideas as incompatible with Chinese traditions.",
         "It preserved Confucian moral concerns while developing ideas in response to other traditions.",
-        "It ended the practice of Buddhism across East Asia.",
-        "It abandoned education as a means of developing ethical conduct.",
+        "It combined Buddhist meditation with civil-service training to create a state religion enforced throughout East Asia.",
+        "It revived classical Confucian texts while shifting moral authority from families and rulers to Buddhist monasteries.",
       ],
       correctAnswer: 1,
       explanation:
-        "Neo-Confucianism kept Confucian ethics central but developed new interpretations in conversation and tension with Buddhist and Daoist ideas. Renewed tradition did not mean complete intellectual isolation.",
+        "Neo-Confucianism kept Confucian ethics and hierarchy central while developing ideas in conversation with Buddhism and Daoism. It neither rejected those influences completely nor transferred authority to Buddhist institutions.",
     },
     {
       id: "q4",
@@ -65,14 +65,14 @@ export const bank = {
       skillTag: "Explaining significance",
       prompt: "How could the Confucian emphasis on filial piety support imperial rule?",
       choices: [
-        "It required children to select rulers through an examination.",
-        "It prevented Buddhist ideas from reaching China.",
-        "It transferred all government duties to merchants.",
+        "It taught respect for family elders while discouraging people from applying those duties to political rulers.",
+        "It justified imperial authority mainly by promising equal social rank to every obedient subject.",
+        "It shifted loyalty away from kinship groups and toward Buddhist monasteries supervised by the state.",
         "It encouraged respect for hierarchical relationships that could extend from family to state.",
       ],
       correctAnswer: 3,
       explanation:
-        "Duties within a family could help justify duties within a wider political hierarchy. Filial piety concerned respect and responsibility; it was not an electoral system or a ban on foreign religion.",
+        "Filial piety linked duties within the family to respect for authority in a wider political hierarchy. Its political importance came from extending hierarchy, not separating family ethics from government or promising social equality.",
     },
     {
       id: "q5",
@@ -84,13 +84,13 @@ export const bank = {
         "Which sequence best explains how agricultural innovation contributed to Song economic growth?",
       choices: [
         "Higher food output → support for population and specialized work → larger markets",
-        "Higher food output → disappearance of farming → dependence only on imports",
-        "More harvests → less need for transport → the closure of markets",
-        "New rice varieties → an end to artisan production → fewer towns",
+        "Higher food output → population growth → declining demand for artisan goods as workers returned to subsistence farming",
+        "New rice varieties → more land under cultivation → less need for canals and commercial transport",
+        "More harvests → lower government revenues → contraction of cities and long-distance trade",
       ],
       correctAnswer: 0,
       explanation:
-        "A larger food supply could support more people and more specialized occupations, helping markets expand. Agriculture remained central, and irrigation, tools, and transport also contributed.",
+        "A larger food supply supported population growth and workers in specialized occupations, which expanded towns and markets. Agricultural gains increased rather than reduced the value of artisan production and transport networks.",
     },
     {
       id: "q6",
@@ -102,14 +102,14 @@ export const bank = {
         "A village workshop makes porcelain for buyers in distant cities. Boats carry its output along waterways, and merchants arrange sales beyond the local community.",
       prompt: "This situation most directly illustrates which development?",
       choices: [
-        "A return to producing only for household consumption",
-        "The replacement of artisan work by steam-powered factories",
+        "The growth of home-based production intended mainly for local household consumption",
+        "The expansion of state-supervised workshops that produced porcelain only as tribute for the emperor",
         "The growing importance of production for markets and regional trade",
-        "The elimination of farming from the Chinese economy",
+        "The spread of rural proto-industrial production powered by mechanized steam equipment",
       ],
       correctAnswer: 2,
       explanation:
-        "Production for distant buyers shows commercialization. Artisans and peasants still supplied goods; market growth in the Song period was not the same as later factory industrialization.",
+        "Production for distant buyers shows commercialization and proto-industrial market production. The key evidence is sale beyond the local community, not household consumption, tribute-only production, or later steam-powered industry.",
     },
     {
       id: "q7",
@@ -119,14 +119,14 @@ export const bank = {
       skillTag: "Comparison",
       prompt: "Which comparison of Song China and medieval Japan is most accurate?",
       choices: [
-        "Both were administered entirely by elected religious leaders.",
+        "Both borrowed Chinese political models and relied primarily on scholar-officials selected through civil-service examinations.",
         "Both experienced Chinese and Buddhist cultural influences, but Japan’s warrior elites differed from Song scholar-officials.",
-        "Neither developed political institutions influenced by local traditions.",
-        "Japan’s adoption of Chinese culture made it a province governed by Song officials.",
+        "Both adopted Buddhism, but Song rulers placed political authority in monasteries while Japan retained secular rule.",
+        "Both developed warrior governments, although Japan’s shogunate was more centralized than Song military rule.",
       ],
       correctAnswer: 1,
       explanation:
-        "Cultural borrowing coexisted with political differences. Song administration relied heavily on scholar-officials, while warrior leadership grew central in Japan. Shared culture does not prove shared rule.",
+        "Cultural borrowing coexisted with political differences. Song administration relied heavily on scholar-officials, while warrior leadership grew central in Japan; Japan did not simply reproduce China’s examination bureaucracy.",
     },
     {
       id: "q8",
@@ -137,14 +137,14 @@ export const bank = {
       prompt:
         "A historian finds Chinese-derived writing and Confucian learning in Korea and Vietnam. What additional evidence would best show local adaptation?",
       choices: [
-        "Records that both regions had contact with China",
-        "Examples of books arriving from Chinese ports",
-        "Evidence that Chinese scholars valued literacy",
+        "Records showing Korean and Vietnamese elites used Chinese writing in government documents",
+        "Evidence that Korea and Vietnam maintained tributary and diplomatic relations with Chinese dynasties",
+        "Records showing rulers copied China’s examination curriculum without adapting it",
         "Records showing that each region modified borrowed institutions to suit its own elites and traditions",
       ],
       correctAnswer: 3,
       explanation:
-        "Adaptation means reshaping what is borrowed. Evidence of local modifications shows more than contact or simple adoption and helps explain why societies remained distinct.",
+        "Adaptation means reshaping what is borrowed. Writing, diplomacy, and an unaltered exam curriculum would demonstrate contact or adoption; local modifications specifically show adaptation.",
     },
     {
       id: "k1",
