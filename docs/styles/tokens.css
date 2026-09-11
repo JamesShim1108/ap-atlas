@@ -1,0 +1,20 @@
+/* Palette and typefaces. These variables are shared by every course. */
+:root {
+  color-scheme: light;
+  --paper: #eaf0ed;
+  --white: #f2f6f1;
+  --ink: #173e34;
+  --muted: #4c655b;
+  --green: #245548;
+  --green-hover: #193f34;
+  --soft: #dce9e2;
+  --line: #b4c7bf;
+  --focus: #367d7b;
+  --amber: #835711;
+  --amber-bg: #fff5e2;
+  --red: #8b3d31;
+  --red-bg: #fcf0eb;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: "Segoe UI", Arial, sans-serif;
+  --mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+}

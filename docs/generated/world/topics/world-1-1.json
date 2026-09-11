@@ -1,0 +1,449 @@
+{
+  "course": {
+    "schemaVersion": 1,
+    "id": "world",
+    "title": "AP World History: Modern",
+    "shortTitle": "AP World",
+    "description": "Understand the people, ideas, and connections that shaped the world from c. 1200 to the present.",
+    "status": "ready",
+    "period": "c. 1200–present",
+    "order": 1,
+    "previewDescription": "Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present."
+  },
+  "unit": {
+    "schemaVersion": 1,
+    "id": "world-1",
+    "courseId": "world",
+    "number": 1,
+    "title": "The Global Tapestry",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "description": "Explore how societies organized power, shared beliefs, and built their economies across the world.",
+    "quizzes": [
+      {
+        "id": "world-1-practice",
+        "courseId": "world",
+        "unitId": "world-1",
+        "title": "Unit 1 practice",
+        "quizType": "unit",
+        "selections": [
+          {
+            "topicId": "world-1-1",
+            "questionIds": [
+              "q1",
+              "q5",
+              "q7"
+            ]
+          },
+          {
+            "topicId": "world-1-2",
+            "questionIds": [
+              "islam-q1",
+              "islam-q4",
+              "islam-q8"
+            ]
+          },
+          {
+            "topicId": "world-1-3",
+            "questionIds": [
+              "world-1-3-q1",
+              "world-1-3-q4",
+              "world-1-3-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-4",
+            "questionIds": [
+              "world-1-4-q1",
+              "world-1-4-q4",
+              "world-1-4-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-5",
+            "questionIds": [
+              "world-1-5-q1",
+              "world-1-5-q4",
+              "world-1-5-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-6",
+            "questionIds": [
+              "world-1-6-q1",
+              "world-1-6-q4",
+              "world-1-6-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-7",
+            "questionIds": [
+              "world-1-7-q1",
+              "world-1-7-q4",
+              "world-1-7-q6"
+            ]
+          }
+        ]
+      }
+    ],
+    "topicCount": 7,
+    "firstTopic": {
+      "id": "world-1-1",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 1,
+      "code": "1.1",
+      "title": "East Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Song China: an enduring government, changing economy, and influential culture."
+    },
+    "hasGuide": true,
+    "writingQuizzes": [
+      {
+        "id": "world-1-saq",
+        "title": "Unit 1 writing quiz",
+        "partCount": 3
+      }
+    ]
+  },
+  "topic": {
+    "id": "world-1-1",
+    "courseId": "world",
+    "unitId": "world-1",
+    "order": 1,
+    "code": "1.1",
+    "title": "East Asia",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "summary": "Song China: an enduring government, changing economy, and influential culture."
+  },
+  "framework": {
+    "id": "inspect",
+    "name": "InSPECT",
+    "title": "Use InSPECT to choose your evidence",
+    "intro": "A fact can connect to more than one lens. Choose the lens that helps answer the prompt.",
+    "sourceNote": "Based on the class Early Religions + InSPECT slides, pages 5-17.",
+    "themes": [
+      {
+        "id": "In",
+        "title": "Interactions of humans with the environment",
+        "question": "How did geography, crops, resources, or disease shape choices?",
+        "example": "Andean terraces made steep slopes more usable for farming.",
+        "shortTitle": "Environment"
+      },
+      {
+        "id": "S",
+        "title": "Social interactions and organization",
+        "question": "Who had status, opportunities, or obligations?",
+        "example": "Examination preparation favored families that could afford education.",
+        "shortTitle": "Social"
+      },
+      {
+        "id": "P",
+        "title": "Political systems and governance",
+        "question": "How did rulers gain authority and administer territory?",
+        "example": "Song officials carried imperial decisions into local government.",
+        "shortTitle": "Political"
+      },
+      {
+        "id": "E",
+        "title": "Economic systems",
+        "question": "How were goods produced, exchanged, taxed, or distributed?",
+        "example": "Mali drew revenue from commerce through its territory.",
+        "shortTitle": "Economic"
+      },
+      {
+        "id": "C",
+        "title": "Cultural developments and interactions",
+        "question": "How did beliefs, learning, and artistic practices influence society?",
+        "example": "Buddhist monasteries connected religious practice with education.",
+        "shortTitle": "Cultural"
+      },
+      {
+        "id": "T",
+        "title": "Technology and innovation",
+        "question": "What techniques or tools changed what people could do?",
+        "example": "Inca roads and knotted records helped officials coordinate resources.",
+        "shortTitle": "Technology"
+      }
+    ]
+  },
+  "lesson": {
+    "schemaVersion": 1,
+    "id": "world-1-1",
+    "unitId": "world-1",
+    "code": "1.1",
+    "title": "East Asia",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "summary": "Song China: an enduring government, changing economy, and influential culture.",
+    "courseId": "world",
+    "order": 1,
+    "minutes": 10,
+    "learningGoals": [
+      "Explain continuity in Chinese government and the limits of examination-based mobility.",
+      "Connect belief systems and cultural exchange to East Asian societies.",
+      "Explain how agricultural, manufacturing, and transport innovations supported commercialization."
+    ],
+    "bigIdea": "Song China combined long-standing ideas about authority with changes in farming and trade. Its neighbors borrowed Chinese practices while shaping societies of their own.",
+    "context": "Around 1200, the Southern Song governed much of southern China. The Song dynasty lasted from 960 to 1279; the broader topic continues through Mongol Yuan rule and into the Ming period. Use Song China as a starting point, not as the ruler of this entire timeline.",
+    "sections": [
+      {
+        "id": "governance",
+        "title": "How do you govern a huge territory?",
+        "conceptTitle": "Governance",
+        "lenses": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "An emperor could not personally collect every tax or settle every local dispute. An imperial bureaucracy, a network of appointed officials, carried out those jobs. The Song expanded this system, building on institutions developed under earlier dynasties."
+          },
+          {
+            "type": "paragraph",
+            "text": "Civil service examinations tested knowledge of Confucian writings and helped select officials. Success could give an educated man a path into government beyond inherited noble rank. But preparation required time, teachers, and books, giving wealthy families a major advantage. Women were excluded from the examination route."
+          },
+          {
+            "type": "paragraph",
+            "text": "The scholar-gentry gained influence through education, government service, and often landownership. The important connection: exams tied political opportunity to a shared set of ideas, while unequal access to education preserved social hierarchy."
+          }
+        ],
+        "takeaway": "An exam-based system offered some social mobility. It did not give everyone an equal opportunity or make imperial China a democracy."
+      },
+      {
+        "id": "beliefs",
+        "title": "Ideas could support political power.",
+        "conceptTitle": "Belief systems",
+        "lenses": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Confucian teaching emphasized ethical conduct and duties within relationships: rulers and subjects, parents and children, elders and younger people. Filial piety meant respect and responsibility toward parents and ancestors. These family expectations helped make a wider hierarchy seem legitimate."
+          },
+          {
+            "type": "paragraph",
+            "text": "Neo-Confucian thinkers renewed Confucian traditions while responding to ideas associated with Buddhism and Daoism. They put moral self-cultivation at the center of an account of how society and the universe should work. This was a changing intellectual tradition, not simply a return to an untouched past."
+          },
+          {
+            "type": "paragraph",
+            "text": "Buddhism, which originated in South Asia, remained influential across East Asia. Its teachings connected suffering with craving and offered ethical and spiritual paths toward liberation. Communities developed different traditions; Chan in China and Zen in Japan emphasized meditation. Confucianism, Buddhism, and Daoism could coexist and influence one another."
+          },
+          {
+            "type": "paragraph",
+            "text": "Buddhist branches shared important teachings but developed different institutions and practices. Theravada traditions became prominent in Sri Lanka and much of mainland Southeast Asia, with a strong monastic tradition. Mahayana traditions, influential in China and Korea, emphasized the bodhisattva ideal of helping other beings toward liberation. Tibetan Buddhism drew on Mahayana and Vajrayana practices, including ritual and teacher lineages. These broad labels contain considerable diversity."
+          },
+          {
+            "type": "paragraph",
+            "text": "Social roles remained unequal. Patriarchal expectations privileged male authority, and foot binding among some Chinese families restricted women’s mobility and reflected status distinctions. Cultural ideals should be understood as historical beliefs, not universal rules for how people should live."
+          }
+        ],
+        "takeaway": "Continuity and change can happen together: familiar social duties persisted as thinkers developed new interpretations."
+      },
+      {
+        "id": "economy",
+        "title": "Follow the rice to understand the cities.",
+        "conceptTitle": "Economic change",
+        "lenses": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Early-ripening Champa rice reached China from a kingdom in present-day Vietnam. Alongside irrigation, improved tools, and other farming changes, it helped raise food output. In suitable conditions, a shorter growing season allowed more than one harvest a year."
+          },
+          {
+            "type": "paragraph",
+            "text": "A larger food supply supported population growth and more people working outside farming. Farmers and artisans increasingly produced for markets. Workshops supplied goods such as silk, porcelain, and iron products, while cities brought buyers, sellers, and craftspeople together."
+          },
+          {
+            "type": "paragraph",
+            "text": "Waterways, including the Grand Canal, linked producing regions and markets. Better shipping and navigation supported trade; paper money helped some transactions. Growing trade did not mean farming disappeared: peasants and artisans still did much of the work that sustained the economy."
+          },
+          {
+            "type": "paragraph",
+            "text": "Manufacturing and technical knowledge reinforced these changes. Iron and steel production supplied tools and other goods; printing made texts more available to readers; and the compass supported navigation. Porcelain and textiles reached distant buyers. This growth relied heavily on peasant and artisanal labor and should not be confused with the later factory-based Industrial Revolution."
+          }
+        ],
+        "takeaway": "Explain the chain: greater farm output → support for population and specialized work → expanding markets. Rice was one contributor, not the sole cause."
+      },
+      {
+        "id": "influence",
+        "title": "Borrowing did not mean becoming identical.",
+        "conceptTitle": "Regional influence",
+        "lenses": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Chinese writing, Confucian learning, and Buddhist traditions spread through contact with Korea, Japan, and Vietnam. Trade, scholars, monks, and diplomacy carried ideas across borders. Adoption depended on local priorities and existing institutions."
+          },
+          {
+            "type": "paragraph",
+            "text": "Korea and Vietnam used versions of Chinese-style examinations and Confucian administration, but local elites and traditions shaped how these worked. In Japan, Chinese cultural influences coexisted with Shinto traditions and growing warrior authority under shoguns."
+          },
+          {
+            "type": "paragraph",
+            "text": "For a useful comparison, name something shared and something different. Song China and Japan both drew on Buddhist and Chinese cultural traditions, but appointed scholar-officials were central to Song government while warrior elites held major political power in medieval Japan."
+          },
+          {
+            "type": "paragraph",
+            "text": "Heian Japan had earlier adapted Chinese writing, court institutions, and Buddhist learning while developing a distinctive literary culture. By around 1200, military governments and warrior elites were increasingly important. In Korea and Vietnam, local elites similarly shaped borrowed institutions. Diplomatic tribute and cultural influence should not be assumed to mean direct Chinese rule."
+          }
+        ],
+        "takeaway": "Cultural influence does not, by itself, prove political control. Look for adaptation as well as similarity."
+      }
+    ],
+    "readingGuide": {
+      "objectives": "A, B, C",
+      "readingLabel": "AMSCO Topic 1.1, supplied Unit 1 PDF pages 3-11",
+      "lenses": [
+        "P",
+        "S",
+        "C",
+        "In",
+        "E",
+        "T"
+      ],
+      "prompts": [
+        "Trace the connection from Champa rice to specialized urban work. Include one other contributing development.",
+        "Compare the role of educated officials in Song China with warrior elites in Japan.",
+        "Use a belief or practice to show both Chinese influence and local adaptation in East Asia."
+      ]
+    },
+    "vocabulary": [
+      {
+        "id": "bureaucracy",
+        "topicId": "world-1-1",
+        "term": "Imperial bureaucracy",
+        "definition": "A system of appointed officials who carry out a ruler’s policies and manage government work."
+      },
+      {
+        "id": "exams",
+        "topicId": "world-1-1",
+        "term": "Civil service examination",
+        "definition": "An examination used to select government officials; in imperial China, knowledge of Confucian texts was central."
+      },
+      {
+        "id": "gentry",
+        "topicId": "world-1-1",
+        "term": "Scholar-gentry",
+        "definition": "An educated elite associated with Confucian learning, government service, and often landownership."
+      },
+      {
+        "id": "neo",
+        "topicId": "world-1-1",
+        "term": "Neo-Confucianism",
+        "definition": "A renewed Confucian intellectual tradition that emphasized moral development while engaging with Buddhist and Daoist ideas."
+      },
+      {
+        "id": "filial",
+        "topicId": "world-1-1",
+        "term": "Filial piety",
+        "definition": "Respect for and responsibility toward parents and ancestors, an important Confucian value."
+      },
+      {
+        "id": "champa",
+        "topicId": "world-1-1",
+        "term": "Champa rice",
+        "definition": "An early-ripening rice variety introduced from present-day Vietnam that contributed to increased Chinese agricultural output."
+      },
+      {
+        "id": "commercial",
+        "topicId": "world-1-1",
+        "term": "Commercialization",
+        "definition": "A shift toward producing goods for sale and relying more on markets and trade."
+      },
+      {
+        "id": "adaptation",
+        "topicId": "world-1-1",
+        "term": "Cultural adaptation",
+        "definition": "Changing a borrowed idea or practice to fit a society’s own needs and traditions."
+      },
+      {
+        "id": "theravada",
+        "term": "Theravada Buddhism",
+        "definition": "A Buddhist tradition with a strong monastic heritage, prominent in Sri Lanka and much of mainland Southeast Asia.",
+        "topicId": "world-1-1"
+      },
+      {
+        "id": "mahayana",
+        "term": "Mahayana Buddhism",
+        "definition": "A family of Buddhist traditions emphasizing the bodhisattva ideal, influential in East Asia.",
+        "topicId": "world-1-1"
+      },
+      {
+        "id": "tibetan",
+        "term": "Tibetan Buddhism",
+        "definition": "Buddhist traditions associated with Tibet that include Mahayana and Vajrayana teachings and practices.",
+        "topicId": "world-1-1"
+      },
+      {
+        "id": "artisan",
+        "term": "Artisanal labor",
+        "definition": "Skilled craft production, important to the manufacture of textiles, ceramics, and other goods.",
+        "topicId": "world-1-1"
+      }
+    ],
+    "connections": [
+      {
+        "id": "rice-cities",
+        "topicId": "world-1-1",
+        "type": "Cause → effect",
+        "title": "A crop can change more than the farm.",
+        "body": "Higher agricultural output supported a larger population and specialized work. More producers and buyers helped markets grow. Connect an innovation to the social or economic change it supported."
+      },
+      {
+        "id": "exams-hierarchy",
+        "topicId": "world-1-1",
+        "type": "Continuity / change",
+        "title": "A new path upward, with old advantages.",
+        "body": "Examination success offered a route to office, yet wealthy families could more easily fund education. An institution can create opportunities while preserving inequality."
+      },
+      {
+        "id": "china-japan",
+        "topicId": "world-1-1",
+        "type": "Similarity / difference",
+        "title": "Shared influences, different governments.",
+        "body": "Song China and medieval Japan shared Buddhist and Chinese cultural influences. However, scholar-officials were central to Song administration, while warrior elites exercised major power in Japan."
+      },
+      {
+        "id": "belief-power",
+        "topicId": "world-1-1",
+        "type": "Why it matters",
+        "title": "Beliefs help explain authority.",
+        "body": "Confucian duties linked respect within families to expectations within the state. When explaining how a ruler maintained power, consider the ideas that made hierarchy acceptable as well as the officials who enforced policy."
+      }
+    ],
+    "sourceIds": [
+      "reference-16",
+      "ced-topic-1-1",
+      "reference-17",
+      "reference-18",
+      "reference-19"
+    ]
+  },
+  "bankPath": "world/banks/world-1-1.json",
+  "sources": [
+    {
+      "id": "reference-16",
+      "label": "Class reading: AMSCO Unit 1, supplied PDF pages 3-11; Tang/Song/Mongols class slides. Earlier dynasties provide background."
+    },
+    {
+      "id": "ced-topic-1-1",
+      "label": "College Board: AP World History: Modern course framework (2026), Topic 1.1",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-world-history-modern-course-and-exam-description.pdf"
+    },
+    {
+      "id": "reference-17",
+      "label": "Columbia University, Asia for Educators: Rice cultivation",
+      "url": "https://afe.easia.columbia.edu/songdynasty-module/tech-rice.html"
+    },
+    {
+      "id": "reference-18",
+      "label": "Columbia University, Asia for Educators: Commercialization in Song China",
+      "url": "https://afe.easia.columbia.edu/songdynasty-module/econ-rev-commercial.html"
+    },
+    {
+      "id": "reference-19",
+      "label": "Class framework: Early Religions + InSPECT, slides 5-17. InSPECT categories inform the reading guide and writing exercise."
+    }
+  ],
+  "assets": {}
+}

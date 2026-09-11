@@ -1,0 +1,281 @@
+{
+  "course": {
+    "schemaVersion": 1,
+    "id": "world",
+    "title": "AP World History: Modern",
+    "shortTitle": "AP World",
+    "description": "Understand the people, ideas, and connections that shaped the world from c. 1200 to the present.",
+    "status": "ready",
+    "period": "c. 1200–present",
+    "order": 1,
+    "previewDescription": "Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present.",
+    "readyTopicCount": 7,
+    "previewTopics": [
+      {
+        "id": "world-1-1",
+        "courseId": "world",
+        "unitId": "world-1",
+        "order": 1,
+        "code": "1.1",
+        "title": "East Asia",
+        "period": "c. 1200–1450",
+        "status": "ready",
+        "summary": "Song China: an enduring government, changing economy, and influential culture."
+      },
+      {
+        "id": "world-1-2",
+        "courseId": "world",
+        "unitId": "world-1",
+        "order": 2,
+        "code": "1.2",
+        "title": "Dar al-Islam",
+        "period": "c. 1200–1450",
+        "status": "ready",
+        "summary": "Regional Muslim states, connected communities, and the movement of ideas across Afro-Eurasia."
+      },
+      {
+        "id": "world-1-3",
+        "courseId": "world",
+        "unitId": "world-1",
+        "order": 3,
+        "code": "1.3",
+        "title": "South and Southeast Asia",
+        "period": "c. 1200–1450",
+        "status": "ready",
+        "summary": "Hindu, Buddhist, and Muslim communities; inland kingdoms and maritime states."
+      }
+    ],
+    "firstTopic": {
+      "id": "world-1-1",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 1,
+      "code": "1.1",
+      "title": "East Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Song China: an enduring government, changing economy, and influential culture."
+    },
+    "indexPath": "world/index.json",
+    "routesPath": "world/routes.json"
+  },
+  "units": [
+    {
+      "schemaVersion": 1,
+      "id": "world-1",
+      "courseId": "world",
+      "number": 1,
+      "title": "The Global Tapestry",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "description": "Explore how societies organized power, shared beliefs, and built their economies across the world.",
+      "quizzes": [
+        {
+          "id": "world-1-practice",
+          "courseId": "world",
+          "unitId": "world-1",
+          "title": "Unit 1 practice",
+          "quizType": "unit",
+          "selections": [
+            {
+              "topicId": "world-1-1",
+              "questionIds": [
+                "q1",
+                "q5",
+                "q7"
+              ]
+            },
+            {
+              "topicId": "world-1-2",
+              "questionIds": [
+                "islam-q1",
+                "islam-q4",
+                "islam-q8"
+              ]
+            },
+            {
+              "topicId": "world-1-3",
+              "questionIds": [
+                "world-1-3-q1",
+                "world-1-3-q4",
+                "world-1-3-q6"
+              ]
+            },
+            {
+              "topicId": "world-1-4",
+              "questionIds": [
+                "world-1-4-q1",
+                "world-1-4-q4",
+                "world-1-4-q6"
+              ]
+            },
+            {
+              "topicId": "world-1-5",
+              "questionIds": [
+                "world-1-5-q1",
+                "world-1-5-q4",
+                "world-1-5-q6"
+              ]
+            },
+            {
+              "topicId": "world-1-6",
+              "questionIds": [
+                "world-1-6-q1",
+                "world-1-6-q4",
+                "world-1-6-q6"
+              ]
+            },
+            {
+              "topicId": "world-1-7",
+              "questionIds": [
+                "world-1-7-q1",
+                "world-1-7-q4",
+                "world-1-7-q6"
+              ]
+            }
+          ]
+        }
+      ],
+      "topicCount": 7,
+      "firstTopic": {
+        "id": "world-1-1",
+        "courseId": "world",
+        "unitId": "world-1",
+        "order": 1,
+        "code": "1.1",
+        "title": "East Asia",
+        "period": "c. 1200–1450",
+        "status": "ready",
+        "summary": "Song China: an enduring government, changing economy, and influential culture."
+      },
+      "hasGuide": true,
+      "writingQuizzes": [
+        {
+          "id": "world-1-saq",
+          "title": "Unit 1 writing quiz",
+          "partCount": 3
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "world-2",
+      "courseId": "world",
+      "number": 2,
+      "title": "Networks of Exchange",
+      "period": "c. 1200–1450",
+      "status": "soon",
+      "description": "",
+      "quizzes": [],
+      "topicCount": 0,
+      "firstTopic": null,
+      "hasGuide": false,
+      "writingQuizzes": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "world-3",
+      "courseId": "world",
+      "number": 3,
+      "title": "Land-Based Empires",
+      "period": "c. 1450–1750",
+      "status": "soon",
+      "description": "",
+      "quizzes": [],
+      "topicCount": 0,
+      "firstTopic": null,
+      "hasGuide": false,
+      "writingQuizzes": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "world-4",
+      "courseId": "world",
+      "number": 4,
+      "title": "Transoceanic Interconnections",
+      "period": "c. 1450–1750",
+      "status": "soon",
+      "description": "",
+      "quizzes": [],
+      "topicCount": 0,
+      "firstTopic": null,
+      "hasGuide": false,
+      "writingQuizzes": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "world-5",
+      "courseId": "world",
+      "number": 5,
+      "title": "Revolutions",
+      "period": "c. 1750–1900",
+      "status": "soon",
+      "description": "",
+      "quizzes": [],
+      "topicCount": 0,
+      "firstTopic": null,
+      "hasGuide": false,
+      "writingQuizzes": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "world-6",
+      "courseId": "world",
+      "number": 6,
+      "title": "Consequences of Industrialization",
+      "period": "c. 1750–1900",
+      "status": "soon",
+      "description": "",
+      "quizzes": [],
+      "topicCount": 0,
+      "firstTopic": null,
+      "hasGuide": false,
+      "writingQuizzes": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "world-7",
+      "courseId": "world",
+      "number": 7,
+      "title": "Global Conflict",
+      "period": "c. 1900–present",
+      "status": "soon",
+      "description": "",
+      "quizzes": [],
+      "topicCount": 0,
+      "firstTopic": null,
+      "hasGuide": false,
+      "writingQuizzes": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "world-8",
+      "courseId": "world",
+      "number": 8,
+      "title": "Cold War and Decolonization",
+      "period": "c. 1900–present",
+      "status": "soon",
+      "description": "",
+      "quizzes": [],
+      "topicCount": 0,
+      "firstTopic": null,
+      "hasGuide": false,
+      "writingQuizzes": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "world-9",
+      "courseId": "world",
+      "number": 9,
+      "title": "Globalization",
+      "period": "c. 1900–present",
+      "status": "soon",
+      "description": "",
+      "quizzes": [],
+      "topicCount": 0,
+      "firstTopic": null,
+      "hasGuide": false,
+      "writingQuizzes": []
+    }
+  ]
+}

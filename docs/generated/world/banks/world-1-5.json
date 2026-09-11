@@ -1,0 +1,422 @@
+{
+  "course": {
+    "schemaVersion": 1,
+    "id": "world",
+    "title": "AP World History: Modern",
+    "shortTitle": "AP World",
+    "description": "Understand the people, ideas, and connections that shaped the world from c. 1200 to the present.",
+    "status": "ready",
+    "period": "c. 1200–present",
+    "order": 1,
+    "previewDescription": "Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present."
+  },
+  "unit": {
+    "schemaVersion": 1,
+    "id": "world-1",
+    "courseId": "world",
+    "number": 1,
+    "title": "The Global Tapestry",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "description": "Explore how societies organized power, shared beliefs, and built their economies across the world.",
+    "quizzes": [
+      {
+        "id": "world-1-practice",
+        "courseId": "world",
+        "unitId": "world-1",
+        "title": "Unit 1 practice",
+        "quizType": "unit",
+        "selections": [
+          {
+            "topicId": "world-1-1",
+            "questionIds": [
+              "q1",
+              "q5",
+              "q7"
+            ]
+          },
+          {
+            "topicId": "world-1-2",
+            "questionIds": [
+              "islam-q1",
+              "islam-q4",
+              "islam-q8"
+            ]
+          },
+          {
+            "topicId": "world-1-3",
+            "questionIds": [
+              "world-1-3-q1",
+              "world-1-3-q4",
+              "world-1-3-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-4",
+            "questionIds": [
+              "world-1-4-q1",
+              "world-1-4-q4",
+              "world-1-4-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-5",
+            "questionIds": [
+              "world-1-5-q1",
+              "world-1-5-q4",
+              "world-1-5-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-6",
+            "questionIds": [
+              "world-1-6-q1",
+              "world-1-6-q4",
+              "world-1-6-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-7",
+            "questionIds": [
+              "world-1-7-q1",
+              "world-1-7-q4",
+              "world-1-7-q6"
+            ]
+          }
+        ]
+      }
+    ],
+    "topicCount": 7,
+    "firstTopic": {
+      "id": "world-1-1",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 1,
+      "code": "1.1",
+      "title": "East Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Song China: an enduring government, changing economy, and influential culture."
+    },
+    "hasGuide": true,
+    "writingQuizzes": [
+      {
+        "id": "world-1-saq",
+        "title": "Unit 1 writing quiz",
+        "partCount": 3
+      }
+    ]
+  },
+  "topic": {
+    "id": "world-1-5",
+    "courseId": "world",
+    "unitId": "world-1",
+    "order": 5,
+    "code": "1.5",
+    "title": "Africa",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "summary": "African kingdoms and cities, connected by agriculture, commerce, and varied beliefs."
+  },
+  "framework": {
+    "id": "inspect",
+    "name": "InSPECT",
+    "title": "Use InSPECT to choose your evidence",
+    "intro": "A fact can connect to more than one lens. Choose the lens that helps answer the prompt.",
+    "sourceNote": "Based on the class Early Religions + InSPECT slides, pages 5-17.",
+    "themes": [
+      {
+        "id": "In",
+        "title": "Interactions of humans with the environment",
+        "question": "How did geography, crops, resources, or disease shape choices?",
+        "example": "Andean terraces made steep slopes more usable for farming.",
+        "shortTitle": "Environment"
+      },
+      {
+        "id": "S",
+        "title": "Social interactions and organization",
+        "question": "Who had status, opportunities, or obligations?",
+        "example": "Examination preparation favored families that could afford education.",
+        "shortTitle": "Social"
+      },
+      {
+        "id": "P",
+        "title": "Political systems and governance",
+        "question": "How did rulers gain authority and administer territory?",
+        "example": "Song officials carried imperial decisions into local government.",
+        "shortTitle": "Political"
+      },
+      {
+        "id": "E",
+        "title": "Economic systems",
+        "question": "How were goods produced, exchanged, taxed, or distributed?",
+        "example": "Mali drew revenue from commerce through its territory.",
+        "shortTitle": "Economic"
+      },
+      {
+        "id": "C",
+        "title": "Cultural developments and interactions",
+        "question": "How did beliefs, learning, and artistic practices influence society?",
+        "example": "Buddhist monasteries connected religious practice with education.",
+        "shortTitle": "Cultural"
+      },
+      {
+        "id": "T",
+        "title": "Technology and innovation",
+        "question": "What techniques or tools changed what people could do?",
+        "example": "Inca roads and knotted records helped officials coordinate resources.",
+        "shortTitle": "Technology"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "world-1-5-q1",
+      "topicId": "world-1-5",
+      "concept": "africa-kinship",
+      "prompt": "Which comparison of Mali and the Hausa city-states is accurate?",
+      "choices": [
+        "Both had one shared ruler throughout 1200-1450.",
+        "Mali developed an empire, while Hausa cities retained separate rulers.",
+        "Neither society participated in regional exchange.",
+        "Every Hausa city was governed by an Inca official."
+      ],
+      "correctAnswer": 1,
+      "explanation": "These societies organized authority at different scales. Economic and cultural links did not require political unity.",
+      "difficulty": "Apply",
+      "skillTag": "Comparison"
+    },
+    {
+      "id": "world-1-5-q2",
+      "topicId": "world-1-5",
+      "concept": "africa-mali",
+      "prompt": "How did trans-Saharan exchange contribute to Mali’s political power?",
+      "choices": [
+        "Revenue from commerce helped sustain rulers, armies, and administration.",
+        "Gold automatically eliminated disputes over succession.",
+        "Caravans replaced the need for agricultural producers.",
+        "Trade prevented religious and cultural connections."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Rulers could use commercial revenue as one source of resources. Agriculture and political organization remained necessary.",
+      "difficulty": "Apply",
+      "skillTag": "Causation"
+    },
+    {
+      "id": "world-1-5-q3",
+      "topicId": "world-1-5",
+      "concept": "africa-mali",
+      "prompt": "How could Mansa Musa’s pilgrimage support his authority?",
+      "choices": [
+        "It made all Malian subjects immediately Muslim.",
+        "It transferred the Malian throne to the pope.",
+        "It ended all local traditions associated with kingship.",
+        "It strengthened his visible Islamic identity and connections with influential religious networks."
+      ],
+      "correctAnswer": 3,
+      "explanation": "The pilgrimage connected sacred prestige with international relationships. It did not produce complete religious uniformity.",
+      "difficulty": "Apply",
+      "skillTag": "Explaining significance"
+    },
+    {
+      "id": "world-1-5-q4",
+      "topicId": "world-1-5",
+      "concept": "africa-swahili",
+      "prompt": "Which interpretation of Swahili cities best accounts for African and imported cultural elements?",
+      "choices": [
+        "Foreign goods prove that Africans could not build urban centers.",
+        "Arabic vocabulary means Swahili is not a Bantu language.",
+        "Local communities actively shaped cities connected to overseas exchange.",
+        "Islamic influence meant all coastal cities had one government."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Connections can influence language and institutions without removing local agency or separate governments.",
+      "difficulty": "Apply",
+      "skillTag": "Evidence and limits"
+    },
+    {
+      "id": "world-1-5-q5",
+      "topicId": "world-1-5",
+      "concept": "africa-zimbabwe",
+      "prompt": "What would imported ceramics found at Great Zimbabwe most directly suggest?",
+      "choices": [
+        "The site was located on the Mediterranean coast.",
+        "Connections between an inland center and distant exchange networks.",
+        "The buildings were necessarily constructed by foreign rulers.",
+        "Its population relied exclusively on imported food."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Imported objects support exchange connections, often through intermediaries. They do not establish who built or ruled the site.",
+      "difficulty": "Apply",
+      "skillTag": "Using evidence"
+    },
+    {
+      "id": "world-1-5-q6",
+      "topicId": "world-1-5",
+      "concept": "africa-ethiopia",
+      "prompt": "How do Lalibela’s churches challenge the claim that African state building relied exclusively on Islam?",
+      "choices": [
+        "They demonstrate Christian patronage linked with Ethiopian kingship.",
+        "They prove religion never influenced any African state.",
+        "They show that all African rulers followed the Roman pope.",
+        "They date exclusively to European colonial rule."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ethiopia provides a specific Christian example within Africa’s broader religious diversity.",
+      "difficulty": "Apply",
+      "skillTag": "Evaluating a claim"
+    },
+    {
+      "id": "world-1-5-q7",
+      "topicId": "world-1-5",
+      "concept": "africa-culture",
+      "prompt": "Why should a historian examine the context of a griot’s account?",
+      "choices": [
+        "Oral sources contain no usable historical information.",
+        "Written sources are always free of perspective.",
+        "Every performance was a transcript made by a court scribe.",
+        "Its audience and transmission can shape how rulers and events are remembered."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Oral histories can preserve important evidence, but their context matters. The same principle applies to written and material sources.",
+      "difficulty": "Apply",
+      "skillTag": "Sourcing"
+    },
+    {
+      "id": "world-1-5-q8",
+      "topicId": "world-1-5",
+      "concept": "africa-kinship",
+      "prompt": "What is a problem with saying kin-based societies had no government?",
+      "choices": [
+        "It assumes they always had an elected national parliament.",
+        "It understates their universal use of Chinese examinations.",
+        "It overlooks institutions that organized decisions and resolved disputes.",
+        "It overlooks their permanent political unity with Ethiopia."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Political institutions can operate through elders, chiefs, and lineages without a single centralized empire.",
+      "difficulty": "Apply",
+      "skillTag": "Historical reasoning"
+    },
+    {
+      "id": "world-1-5-k1",
+      "topicId": "world-1-5",
+      "concept": "africa-zimbabwe",
+      "prompt": "Where was Great Zimbabwe?",
+      "choices": [
+        "Central Mexico.",
+        "Inland southern Africa.",
+        "The northern European coast.",
+        "The island of Java."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Its inland location makes connections through coastal intermediaries important.",
+      "difficulty": "Quick check",
+      "skillTag": "Concept check"
+    },
+    {
+      "id": "world-1-5-k2",
+      "topicId": "world-1-5",
+      "concept": "africa-ethiopia",
+      "prompt": "Which tradition was important to medieval Ethiopian kingship?",
+      "choices": [
+        "Christianity.",
+        "Neo-Confucian examination learning.",
+        "Maya calendrical kingship.",
+        "The Bhakti movement as a state religion."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Christian institutions and claims to sacred ancestry supported rulers.",
+      "difficulty": "Quick check",
+      "skillTag": "Concept check"
+    },
+    {
+      "id": "world-1-5-k3",
+      "topicId": "world-1-5",
+      "concept": "africa-swahili",
+      "prompt": "What connected many Swahili cities to distant markets?",
+      "choices": [
+        "The Grand Canal of China.",
+        "Inca roads across the Andes.",
+        "The English manorial court.",
+        "Indian Ocean exchange."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Coastal cities linked African producers with overseas merchants.",
+      "difficulty": "Quick check",
+      "skillTag": "Concept check"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "world-1-5-quiz",
+      "courseId": "world",
+      "unitId": "world-1",
+      "topicId": "world-1-5",
+      "title": "Africa topic quiz",
+      "quizType": "topic",
+      "questionIds": [
+        "world-1-5-q1",
+        "world-1-5-q2",
+        "world-1-5-q3",
+        "world-1-5-q4",
+        "world-1-5-q5",
+        "world-1-5-q6",
+        "world-1-5-q7",
+        "world-1-5-q8"
+      ]
+    },
+    {
+      "id": "world-1-5-quick",
+      "courseId": "world",
+      "unitId": "world-1",
+      "topicId": "world-1-5",
+      "title": "Africa quick practice",
+      "quizType": "quick",
+      "questionIds": [
+        "world-1-5-k1",
+        "world-1-5-k2",
+        "world-1-5-k3"
+      ]
+    }
+  ],
+  "concepts": {
+    "africa-kinship": {
+      "id": "africa-kinship",
+      "title": "Kinship and city governments were forms of political organization.",
+      "section": "africa-kinship",
+      "topicId": "world-1-5"
+    },
+    "africa-mali": {
+      "id": "africa-mali",
+      "title": "Mali turned agriculture and exchange into imperial resources.",
+      "section": "africa-mali",
+      "topicId": "world-1-5"
+    },
+    "africa-swahili": {
+      "id": "africa-swahili",
+      "title": "Coastal cities connected African producers with overseas markets.",
+      "section": "africa-swahili",
+      "topicId": "world-1-5"
+    },
+    "africa-zimbabwe": {
+      "id": "africa-zimbabwe",
+      "title": "Great Zimbabwe combined local production with distant connections.",
+      "section": "africa-zimbabwe",
+      "topicId": "world-1-5"
+    },
+    "africa-ethiopia": {
+      "id": "africa-ethiopia",
+      "title": "Ethiopia connected Christian traditions with kingship.",
+      "section": "africa-ethiopia",
+      "topicId": "world-1-5"
+    },
+    "africa-culture": {
+      "id": "africa-culture",
+      "title": "Knowledge and status traveled through several institutions.",
+      "section": "africa-culture",
+      "topicId": "world-1-5"
+    }
+  },
+  "assets": {}
+}

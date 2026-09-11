@@ -1,0 +1,347 @@
+/* Continuous reading surfaces, lesson navigation, terms, and sources. */
+.lesson-grid {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 730px);
+  gap: 4rem;
+  padding-bottom: 4rem;
+  justify-content: space-between;
+}
+.lesson-nav {
+  position: sticky;
+  top: 115px;
+  align-self: start;
+}
+.lesson-nav .eyebrow {
+  margin: 0 0 1rem;
+}
+.lesson-nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.55rem 0.85rem;
+  border-left: 2px solid var(--line);
+  color: var(--muted);
+}
+.lesson-nav a:hover {
+  background: var(--soft);
+  color: var(--green);
+  border-color: var(--green);
+}
+.lesson-nav .btn {
+  color: white;
+  margin-top: 1.5rem;
+  text-align: center;
+  border-left: none;
+  padding: 0.8rem;
+}
+.lesson-nav .nav-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.8rem;
+}
+.lesson-head h1 {
+  margin: 0.75rem 0 1rem;
+}
+.lesson-head .date-line {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  color: var(--muted);
+}
+.lesson-head .lede {
+  font-size: 1.12rem;
+  max-width: 670px;
+  margin-top: 1.3rem;
+}
+.lesson-meta {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 1.5rem 0 2rem;
+}
+.big-idea {
+  background: var(--soft);
+  padding: 1.5rem 1.7rem;
+  border-left: 3px solid var(--green);
+  margin: 0 0 3rem;
+}
+.big-idea .eyebrow {
+  color: var(--green);
+  margin-bottom: 0.6rem;
+}
+.big-idea p {
+  font-size: 1.05rem;
+  margin: 0;
+}
+.lesson-section {
+  padding-bottom: 2.2rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 7rem;
+}
+.lesson-section h2 {
+  margin-bottom: 1.2rem;
+}
+.lesson-section .section-number {
+  font: 500 0.8rem var(--sans);
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.lesson-section h3 {
+  margin: 1.65rem 0 0.65rem;
+  font-size: 1.15rem;
+}
+.lesson-section p {
+  color: #354a42;
+  line-height: 1.8;
+}
+.lesson-section ul {
+  padding-left: 1.3rem;
+  color: #354a42;
+}
+.lesson-section li {
+  margin-bottom: 0.5rem;
+}
+.concept {
+  scroll-margin-top: 7rem;
+}
+.note {
+  font-size: 0.9rem !important;
+  padding: 1rem 1.2rem;
+  line-height: 1.65 !important;
+}
+.terms {
+  margin: 0;
+}
+.term-row {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+.term-row dt {
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.term-row dd {
+  margin: 0;
+  color: #43564d;
+  font-size: 0.98rem;
+}
+.connection-list {
+  display: grid;
+  gap: 1rem;
+}
+.connection {
+  border: 1px solid var(--line);
+}
+.connection .eyebrow {
+  margin: 0 0 0.6rem;
+  color: var(--green);
+}
+.connection h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.02rem;
+}
+.connection p {
+  font-size: 0.96rem;
+  margin: 0;
+}
+.sources {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.sources summary {
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+.sources ul {
+  padding-left: 1.2rem;
+}
+.sources li {
+  margin: 0.5rem 0;
+}
+@media (max-width: 950px) {
+  .lesson-grid {
+    gap: 2rem;
+    grid-template-columns: 175px minmax(0, 1fr);
+  }
+  .term-row {
+    grid-template-columns: 150px 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .lesson-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+  }
+  .lesson-nav {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1rem;
+  }
+  .lesson-nav .eyebrow {
+    display: none;
+  }
+  .lesson-nav .nav-note {
+    display: none;
+  }
+  .lesson-nav a {
+    border: 1px solid var(--line);
+    padding: 0.4rem 0.65rem;
+    border-radius: 5px;
+    background: white;
+  }
+  .lesson-nav .btn {
+    padding: 0.4rem 0.65rem;
+    min-height: 0;
+    margin: 0;
+    background: var(--green);
+    border: 1px solid var(--green);
+  }
+  .lesson-head .date-line {
+    font-size: 1.7rem;
+  }
+  .lesson-head .lede {
+    font-size: 1.03rem;
+  }
+  .lesson-meta {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .big-idea {
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .big-idea p {
+    font-size: 1rem;
+  }
+  .term-row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+}
+.lesson-nav a:hover {
+  border-radius: 0;
+}
+.lesson-meta {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+.big-idea {
+  border-radius: 0;
+}
+.connection {
+  border-width: 0 0 1px;
+  border-radius: 0;
+  padding: 1.3rem 0;
+  background: transparent;
+}
+.note {
+  border-radius: 0;
+}
+.lesson-section .section-number {
+  font-size: 0.875rem;
+}
+@media (max-width: 700px) {
+  .lesson-grid article {
+    min-width: 0;
+    width: 100%;
+  }
+  .lesson-meta {
+    gap: 0.6rem;
+  }
+  .lesson-nav {
+    gap: 0.5rem;
+  }
+  .lesson-nav a {
+    font-size: 0.875rem;
+  }
+}
+.lesson-section .section-number {
+  letter-spacing: 0;
+}
+.lesson-head h1 {
+  font-size: 3.25rem;
+}
+.lesson-grid > * {
+  min-width: 0;
+}
+.lesson-head .date-line {
+  font: 1rem/1.6 var(--mono);
+}
+.lesson-section h2 {
+  font-size: 2rem;
+  line-height: 1.25;
+}
+.lesson-section .section-number {
+  font-family: var(--mono);
+}
+.note {
+  background: var(--soft);
+}
+.lesson-nav a:not(.btn) {
+  background: var(--paper);
+}
+.lesson-nav a:not(.btn):hover {
+  background: var(--soft);
+}
+.lesson-nav .btn:hover {
+  background: var(--green-hover);
+  color: var(--white);
+}
+.lesson-grid > article {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(20px, 3vw, 40px);
+}
+.lesson-section {
+  background: transparent;
+}
+.sources {
+  padding-top: 16px;
+}
+@media (max-width: 700px) {
+  .lesson-grid > article {
+    padding: 20px;
+  }
+  .lesson-head h1 {
+    font-size: 2.5rem;
+  }
+  .lesson-section h2 {
+    font-size: 1.75rem;
+  }
+  .lesson-nav a:not(.btn) {
+    background: var(--white);
+  }
+}
+.lesson-goals {
+  margin: 24px 0;
+  padding: 22px;
+  background: var(--soft);
+  border-left: 3px solid var(--green);
+}
+.lesson-goals ul {
+  padding-left: 20px;
+  margin: 0 0 12px;
+}
+.lesson-goals li + li {
+  margin-top: 8px;
+}
+.lesson-goals small {
+  color: var(--muted);
+}
+@media (min-width: 901px) {
+  .lesson-nav {
+    max-height: calc(100dvh - 125px);
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,501 @@
+{
+  "course": {
+    "schemaVersion": 1,
+    "id": "world",
+    "title": "AP World History: Modern",
+    "shortTitle": "AP World",
+    "description": "Understand the people, ideas, and connections that shaped the world from c. 1200 to the present.",
+    "status": "ready",
+    "period": "c. 1200–present",
+    "order": 1,
+    "previewDescription": "Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present."
+  },
+  "unit": {
+    "schemaVersion": 1,
+    "id": "world-1",
+    "courseId": "world",
+    "number": 1,
+    "title": "The Global Tapestry",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "description": "Explore how societies organized power, shared beliefs, and built their economies across the world.",
+    "quizzes": [
+      {
+        "id": "world-1-practice",
+        "courseId": "world",
+        "unitId": "world-1",
+        "title": "Unit 1 practice",
+        "quizType": "unit",
+        "selections": [
+          {
+            "topicId": "world-1-1",
+            "questionIds": [
+              "q1",
+              "q5",
+              "q7"
+            ]
+          },
+          {
+            "topicId": "world-1-2",
+            "questionIds": [
+              "islam-q1",
+              "islam-q4",
+              "islam-q8"
+            ]
+          },
+          {
+            "topicId": "world-1-3",
+            "questionIds": [
+              "world-1-3-q1",
+              "world-1-3-q4",
+              "world-1-3-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-4",
+            "questionIds": [
+              "world-1-4-q1",
+              "world-1-4-q4",
+              "world-1-4-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-5",
+            "questionIds": [
+              "world-1-5-q1",
+              "world-1-5-q4",
+              "world-1-5-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-6",
+            "questionIds": [
+              "world-1-6-q1",
+              "world-1-6-q4",
+              "world-1-6-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-7",
+            "questionIds": [
+              "world-1-7-q1",
+              "world-1-7-q4",
+              "world-1-7-q6"
+            ]
+          }
+        ]
+      }
+    ],
+    "topicCount": 7,
+    "firstTopic": {
+      "id": "world-1-1",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 1,
+      "code": "1.1",
+      "title": "East Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Song China: an enduring government, changing economy, and influential culture."
+    },
+    "hasGuide": true,
+    "writingQuizzes": [
+      {
+        "id": "world-1-saq",
+        "title": "Unit 1 writing quiz",
+        "partCount": 3
+      }
+    ]
+  },
+  "topic": {
+    "id": "world-1-6",
+    "courseId": "world",
+    "unitId": "world-1",
+    "order": 6,
+    "code": "1.6",
+    "title": "Developments in Europe",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "summary": "Religious institutions, divided political authority, and changing agricultural societies."
+  },
+  "framework": {
+    "id": "inspect",
+    "name": "InSPECT",
+    "title": "Use InSPECT to choose your evidence",
+    "intro": "A fact can connect to more than one lens. Choose the lens that helps answer the prompt.",
+    "sourceNote": "Based on the class Early Religions + InSPECT slides, pages 5-17.",
+    "themes": [
+      {
+        "id": "In",
+        "title": "Interactions of humans with the environment",
+        "question": "How did geography, crops, resources, or disease shape choices?",
+        "example": "Andean terraces made steep slopes more usable for farming.",
+        "shortTitle": "Environment"
+      },
+      {
+        "id": "S",
+        "title": "Social interactions and organization",
+        "question": "Who had status, opportunities, or obligations?",
+        "example": "Examination preparation favored families that could afford education.",
+        "shortTitle": "Social"
+      },
+      {
+        "id": "P",
+        "title": "Political systems and governance",
+        "question": "How did rulers gain authority and administer territory?",
+        "example": "Song officials carried imperial decisions into local government.",
+        "shortTitle": "Political"
+      },
+      {
+        "id": "E",
+        "title": "Economic systems",
+        "question": "How were goods produced, exchanged, taxed, or distributed?",
+        "example": "Mali drew revenue from commerce through its territory.",
+        "shortTitle": "Economic"
+      },
+      {
+        "id": "C",
+        "title": "Cultural developments and interactions",
+        "question": "How did beliefs, learning, and artistic practices influence society?",
+        "example": "Buddhist monasteries connected religious practice with education.",
+        "shortTitle": "Cultural"
+      },
+      {
+        "id": "T",
+        "title": "Technology and innovation",
+        "question": "What techniques or tools changed what people could do?",
+        "example": "Inca roads and knotted records helped officials coordinate resources.",
+        "shortTitle": "Technology"
+      }
+    ]
+  },
+  "lesson": {
+    "schemaVersion": 1,
+    "id": "world-1-6",
+    "unitId": "world-1",
+    "code": "1.6",
+    "title": "Developments in Europe",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "summary": "Religious institutions, divided political authority, and changing agricultural societies.",
+    "courseId": "world",
+    "order": 6,
+    "minutes": 10,
+    "learningGoals": [
+      "Explain the influence of Christianity, Judaism, and Islam in Europe.",
+      "Explain the causes and effects of decentralized government.",
+      "Connect agriculture and labor obligations to social organization."
+    ],
+    "bigIdea": "European societies were largely agricultural and politically divided. Religious institutions, landholding, and labor obligations shaped authority, while growing towns and uneven political changes complicated that pattern.",
+    "context": "The loss of western Roman imperial government long preceded 1200. By this unit’s period, Europe included competing kingdoms, the Holy Roman Empire, cities, and the Byzantine world. Christian, Jewish, and Muslim communities shaped the region. The Black Death reached much of Europe in the mid-fourteenth century.",
+    "sections": [
+      {
+        "id": "europe-power",
+        "title": "Authority was divided among rulers and local elites.",
+        "conceptTitle": "Authority was divided among rulers and local elites.",
+        "lenses": [
+          "P",
+          "S"
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Many rulers depended on nobles who controlled land, armed followers, and local justice. Limited revenue and the costs of communication helped make personal ties and local lordship important. A monarch’s title did not guarantee direct control over every village."
+          },
+          {
+            "type": "paragraph",
+            "text": "Feudal relationships involved grants or rights to land and obligations such as military service. A vassal owed duties to a lord, and a fief supported those duties. These arrangements varied by time and place; the familiar king-lord-knight pyramid is a simplification, not a universal European constitution."
+          },
+          {
+            "type": "paragraph",
+            "text": "England and France developed stronger royal institutions over time, while the Holy Roman Empire remained divided among many powerful territories. In England, Magna Carta in 1215 reflected efforts by elites to restrain royal power. It did not create modern universal political rights."
+          }
+        ],
+        "takeaway": "Political fragmentation was a broad pattern with important exceptions and changes."
+      },
+      {
+        "id": "europe-manors",
+        "title": "Manors organized land and labor.",
+        "conceptTitle": "Manors organized land and labor.",
+        "lenses": [
+          "E",
+          "S",
+          "P"
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Manorialism described economic and social relationships on landed estates. Peasant households cultivated land while supplying rents, produce, or labor to a lord. Many serfs faced inherited obligations and restrictions on movement. Free peasants also existed, so not every farmer was a serf."
+          },
+          {
+            "type": "paragraph",
+            "text": "Lordship gave elites access to agricultural output and local authority. In return, lords were expected to offer protection and access to land, although the relationship was unequal and often coercive. Feudal military obligations among elites and manorial labor obligations were connected but distinct."
+          },
+          {
+            "type": "paragraph",
+            "text": "Manors produced many necessities locally, but they were not entirely cut off from markets. Peasants and lords could sell produce and buy goods. The growing use of cash could alter obligations without immediately ending the power of landowners."
+          }
+        ],
+        "takeaway": "For a labor question, explain who owed what to whom and what constrained their choices."
+      },
+      {
+        "id": "europe-faith",
+        "title": "Religious institutions could support and challenge rulers.",
+        "conceptTitle": "Religious institutions could support and challenge rulers.",
+        "lenses": [
+          "C",
+          "P",
+          "S"
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Christian beliefs about salvation, worship, and moral duties shaped everyday life. In western Europe, the Roman Catholic Church owned land, collected resources, provided education, and organized religious communities. Clergy and monasteries supplied networks that crossed political borders."
+          },
+          {
+            "type": "paragraph",
+            "text": "Church officials could legitimize monarchs, but disputes over appointments, legal authority, and resources also put them in conflict. The Byzantine world was associated with Eastern Orthodox Christianity and its own relationship between church and imperial government. Europe did not have one uniform Christian political structure."
+          },
+          {
+            "type": "paragraph",
+            "text": "Jewish and Muslim communities contributed to commerce, medicine, philosophy, and translation. Iberia included Christian kingdoms and Muslim-ruled territory. Cooperation coexisted with restrictions, persecution, and violence. Describing all medieval Europeans as Christian erases these communities."
+          }
+        ],
+        "takeaway": "Religious institutions had political and economic roles as well as spiritual ones."
+      },
+      {
+        "id": "europe-exchange",
+        "title": "Conflict and exchange could happen together.",
+        "conceptTitle": "Conflict and exchange could happen together.",
+        "lenses": [
+          "C",
+          "E",
+          "P"
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The Crusades began before 1200 and continued into this period. Religious goals interacted with political ambitions and economic interests. In 1204, the Fourth Crusade attacked Christian Constantinople, showing why a simple Christian-versus-Muslim model is incomplete."
+          },
+          {
+            "type": "paragraph",
+            "text": "Trade and translations connected Europe with the wider Mediterranean and beyond. Scholars engaged with classical Greek thought through several channels, including Arabic and Greek texts. Scholastic thinkers sought to reason about theology and other questions rather than merely abandon faith."
+          },
+          {
+            "type": "paragraph",
+            "text": "Markets, fairs, and merchant networks helped towns grow. Guilds regulated crafts and access to trades. Urban residents gained new opportunities, but differences in wealth, gender, and legal status still restricted participation."
+          }
+        ],
+        "takeaway": "A society could exchange goods and knowledge with people it also fought."
+      },
+      {
+        "id": "europe-agriculture",
+        "title": "Agriculture and population changes reshaped bargaining power.",
+        "conceptTitle": "Agriculture and population changes reshaped bargaining power.",
+        "lenses": [
+          "In",
+          "T",
+          "E",
+          "S"
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "In suitable regions, heavier plows, improved harnessing, mills, and crop rotation helped agricultural production. A three-field rotation left part of the land fallow while other fields carried crops. These practices spread unevenly and worked alongside local knowledge, climate, and labor."
+          },
+          {
+            "type": "paragraph",
+            "text": "More agricultural output could support population growth and town occupations. The relationship was not a steady upward line: poor harvests and the fourteenth-century plague brought severe disruption. Disease spread across interconnected regions and had social as well as demographic consequences."
+          },
+          {
+            "type": "paragraph",
+            "text": "Labor shortages after the Black Death could strengthen workers’ bargaining position in parts of western Europe. Landowners and governments sometimes tried to limit wages or mobility, and conflict followed. Serfdom did not end at the same time or in the same way across Europe. Jewish communities were falsely blamed for disease and suffered persecution."
+          }
+        ],
+        "takeaway": "Explain the mechanism linking population to labor supply, then qualify the outcome by region."
+      },
+      {
+        "id": "europe-learning",
+        "title": "New learning developed within older institutions.",
+        "conceptTitle": "New learning developed within older institutions.",
+        "lenses": [
+          "C",
+          "S",
+          "T"
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Monasteries, schools, and universities supported learning. Some religious communities offered women opportunities for education and administration even within a patriarchal society. Access was unequal, and most people’s lives continued to center on agricultural work."
+          },
+          {
+            "type": "paragraph",
+            "text": "The early Renaissance in Italian cities renewed interest in classical texts and human achievement. Humanism emphasized education and human capacities, but many humanists remained Christian. Writers such as Dante and Chaucer used vernacular languages, expanding literary expression beyond Latin."
+          },
+          {
+            "type": "paragraph",
+            "text": "Gutenberg’s printing developments fall near this unit’s endpoint, with their largest effects after 1450. In eastern Europe, Orthodox traditions and Mongol rule shaped the Rus principalities; Moscow’s later independence belongs beyond the main period. Keep these transitions separate from changes already established by 1200."
+          }
+        ],
+        "takeaway": "Continuity and innovation can coexist: renewed classical study did not instantly replace religion or hierarchy."
+      }
+    ],
+    "readingGuide": {
+      "objectives": "K, L, M",
+      "readingLabel": "AMSCO Topic 1.6, supplied Unit 1 PDF pages 41-49",
+      "lenses": [
+        "P",
+        "S",
+        "E",
+        "C",
+        "In",
+        "T"
+      ],
+      "prompts": [
+        "Distinguish feudal relationships among elites from the manor’s labor system.",
+        "Explain one way religious institutions could support a ruler and one way they could challenge a ruler.",
+        "Trace how agricultural productivity and later population losses could change labor relationships."
+      ]
+    },
+    "vocabulary": [
+      {
+        "id": "world-1-6-feudal",
+        "topicId": "world-1-6",
+        "term": "Feudal relationships",
+        "definition": "Obligations between lords and vassals involving land rights and service, especially military service."
+      },
+      {
+        "id": "world-1-6-fief",
+        "topicId": "world-1-6",
+        "term": "Fief",
+        "definition": "Land or associated rights granted in exchange for obligations to a lord."
+      },
+      {
+        "id": "world-1-6-vassal",
+        "topicId": "world-1-6",
+        "term": "Vassal",
+        "definition": "A person owing specified service and loyalty to a lord."
+      },
+      {
+        "id": "world-1-6-manor",
+        "topicId": "world-1-6",
+        "term": "Manorialism",
+        "definition": "An estate-based system organizing peasant landholding, production, and obligations to a lord."
+      },
+      {
+        "id": "world-1-6-serf",
+        "topicId": "world-1-6",
+        "term": "Serfdom",
+        "definition": "A form of unfree peasant status involving inherited obligations and restrictions tied to an estate."
+      },
+      {
+        "id": "world-1-6-rotation",
+        "topicId": "world-1-6",
+        "term": "Three-field rotation",
+        "definition": "A crop rotation in which different fields carried crops or remained fallow."
+      },
+      {
+        "id": "world-1-6-papacy",
+        "topicId": "world-1-6",
+        "term": "Papacy",
+        "definition": "The office and authority of the pope in the Roman Catholic Church."
+      },
+      {
+        "id": "world-1-6-orthodox",
+        "topicId": "world-1-6",
+        "term": "Eastern Orthodox Christianity",
+        "definition": "Christian traditions associated with the Byzantine world and other eastern churches."
+      },
+      {
+        "id": "world-1-6-scholastic",
+        "topicId": "world-1-6",
+        "term": "Scholasticism",
+        "definition": "Medieval methods of learning using reasoned argument, often to examine theological questions."
+      },
+      {
+        "id": "world-1-6-guild",
+        "topicId": "world-1-6",
+        "term": "Guild",
+        "definition": "An organization regulating aspects of a craft or trade."
+      },
+      {
+        "id": "world-1-6-magna",
+        "topicId": "world-1-6",
+        "term": "Magna Carta",
+        "definition": "A charter issued in England in 1215 limiting some uses of royal power."
+      },
+      {
+        "id": "world-1-6-humanism",
+        "topicId": "world-1-6",
+        "term": "Renaissance humanism",
+        "definition": "An intellectual movement emphasizing classical learning, education, and human capacities."
+      },
+      {
+        "id": "world-1-6-vernacular",
+        "topicId": "world-1-6",
+        "term": "Vernacular",
+        "definition": "A locally used language, as distinct from a scholarly or liturgical language such as Latin."
+      }
+    ],
+    "connections": [
+      {
+        "id": "world-1-6-connection-1",
+        "topicId": "world-1-6",
+        "type": "Make the connection",
+        "title": "Land and administration",
+        "body": "Many European monarchs depended on nobles with landed power. Song rulers used a much more extensive examination-based bureaucracy. Both still depended heavily on agricultural producers."
+      },
+      {
+        "id": "world-1-6-connection-2",
+        "topicId": "world-1-6",
+        "type": "Make the connection",
+        "title": "Demography and bargaining",
+        "body": "After plague reduced the workforce, some workers could seek better terms. Rulers and landlords also resisted those demands, so a labor shortage did not produce the same outcome everywhere."
+      },
+      {
+        "id": "world-1-6-connection-3",
+        "topicId": "world-1-6",
+        "type": "Make the connection",
+        "title": "Institutions and learning",
+        "body": "European monasteries and Buddhist monasteries supported religious practice and education. Their common functions do not imply identical beliefs or political relationships."
+      }
+    ],
+    "sourceIds": [
+      "reference-27",
+      "ced",
+      "feudal",
+      "monastic",
+      "reference-19"
+    ]
+  },
+  "bankPath": "world/banks/world-1-6.json",
+  "sources": [
+    {
+      "id": "reference-27",
+      "label": "Class reading: AMSCO Unit 1, Topic 1.6, supplied PDF pages 41-49. Original notes below; consult your own copy for the reading."
+    },
+    {
+      "id": "ced",
+      "label": "College Board: AP World History: Modern Course and Exam Description",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-world-history-modern-course-and-exam-description.pdf",
+      "note": "Course scope and learning objectives for Topics 1.1 through 1.7."
+    },
+    {
+      "id": "feudal",
+      "label": "The Metropolitan Museum of Art: Feudalism and knights",
+      "url": "https://www.metmuseum.org/essays/feudalism-and-knights-in-medieval-europe",
+      "note": "Landholding and military obligations in medieval Europe."
+    },
+    {
+      "id": "monastic",
+      "label": "The Metropolitan Museum of Art: Monasticism in western medieval Europe",
+      "url": "https://www.metmuseum.org/essays/monasticism-in-western-medieval-europe",
+      "note": "Religious communities, learning, and patronage."
+    },
+    {
+      "id": "reference-19",
+      "label": "Class framework: Early Religions + InSPECT, slides 5-17. InSPECT categories inform the reading guide and writing exercise."
+    }
+  ],
+  "assets": {}
+}

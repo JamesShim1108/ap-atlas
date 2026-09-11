@@ -1,0 +1,292 @@
+{
+  "course": {
+    "schemaVersion": 1,
+    "id": "world",
+    "title": "AP World History: Modern",
+    "shortTitle": "AP World",
+    "description": "Understand the people, ideas, and connections that shaped the world from c. 1200 to the present.",
+    "status": "ready",
+    "period": "c. 1200–present",
+    "order": 1,
+    "previewDescription": "Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present."
+  },
+  "unit": {
+    "schemaVersion": 1,
+    "id": "world-1",
+    "courseId": "world",
+    "number": 1,
+    "title": "The Global Tapestry",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "description": "Explore how societies organized power, shared beliefs, and built their economies across the world.",
+    "quizzes": [
+      {
+        "id": "world-1-practice",
+        "courseId": "world",
+        "unitId": "world-1",
+        "title": "Unit 1 practice",
+        "quizType": "unit",
+        "selections": [
+          {
+            "topicId": "world-1-1",
+            "questionIds": [
+              "q1",
+              "q5",
+              "q7"
+            ]
+          },
+          {
+            "topicId": "world-1-2",
+            "questionIds": [
+              "islam-q1",
+              "islam-q4",
+              "islam-q8"
+            ]
+          },
+          {
+            "topicId": "world-1-3",
+            "questionIds": [
+              "world-1-3-q1",
+              "world-1-3-q4",
+              "world-1-3-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-4",
+            "questionIds": [
+              "world-1-4-q1",
+              "world-1-4-q4",
+              "world-1-4-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-5",
+            "questionIds": [
+              "world-1-5-q1",
+              "world-1-5-q4",
+              "world-1-5-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-6",
+            "questionIds": [
+              "world-1-6-q1",
+              "world-1-6-q4",
+              "world-1-6-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-7",
+            "questionIds": [
+              "world-1-7-q1",
+              "world-1-7-q4",
+              "world-1-7-q6"
+            ]
+          }
+        ]
+      }
+    ],
+    "topicCount": 7,
+    "firstTopic": {
+      "id": "world-1-1",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 1,
+      "code": "1.1",
+      "title": "East Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Song China: an enduring government, changing economy, and influential culture."
+    },
+    "hasGuide": true,
+    "writingQuizzes": [
+      {
+        "id": "world-1-saq",
+        "title": "Unit 1 writing quiz",
+        "partCount": 3
+      }
+    ]
+  },
+  "framework": {
+    "id": "inspect",
+    "name": "InSPECT",
+    "title": "Use InSPECT to choose your evidence",
+    "intro": "A fact can connect to more than one lens. Choose the lens that helps answer the prompt.",
+    "sourceNote": "Based on the class Early Religions + InSPECT slides, pages 5-17.",
+    "themes": [
+      {
+        "id": "In",
+        "title": "Interactions of humans with the environment",
+        "question": "How did geography, crops, resources, or disease shape choices?",
+        "example": "Andean terraces made steep slopes more usable for farming.",
+        "shortTitle": "Environment"
+      },
+      {
+        "id": "S",
+        "title": "Social interactions and organization",
+        "question": "Who had status, opportunities, or obligations?",
+        "example": "Examination preparation favored families that could afford education.",
+        "shortTitle": "Social"
+      },
+      {
+        "id": "P",
+        "title": "Political systems and governance",
+        "question": "How did rulers gain authority and administer territory?",
+        "example": "Song officials carried imperial decisions into local government.",
+        "shortTitle": "Political"
+      },
+      {
+        "id": "E",
+        "title": "Economic systems",
+        "question": "How were goods produced, exchanged, taxed, or distributed?",
+        "example": "Mali drew revenue from commerce through its territory.",
+        "shortTitle": "Economic"
+      },
+      {
+        "id": "C",
+        "title": "Cultural developments and interactions",
+        "question": "How did beliefs, learning, and artistic practices influence society?",
+        "example": "Buddhist monasteries connected religious practice with education.",
+        "shortTitle": "Cultural"
+      },
+      {
+        "id": "T",
+        "title": "Technology and innovation",
+        "question": "What techniques or tools changed what people could do?",
+        "example": "Inca roads and knotted records helped officials coordinate resources.",
+        "shortTitle": "Technology"
+      }
+    ]
+  },
+  "quiz": {
+    "id": "world-1-saq",
+    "version": 1,
+    "courseId": "world",
+    "unitId": "world-1",
+    "title": "Unit 1 writing quiz",
+    "prompt": "States across the world developed different ways to maintain authority in the period c. 1200 to c. 1450. Answer all three parts below.",
+    "instructions": "Write three APE responses, one for each part. Answer the question directly, Prove it with specific historical evidence, and Explain how that evidence supports your answer. Aim for a short paragraph per part, usually about three sentences. There is no required word count.",
+    "parts": [
+      {
+        "id": "a",
+        "lenses": [
+          "C",
+          "P"
+        ],
+        "prompt": "Explain ONE way a belief system helped a ruler or government maintain authority in either Song China or Mali during the period c. 1200 to c. 1450.",
+        "criteria": [
+          "Name a relevant way beliefs supported authority in Song China or Mali.",
+          "Use an accurate, specific example within the period.",
+          "Explain how that example strengthened authority, rather than only describing the belief."
+        ],
+        "model": {
+          "answer": "Confucian teaching helped the Song government justify political hierarchy.",
+          "prove": "Civil service examinations required candidates to study Confucian texts, which emphasized duties within ordered relationships.",
+          "explain": "Recruiting officials educated in those duties linked government service to a shared moral tradition and reinforced expectations of obedience to imperial authority."
+        },
+        "alternatives": "Mansa Musa’s patronage of Islamic learning or his 1324-1325 pilgrimage can also work if you explain how it enhanced his legitimacy or connections. Naming a religion without explaining the political link is insufficient.",
+        "review": [
+          {
+            "topicId": "world-1-1",
+            "sectionId": "governance",
+            "label": "Song government"
+          },
+          {
+            "topicId": "world-1-5",
+            "sectionId": "africa-mali",
+            "label": "Mali"
+          }
+        ]
+      },
+      {
+        "id": "b",
+        "lenses": [
+          "In",
+          "E",
+          "T",
+          "P"
+        ],
+        "prompt": "Explain ONE way an agricultural adaptation or labor system supported a state in the Americas during the period c. 1200 to c. 1450.",
+        "criteria": [
+          "Identify a relevant American state and an agricultural adaptation or labor system.",
+          "Describe a specific example accurately.",
+          "Explain how food production or mobilized labor supported the state."
+        ],
+        "model": {
+          "answer": "Intensive agriculture helped the Mexica support the population of their capital.",
+          "prove": "Farmers used chinampas, constructed growing beds in shallow lake areas, to produce crops near Tenochtitlan.",
+          "explain": "That food supply helped sustain urban residents and specialists, giving the state a stronger base for administration and expansion."
+        },
+        "alternatives": "Inca mit’a obligations or Andean terraces are acceptable when linked to resources for administration, infrastructure, or armies. Place early Inca expansion in the fifteenth century. Do not describe the later Spanish colonial mita as an Inca policy.",
+        "review": [
+          {
+            "topicId": "world-1-4",
+            "sectionId": "americas-mexica",
+            "label": "Mexica agriculture"
+          },
+          {
+            "topicId": "world-1-4",
+            "sectionId": "americas-inca",
+            "label": "Inca labor"
+          }
+        ]
+      },
+      {
+        "id": "c",
+        "lenses": [
+          "P",
+          "S",
+          "E"
+        ],
+        "prompt": "Explain ONE difference between how Song China and either the Mexica state or the Inca state administered their territories during the period c. 1200 to c. 1450.",
+        "criteria": [
+          "Make an explicit difference about administration, comparing Song China with one named American state.",
+          "Support both sides with accurate evidence.",
+          "Explain what the difference meant for organizing officials, subjects, or resources."
+        ],
+        "model": {
+          "answer": "Song China emphasized examination-selected officials, while the Mexica often collected tribute through existing local rulers.",
+          "prove": "Song candidates studied Confucian writings for civil service examinations, whereas Mexica tributary communities commonly retained leaders who delivered required goods.",
+          "explain": "These arrangements gave Song rule a shared bureaucratic recruitment system, while Mexica control relied more on enforcing obligations through subordinate political communities."
+        },
+        "alternatives": "An Inca comparison can contrast Song examination recruitment with Inca officials and hereditary local leaders coordinating labor obligations. Both states had administration, so claiming that the Inca had no bureaucracy would not work. The states need not exist in the exact same year to be compared within the period.",
+        "review": [
+          {
+            "topicId": "world-1-7",
+            "sectionId": "compare-governance",
+            "label": "Comparing administration"
+          },
+          {
+            "topicId": "world-1-4",
+            "sectionId": "americas-inca",
+            "label": "Inca administration"
+          }
+        ]
+      }
+    ],
+    "note": "This is an original classroom SAQ with three parts. APE is a writing scaffold, not a College Board scoring formula. The review offers one self-assessed point per part; it does not automatically grade your writing or predict an exam score.",
+    "headline": "Put it in your words.",
+    "promptTitle": "Building and maintaining authority",
+    "scaffold": [
+      {
+        "label": "A / Answer",
+        "text": "Make a direct claim."
+      },
+      {
+        "label": "P / Prove",
+        "text": "Use specific evidence."
+      },
+      {
+        "label": "E / Explain",
+        "text": "Connect evidence to the claim."
+      }
+    ],
+    "sidebar": {
+      "title": "A short paragraph is enough.",
+      "paragraphs": [
+        "Use a concrete example, then explain what it shows. Part C needs evidence for both societies.",
+        "You do not need an introduction or conclusion for the whole question."
+      ]
+    }
+  }
+}

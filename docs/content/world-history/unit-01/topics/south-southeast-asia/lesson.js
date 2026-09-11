@@ -1,0 +1,283 @@
+// Edit lesson text here. IDs are permanent because review links and saved attempts use them.
+
+export const lesson = {
+  schemaVersion: 1,
+  id: "world-1-3",
+  unitId: "world-1",
+  code: "1.3",
+  title: "South and Southeast Asia",
+  period: "c. 1200–1450",
+  status: "ready",
+  summary:
+    "Hindu, Buddhist, and Muslim communities; inland kingdoms and maritime states.",
+  courseId: "world",
+  order: 3,
+  minutes: 10,
+  learningGoals: [
+    "Explain how Hindu, Buddhist, and Muslim practices shaped social life.",
+    "Compare the resources that supported land-based and maritime states.",
+  ],
+  bigIdea:
+    "South and Southeast Asia shared influential religious traditions, but their states drew on different combinations of land, labor, temples, and maritime commerce.",
+  context:
+    "Between 1200 and 1450, South Asia contained several competing states. The Delhi Sultanate began in 1206 and Vijayanagara in 1336. Southeast Asia included both inland rice-growing kingdoms and states centered on shipping routes. Older Chola and Srivijaya traditions provide background for these developments.",
+  sections: [
+    {
+      id: "asia-beliefs",
+      title: "Beliefs shaped everyday obligations.",
+      conceptTitle: "Beliefs shaped everyday obligations.",
+      lenses: ["C", "S"],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "Hindu traditions included ideas about dharma, or duties and right conduct; karma, the consequences of actions; and samsara, the cycle of rebirth. Moksha meant liberation from that cycle. Different communities honored different deities and followed different paths, so Hinduism should not be reduced to a single uniform practice.",
+        },
+        {
+          type: "paragraph",
+          text: "Buddhist traditions also sought release from suffering and rebirth. Monastic communities preserved texts, taught students, and attracted patronage. Islam emphasized one God, Muhammad’s role as prophet, and obligations including prayer and charity. Shared beliefs connected people across political borders without making their customs identical.",
+        },
+        {
+          type: "paragraph",
+          text: "Caste involved broad varna categories and many local jati communities, often associated with birth, marriage, and occupation. Religion could help justify hierarchy, but status also depended on wealth, political power, and local custom. Conversion did not automatically erase inherited social inequalities.",
+        },
+      ],
+      takeaway:
+        "Religious ideals and social reality could differ. Explain how a belief influenced a practice instead of assuming it determined every person’s life.",
+    },
+    {
+      id: "asia-states",
+      title: "Rulers negotiated a divided political landscape.",
+      conceptTitle: "Rulers negotiated a divided political landscape.",
+      lenses: ["P", "C", "E"],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "The Delhi Sultanate was a succession of Muslim-ruled dynasties in northern India. Armies and land revenue supported its rulers, while officials and local intermediaries helped them govern. Regional powers and changing frontiers limited their control. The presence of a sultan did not mean the entire subcontinent was united or its population became Muslim.",
+        },
+        {
+          type: "paragraph",
+          text: "Rajput rulers maintained regional kingdoms and warrior lineages. In southern India, the Chola tradition linked temple patronage, agriculture, and overseas contact before its thirteenth-century decline. Vijayanagara later built a powerful state around revenue from cultivated land, trade, and military organization.",
+        },
+        {
+          type: "paragraph",
+          text: "Vijayanagara rulers patronized Hindu temples, which were religious institutions and substantial holders of resources. Patronage helped present rulers as protectors of sacred order. Yet warfare and alliances did not always follow a simple Hindu-versus-Muslim division: practical political interests also mattered.",
+        },
+      ],
+      takeaway:
+        "Explain both a source of authority and a method of administration. “It was a Hindu kingdom” alone does not explain how a state worked.",
+    },
+    {
+      id: "asia-devotion",
+      title: "Devotion opened new paths within existing traditions.",
+      conceptTitle: "Devotion opened new paths within existing traditions.",
+      lenses: ["C", "S"],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "Bhakti emphasized a personal relationship of devotion to a deity. Poets and teachers often used local languages, making religious expression accessible beyond specialists in Sanskrit. Some challenged caste exclusion or restrictions on women, although the movement varied and did not abolish hierarchy.",
+        },
+        {
+          type: "paragraph",
+          text: "Sufi teachers pursued spiritual discipline and closeness to God within Islam. Their communities, travels, and relationships with local populations contributed to Islam’s spread. Bhakti and Sufism could share an emphasis on devotion while remaining rooted in distinct traditions.",
+        },
+        {
+          type: "paragraph",
+          text: "Religious change also involved patrons, merchants, migration, and sometimes military conquest. Buddhist monasteries linked Sri Lanka with parts of mainland Southeast Asia through learning and ordination. These connections show why cultural influence could persist despite political fragmentation.",
+        },
+      ],
+      takeaway:
+        "Compare the mechanism: accessible teaching and devotional communities could broaden participation without making two religions identical.",
+    },
+    {
+      id: "asia-sea",
+      title: "Ports turned maritime connections into political resources.",
+      conceptTitle: "Ports turned maritime connections into political resources.",
+      lenses: ["E", "P", "C"],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "Sea routes between the Indian Ocean and the South China Sea made island and peninsula ports valuable. Rulers who secured harbors, organized shipping, and attracted merchants could obtain revenue and influence. Control usually depended on relationships among ports, rulers, and traders rather than a modern fixed national border.",
+        },
+        {
+          type: "paragraph",
+          text: "Srivijaya, centered on Sumatra, was an important Buddhist maritime power with roots well before 1200. Its influence declined over time. Majapahit, founded on Java in 1293, combined Hindu and Buddhist court traditions with agriculture and a network of maritime relationships. Neither state can be accurately explained by simply swapping the labels Hindu and Buddhist.",
+        },
+        {
+          type: "paragraph",
+          text: "Muslim merchant communities and religious teachers helped spread Islam through coastal Southeast Asia. Melaka became a significant port and Muslim sultanate in the fifteenth century. Adopting Islam could strengthen connections with trading partners, but conversion was a gradual, locally varied process.",
+        },
+      ],
+      takeaway:
+        "A useful chain is port access, commercial activity, revenue, and political influence. Geography created opportunities that rulers still had to organize.",
+    },
+    {
+      id: "asia-land",
+      title: "Rice, water, and temples supported inland kingdoms.",
+      conceptTitle: "Rice, water, and temples supported inland kingdoms.",
+      lenses: ["In", "T", "P", "C"],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "Khmer rulers centered at Angkor managed a landscape of reservoirs, canals, farmland, and temples. Water infrastructure helped communities manage seasonal rainfall and supported a large agricultural population. Producing food and organizing construction supplied a material foundation for political power.",
+        },
+        {
+          type: "paragraph",
+          text: "Angkor Wat was originally built in the twelfth century as a Hindu temple associated with Vishnu. Buddhist patronage also became important under Khmer rulers, and the site’s religious use changed over time. Its scale connects sacred kingship with the ability to mobilize labor and resources.",
+        },
+        {
+          type: "paragraph",
+          text: "Sukhothai rulers in mainland Southeast Asia supported Theravada Buddhism. Sinhala kingdoms in Sri Lanka also patronized Buddhist institutions and irrigation. These cases connect religion with rule, but do not show that monks controlled every political decision or that the whole region had one government.",
+        },
+      ],
+      takeaway:
+        "Compare Angkor’s agrarian resources with a maritime state’s port revenues. Both used cultural patronage, but their economic foundations differed.",
+    },
+  ],
+  readingGuide: {
+    objectives: "G, H",
+    readingLabel: "AMSCO Topic 1.3, supplied Unit 1 PDF pages 17-23",
+    lenses: ["C", "S", "P", "E", "In"],
+    prompts: [
+      "Explain one difference between the Delhi Sultanate, Rajput kingdoms, and Vijayanagara, including how the state was founded or organized.",
+      "Compare Bhakti devotion and Sufi practice without treating them as the same religion.",
+      "Explain how Khmer water infrastructure supported political authority, then contrast it with a maritime state or Sri Lankan irrigation system.",
+    ],
+  },
+  vocabulary: [
+    {
+      id: "world-1-3-dharma",
+      topicId: "world-1-3",
+      term: "Dharma",
+      definition:
+        "Duties and right conduct in Hindu traditions, shaped by context and social expectations.",
+    },
+    {
+      id: "world-1-3-karma",
+      topicId: "world-1-3",
+      term: "Karma",
+      definition:
+        "The consequences of actions, connected in several South Asian traditions with rebirth.",
+    },
+    {
+      id: "world-1-3-moksha",
+      topicId: "world-1-3",
+      term: "Moksha",
+      definition: "Liberation from the cycle of rebirth in Hindu traditions.",
+    },
+    {
+      id: "world-1-3-jati",
+      topicId: "world-1-3",
+      term: "Jati",
+      definition:
+        "A local social community often associated with birth, marriage, and occupation.",
+    },
+    {
+      id: "world-1-3-bhakti",
+      topicId: "world-1-3",
+      term: "Bhakti",
+      definition:
+        "Devotion to a deity, often expressed through poetry, song, and accessible teaching.",
+    },
+    {
+      id: "world-1-3-sufi",
+      topicId: "world-1-3",
+      term: "Sufism",
+      definition:
+        "Islamic traditions of spiritual discipline and the pursuit of closeness to God.",
+    },
+    {
+      id: "world-1-3-monastic",
+      topicId: "world-1-3",
+      term: "Buddhist monasticism",
+      definition:
+        "Religious community life devoted to Buddhist practice, learning, and discipline.",
+    },
+    {
+      id: "world-1-3-delhi",
+      topicId: "world-1-3",
+      term: "Delhi Sultanate",
+      definition:
+        "A succession of Muslim-ruled dynasties centered in northern India beginning in 1206.",
+    },
+    {
+      id: "world-1-3-vijay",
+      topicId: "world-1-3",
+      term: "Vijayanagara",
+      definition:
+        "A southern Indian empire founded in 1336, associated with Hindu patronage, agriculture, and commerce.",
+    },
+    {
+      id: "world-1-3-rajput",
+      topicId: "world-1-3",
+      term: "Rajput kingdoms",
+      definition:
+        "Regional South Asian kingdoms associated with warrior lineages and local rulers.",
+    },
+    {
+      id: "world-1-3-srivijaya",
+      topicId: "world-1-3",
+      term: "Srivijaya",
+      definition: "An earlier Buddhist maritime power centered on Sumatra.",
+    },
+    {
+      id: "world-1-3-majapahit",
+      topicId: "world-1-3",
+      term: "Majapahit",
+      definition:
+        "A state founded on Java in 1293, with Hindu and Buddhist court traditions and maritime connections.",
+    },
+    {
+      id: "world-1-3-khmer",
+      topicId: "world-1-3",
+      term: "Khmer Empire",
+      definition:
+        "A Southeast Asian state centered at Angkor, supported by agriculture, water infrastructure, and royal patronage.",
+    },
+    {
+      id: "world-1-3-sukhothai",
+      topicId: "world-1-3",
+      term: "Sukhothai",
+      definition:
+        "A mainland Southeast Asian kingdom whose rulers supported Theravada Buddhism.",
+    },
+    {
+      id: "world-1-3-sinhala",
+      topicId: "world-1-3",
+      term: "Sinhala kingdoms",
+      definition: "Sri Lankan states associated with Buddhist patronage and irrigation.",
+    },
+  ],
+  connections: [
+    {
+      id: "world-1-3-connection-1",
+      topicId: "world-1-3",
+      type: "Make the connection",
+      title: "Devotion and participation",
+      body: "Bhakti teachers and Sufis could make religious practice accessible through local relationships and devotional expression. Similar methods did not erase differences in beliefs.",
+    },
+    {
+      id: "world-1-3-connection-2",
+      topicId: "world-1-3",
+      type: "Make the connection",
+      title: "Land and sea",
+      body: "Khmer rulers drew on agrarian production and water infrastructure. Maritime rulers obtained influence through ports and shipping connections. Compare how each gained resources.",
+    },
+    {
+      id: "world-1-3-connection-3",
+      topicId: "world-1-3",
+      type: "Make the connection",
+      title: "Culture without unification",
+      body: "Hindu and Buddhist traditions crossed the borders of competing states. Cultural connections are evidence of exchange, not proof of one political authority.",
+    },
+  ],
+  sourceIds: [
+    "reference-21",
+    "amsco-guide",
+    "ced",
+    "khan",
+    "angkor",
+    "reference-22",
+    "reference-23",
+    "reference-19",
+  ],
+};

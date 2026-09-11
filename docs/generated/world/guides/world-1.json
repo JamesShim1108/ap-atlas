@@ -1,0 +1,557 @@
+{
+  "course": {
+    "schemaVersion": 1,
+    "id": "world",
+    "title": "AP World History: Modern",
+    "shortTitle": "AP World",
+    "description": "Understand the people, ideas, and connections that shaped the world from c. 1200 to the present.",
+    "status": "ready",
+    "period": "c. 1200–present",
+    "order": 1,
+    "previewDescription": "Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present."
+  },
+  "unit": {
+    "schemaVersion": 1,
+    "id": "world-1",
+    "courseId": "world",
+    "number": 1,
+    "title": "The Global Tapestry",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "description": "Explore how societies organized power, shared beliefs, and built their economies across the world.",
+    "quizzes": [
+      {
+        "id": "world-1-practice",
+        "courseId": "world",
+        "unitId": "world-1",
+        "title": "Unit 1 practice",
+        "quizType": "unit",
+        "selections": [
+          {
+            "topicId": "world-1-1",
+            "questionIds": [
+              "q1",
+              "q5",
+              "q7"
+            ]
+          },
+          {
+            "topicId": "world-1-2",
+            "questionIds": [
+              "islam-q1",
+              "islam-q4",
+              "islam-q8"
+            ]
+          },
+          {
+            "topicId": "world-1-3",
+            "questionIds": [
+              "world-1-3-q1",
+              "world-1-3-q4",
+              "world-1-3-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-4",
+            "questionIds": [
+              "world-1-4-q1",
+              "world-1-4-q4",
+              "world-1-4-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-5",
+            "questionIds": [
+              "world-1-5-q1",
+              "world-1-5-q4",
+              "world-1-5-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-6",
+            "questionIds": [
+              "world-1-6-q1",
+              "world-1-6-q4",
+              "world-1-6-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-7",
+            "questionIds": [
+              "world-1-7-q1",
+              "world-1-7-q4",
+              "world-1-7-q6"
+            ]
+          }
+        ]
+      }
+    ],
+    "topicCount": 7,
+    "firstTopic": {
+      "id": "world-1-1",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 1,
+      "code": "1.1",
+      "title": "East Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Song China: an enduring government, changing economy, and influential culture."
+    },
+    "hasGuide": true,
+    "writingQuizzes": [
+      {
+        "id": "world-1-saq",
+        "title": "Unit 1 writing quiz",
+        "partCount": 3
+      }
+    ]
+  },
+  "framework": {
+    "id": "inspect",
+    "name": "InSPECT",
+    "title": "Use InSPECT to choose your evidence",
+    "intro": "A fact can connect to more than one lens. Choose the lens that helps answer the prompt.",
+    "sourceNote": "Based on the class Early Religions + InSPECT slides, pages 5-17.",
+    "themes": [
+      {
+        "id": "In",
+        "title": "Interactions of humans with the environment",
+        "question": "How did geography, crops, resources, or disease shape choices?",
+        "example": "Andean terraces made steep slopes more usable for farming.",
+        "shortTitle": "Environment"
+      },
+      {
+        "id": "S",
+        "title": "Social interactions and organization",
+        "question": "Who had status, opportunities, or obligations?",
+        "example": "Examination preparation favored families that could afford education.",
+        "shortTitle": "Social"
+      },
+      {
+        "id": "P",
+        "title": "Political systems and governance",
+        "question": "How did rulers gain authority and administer territory?",
+        "example": "Song officials carried imperial decisions into local government.",
+        "shortTitle": "Political"
+      },
+      {
+        "id": "E",
+        "title": "Economic systems",
+        "question": "How were goods produced, exchanged, taxed, or distributed?",
+        "example": "Mali drew revenue from commerce through its territory.",
+        "shortTitle": "Economic"
+      },
+      {
+        "id": "C",
+        "title": "Cultural developments and interactions",
+        "question": "How did beliefs, learning, and artistic practices influence society?",
+        "example": "Buddhist monasteries connected religious practice with education.",
+        "shortTitle": "Cultural"
+      },
+      {
+        "id": "T",
+        "title": "Technology and innovation",
+        "question": "What techniques or tools changed what people could do?",
+        "example": "Inca roads and knotted records helped officials coordinate resources.",
+        "shortTitle": "Technology"
+      }
+    ]
+  },
+  "guide": {
+    "title": "Unit 1 study guide",
+    "essential": "How did societies build authority, organize work, and sustain shared beliefs between c. 1200 and c. 1450?",
+    "timeline": [
+      {
+        "date": "Before 1200",
+        "text": "Background: earlier Chinese bureaucracies, Indian Ocean exchange, the rise of Islam, and older American communities shaped this period."
+      },
+      {
+        "date": "1200s",
+        "text": "Southern Song China continued until 1279. The Delhi Sultanate began in 1206; Mali expanded in the thirteenth century. Baghdad fell to the Mongols in 1258."
+      },
+      {
+        "date": "1300s",
+        "text": "Mansa Musa made his pilgrimage in 1324-1325. Vijayanagara emerged in 1336. Plague disrupted Eurasian societies. Ming rule began in 1368."
+      },
+      {
+        "date": "Early 1400s",
+        "text": "The Mexica Triple Alliance formed in 1428. Inca expansion accelerated under Pachacuti from about 1438. Both empires expanded further after 1450."
+      }
+    ],
+    "comparisons": {
+      "caption": "Regional patterns in authority, belief, and resources",
+      "columns": [
+        "Region",
+        "Political organization",
+        "Beliefs and institutions",
+        "Material foundation",
+        "Connection to explain"
+      ],
+      "rows": [
+        [
+          "Song China",
+          "Examinations and appointed officials",
+          "Confucian ethics and Buddhist traditions",
+          "Agriculture, markets, taxes, and manufactures",
+          "Bureaucratic continuity alongside commercial growth."
+        ],
+        [
+          "Dar al-Islam",
+          "Multiple sultanates and dynasties",
+          "Islam, with Christian and Jewish communities",
+          "Farming, cities, commerce, and scholarly patronage",
+          "Shared practices connected politically divided territories."
+        ],
+        [
+          "South and Southeast Asia",
+          "Sultanates, regional kingdoms, and maritime states",
+          "Hinduism, Buddhism, Islam, Bhakti, and Sufism",
+          "Irrigation, land revenue, ports, and shipping",
+          "Cultural influence did not require a single regional empire."
+        ],
+        [
+          "The Americas",
+          "Maya cities, Mexica tributaries, and Inca administration",
+          "Sacred kingship and diverse local traditions",
+          "Tribute, labor obligations, intensive farming",
+          "States mobilized resources through different institutions."
+        ],
+        [
+          "Africa",
+          "Mali, Ethiopia, Great Zimbabwe, and independent cities",
+          "Islam, Christianity, and indigenous traditions",
+          "Agriculture, pastoralism, crafts, and trade",
+          "Centralized and decentralized systems coexisted."
+        ],
+        [
+          "Europe",
+          "Monarchies, nobles, city-states, and church authorities",
+          "Christianity alongside Jewish and Muslim communities",
+          "Manors, free and coerced labor, and growing markets",
+          "Regional variation complicates a single “feudal Europe” model."
+        ]
+      ]
+    },
+    "pitfalls": [
+      "A shared religion does not mean shared government or equal legal status.",
+      "A decentralized political system is still a political system.",
+      "Avoid projecting the peak of the Inca and Mexica empires backward to 1200.",
+      "Chinampas were constructed growing beds, not drifting islands. Terraces and raised fields were different techniques.",
+      "The Abbasid loss of Baghdad did not end Muslim scholarship everywhere.",
+      "A similar building shape is not enough to establish contact between societies.",
+      "Keep developments after 1450 labeled as later context. Do not use European conquest as a cause of thirteenth-century American changes."
+    ],
+    "headline": "The Global Tapestry. A connected review.",
+    "sourceIds": [
+      "ced",
+      "exam",
+      "amsco-guide",
+      "heimler",
+      "crash",
+      "albert",
+      "khan",
+      "angkor",
+      "inka",
+      "mita",
+      "cahokia",
+      "zimbabwe",
+      "ethiopia",
+      "feudal",
+      "monastic"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ced",
+      "label": "College Board: AP World History: Modern Course and Exam Description",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-world-history-modern-course-and-exam-description.pdf",
+      "note": "Course scope and learning objectives for Topics 1.1 through 1.7."
+    },
+    {
+      "id": "exam",
+      "label": "College Board: AP History exam updates for 2027",
+      "url": "https://apcentral.collegeboard.org/courses/ap-history-exam-updates",
+      "note": "Current assessment guidance. The APE exercise here is classroom practice, not an exact exam simulation."
+    },
+    {
+      "id": "amsco-guide",
+      "label": "Class AMSCO reading guide: Topics 1.2 and 1.3",
+      "note": "Completed class guide used to check the companion prompts for Abbasid political change, Islamic scholarship, women and commerce, South Asian states, Bhakti, and Southeast Asian exchange."
+    },
+    {
+      "id": "heimler",
+      "label": "Heimler's History: Unit 1 review, 1200-1450",
+      "url": "https://www.youtube.com/watch?v=Q5WHoq-YxFE",
+      "note": "Optional video overview. Use the current CED for exam requirements."
+    },
+    {
+      "id": "crash",
+      "label": "Crash Course World History 16: Mansa Musa and Islam in Africa",
+      "url": "https://thecrashcourse.com/courses/mansa-musa-and-islam-in-africa-crash-course-world-history-16/",
+      "note": "Optional video connecting African states, trade, and religious exchange."
+    },
+    {
+      "id": "albert",
+      "label": "Albert: Comparing societies, 1200-1450",
+      "url": "https://www.albert.io/blog/ap-world-history-comparing-societies-1200-1450/",
+      "note": "Supplemental comparison review. Some Albert features require an account."
+    },
+    {
+      "id": "khan",
+      "label": "Khan Academy: South and Southeast Asia, 1200-1450",
+      "url": "https://www.khanacademy.org/humanities/world-history-project-ap/xb41992e0ff5e0f09:unit-1-the-global-tapestry/xb41992e0ff5e0f09:developments-in-south-and-southeast-asia-1-3/a/article-south-and-southeast-asia-12001450",
+      "note": "Supplemental regional reading about states and belief systems."
+    },
+    {
+      "id": "angkor",
+      "label": "UNESCO: Angkor",
+      "url": "https://whc.unesco.org/en/list/668/",
+      "note": "Archaeological evidence for Khmer temples and water infrastructure."
+    },
+    {
+      "id": "inka",
+      "label": "Smithsonian NMAI: The Inka road and administration",
+      "url": "https://americanindian.si.edu/inkaroad/inkauniverse/inkaroadexpansion/road-administration.html",
+      "note": "Roads, messengers, and khipu record keeping."
+    },
+    {
+      "id": "mita",
+      "label": "Smithsonian NMAI: Building the Inka road",
+      "url": "https://americanindian.si.edu/inkaroad/inkauniverse/inkaroadexpansion/building-road.html",
+      "note": "Engineering, local expertise, and the mit’a labor obligation."
+    },
+    {
+      "id": "cahokia",
+      "label": "UNESCO: Cahokia Mounds",
+      "url": "https://whc.unesco.org/en/list/198/",
+      "note": "Mississippian settlement, agriculture, and monumental construction."
+    },
+    {
+      "id": "zimbabwe",
+      "label": "UNESCO: Great Zimbabwe",
+      "url": "https://whc.unesco.org/en/list/364/",
+      "note": "Evidence of a major African urban and trading center."
+    },
+    {
+      "id": "ethiopia",
+      "label": "UNESCO: Rock-Hewn Churches, Lalibela",
+      "url": "https://whc.unesco.org/en/list/18/",
+      "note": "Ethiopian Christianity and monumental architecture."
+    },
+    {
+      "id": "feudal",
+      "label": "The Metropolitan Museum of Art: Feudalism and knights",
+      "url": "https://www.metmuseum.org/essays/feudalism-and-knights-in-medieval-europe",
+      "note": "Landholding and military obligations in medieval Europe."
+    },
+    {
+      "id": "monastic",
+      "label": "The Metropolitan Museum of Art: Monasticism in western medieval Europe",
+      "url": "https://www.metmuseum.org/essays/monasticism-in-western-medieval-europe",
+      "note": "Religious communities, learning, and patronage."
+    }
+  ],
+  "topics": [
+    {
+      "id": "world-1-1",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 1,
+      "code": "1.1",
+      "title": "East Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Song China: an enduring government, changing economy, and influential culture.",
+      "bigIdea": "Song China combined long-standing ideas about authority with changes in farming and trade. Its neighbors borrowed Chinese practices while shaping societies of their own.",
+      "readingGuide": {
+        "objectives": "A, B, C",
+        "readingLabel": "AMSCO Topic 1.1, supplied Unit 1 PDF pages 3-11",
+        "lenses": [
+          "P",
+          "S",
+          "C",
+          "In",
+          "E",
+          "T"
+        ],
+        "prompts": [
+          "Trace the connection from Champa rice to specialized urban work. Include one other contributing development.",
+          "Compare the role of educated officials in Song China with warrior elites in Japan.",
+          "Use a belief or practice to show both Chinese influence and local adaptation in East Asia."
+        ]
+      }
+    },
+    {
+      "id": "world-1-2",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 2,
+      "code": "1.2",
+      "title": "Dar al-Islam",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Regional Muslim states, connected communities, and the movement of ideas across Afro-Eurasia.",
+      "bigIdea": "Political power became divided among several Muslim states, while religion, commerce, and scholarship kept people connected across borders. A shared cultural world could survive the decline of a particular empire.",
+      "readingGuide": {
+        "objectives": "D, E, F",
+        "readingLabel": "AMSCO Topic 1.2, supplied Unit 1 PDF pages 12-16",
+        "lenses": [
+          "P",
+          "C",
+          "S",
+          "T",
+          "E"
+        ],
+        "prompts": [
+          "Explain one threat to Abbasid political authority and why it did not end the wider Islamic cultural world.",
+          "Choose one scholarly achievement, such as astronomy, mathematics, medicine, or historical writing, and explain its significance.",
+          "Use one example from commerce, women’s rights, religious communities, or al-Andalus to show both interaction and a limit on equality."
+        ]
+      }
+    },
+    {
+      "id": "world-1-3",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 3,
+      "code": "1.3",
+      "title": "South and Southeast Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Hindu, Buddhist, and Muslim communities; inland kingdoms and maritime states.",
+      "bigIdea": "South and Southeast Asia shared influential religious traditions, but their states drew on different combinations of land, labor, temples, and maritime commerce.",
+      "readingGuide": {
+        "objectives": "G, H",
+        "readingLabel": "AMSCO Topic 1.3, supplied Unit 1 PDF pages 17-23",
+        "lenses": [
+          "C",
+          "S",
+          "P",
+          "E",
+          "In"
+        ],
+        "prompts": [
+          "Explain one difference between the Delhi Sultanate, Rajput kingdoms, and Vijayanagara, including how the state was founded or organized.",
+          "Compare Bhakti devotion and Sufi practice without treating them as the same religion.",
+          "Explain how Khmer water infrastructure supported political authority, then contrast it with a maritime state or Sri Lankan irrigation system."
+        ]
+      }
+    },
+    {
+      "id": "world-1-4",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 4,
+      "code": "1.4",
+      "title": "The Americas",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Maya cities, Mexica tribute, Inca labor, and diverse North American communities.",
+      "bigIdea": "American societies built cities and states using local crops, labor obligations, sacred authority, and regional exchange. Maya, Mexica, Inca, and North American communities developed distinct institutions.",
+      "readingGuide": {
+        "objectives": "I",
+        "readingLabel": "AMSCO Topic 1.4, supplied Unit 1 PDF pages 27-33",
+        "lenses": [
+          "P",
+          "E",
+          "S",
+          "In",
+          "T",
+          "C"
+        ],
+        "prompts": [
+          "Compare payments in goods with labor obligations as ways to support a state.",
+          "Explain how chinampas and Andean terraces addressed different environments.",
+          "Describe what archaeology can reveal about Cahokia or Ancestral Pueblo communities, and one limit of the evidence."
+        ]
+      }
+    },
+    {
+      "id": "world-1-5",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 5,
+      "code": "1.5",
+      "title": "Africa",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "African kingdoms and cities, connected by agriculture, commerce, and varied beliefs.",
+      "bigIdea": "African societies included large kingdoms, independent cities, and communities governed through kinship. Their rulers used agriculture, trade, religious connections, and local institutions in different combinations.",
+      "readingGuide": {
+        "objectives": "J",
+        "readingLabel": "AMSCO Topic 1.5, supplied Unit 1 PDF pages 34-40",
+        "lenses": [
+          "P",
+          "E",
+          "C",
+          "S",
+          "In"
+        ],
+        "prompts": [
+          "Compare Mali with the Hausa city-states on the same political dimension.",
+          "Explain how Great Zimbabwe connected an inland economy to overseas markets.",
+          "Use Ethiopia to challenge the claim that all African states adopted Islam."
+        ]
+      }
+    },
+    {
+      "id": "world-1-6",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 6,
+      "code": "1.6",
+      "title": "Developments in Europe",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Religious institutions, divided political authority, and changing agricultural societies.",
+      "bigIdea": "European societies were largely agricultural and politically divided. Religious institutions, landholding, and labor obligations shaped authority, while growing towns and uneven political changes complicated that pattern.",
+      "readingGuide": {
+        "objectives": "K, L, M",
+        "readingLabel": "AMSCO Topic 1.6, supplied Unit 1 PDF pages 41-49",
+        "lenses": [
+          "P",
+          "S",
+          "E",
+          "C",
+          "In",
+          "T"
+        ],
+        "prompts": [
+          "Distinguish feudal relationships among elites from the manor’s labor system.",
+          "Explain one way religious institutions could support a ruler and one way they could challenge a ruler.",
+          "Trace how agricultural productivity and later population losses could change labor relationships."
+        ]
+      }
+    },
+    {
+      "id": "world-1-7",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 7,
+      "code": "1.7",
+      "title": "Comparisons in the Period",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Compare authority, resources, and beliefs using precise evidence and historical reasoning.",
+      "bigIdea": "A strong comparison names a shared problem, supports both sides with specific evidence, and explains why the similarities or differences matter. State building followed several paths rather than a single global sequence.",
+      "readingGuide": {
+        "objectives": "N",
+        "readingLabel": "AMSCO Topic 1.7, supplied Unit 1 PDF pages 50-53",
+        "lenses": [
+          "In",
+          "S",
+          "P",
+          "E",
+          "C",
+          "T"
+        ],
+        "prompts": [
+          "Choose two states and compare the same method of maintaining authority in each.",
+          "Support one continuity and one innovation with named examples.",
+          "Revise a vague claim such as “all states were the same” into a specific, qualified comparison."
+        ]
+      }
+    }
+  ]
+}

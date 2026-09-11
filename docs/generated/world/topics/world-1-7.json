@@ -1,0 +1,462 @@
+{
+  "course": {
+    "schemaVersion": 1,
+    "id": "world",
+    "title": "AP World History: Modern",
+    "shortTitle": "AP World",
+    "description": "Understand the people, ideas, and connections that shaped the world from c. 1200 to the present.",
+    "status": "ready",
+    "period": "c. 1200–present",
+    "order": 1,
+    "previewDescription": "Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present."
+  },
+  "unit": {
+    "schemaVersion": 1,
+    "id": "world-1",
+    "courseId": "world",
+    "number": 1,
+    "title": "The Global Tapestry",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "description": "Explore how societies organized power, shared beliefs, and built their economies across the world.",
+    "quizzes": [
+      {
+        "id": "world-1-practice",
+        "courseId": "world",
+        "unitId": "world-1",
+        "title": "Unit 1 practice",
+        "quizType": "unit",
+        "selections": [
+          {
+            "topicId": "world-1-1",
+            "questionIds": [
+              "q1",
+              "q5",
+              "q7"
+            ]
+          },
+          {
+            "topicId": "world-1-2",
+            "questionIds": [
+              "islam-q1",
+              "islam-q4",
+              "islam-q8"
+            ]
+          },
+          {
+            "topicId": "world-1-3",
+            "questionIds": [
+              "world-1-3-q1",
+              "world-1-3-q4",
+              "world-1-3-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-4",
+            "questionIds": [
+              "world-1-4-q1",
+              "world-1-4-q4",
+              "world-1-4-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-5",
+            "questionIds": [
+              "world-1-5-q1",
+              "world-1-5-q4",
+              "world-1-5-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-6",
+            "questionIds": [
+              "world-1-6-q1",
+              "world-1-6-q4",
+              "world-1-6-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-7",
+            "questionIds": [
+              "world-1-7-q1",
+              "world-1-7-q4",
+              "world-1-7-q6"
+            ]
+          }
+        ]
+      }
+    ],
+    "topicCount": 7,
+    "firstTopic": {
+      "id": "world-1-1",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 1,
+      "code": "1.1",
+      "title": "East Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Song China: an enduring government, changing economy, and influential culture."
+    },
+    "hasGuide": true,
+    "writingQuizzes": [
+      {
+        "id": "world-1-saq",
+        "title": "Unit 1 writing quiz",
+        "partCount": 3
+      }
+    ]
+  },
+  "topic": {
+    "id": "world-1-7",
+    "courseId": "world",
+    "unitId": "world-1",
+    "order": 7,
+    "code": "1.7",
+    "title": "Comparisons in the Period",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "summary": "Compare authority, resources, and beliefs using precise evidence and historical reasoning."
+  },
+  "framework": {
+    "id": "inspect",
+    "name": "InSPECT",
+    "title": "Use InSPECT to choose your evidence",
+    "intro": "A fact can connect to more than one lens. Choose the lens that helps answer the prompt.",
+    "sourceNote": "Based on the class Early Religions + InSPECT slides, pages 5-17.",
+    "themes": [
+      {
+        "id": "In",
+        "title": "Interactions of humans with the environment",
+        "question": "How did geography, crops, resources, or disease shape choices?",
+        "example": "Andean terraces made steep slopes more usable for farming.",
+        "shortTitle": "Environment"
+      },
+      {
+        "id": "S",
+        "title": "Social interactions and organization",
+        "question": "Who had status, opportunities, or obligations?",
+        "example": "Examination preparation favored families that could afford education.",
+        "shortTitle": "Social"
+      },
+      {
+        "id": "P",
+        "title": "Political systems and governance",
+        "question": "How did rulers gain authority and administer territory?",
+        "example": "Song officials carried imperial decisions into local government.",
+        "shortTitle": "Political"
+      },
+      {
+        "id": "E",
+        "title": "Economic systems",
+        "question": "How were goods produced, exchanged, taxed, or distributed?",
+        "example": "Mali drew revenue from commerce through its territory.",
+        "shortTitle": "Economic"
+      },
+      {
+        "id": "C",
+        "title": "Cultural developments and interactions",
+        "question": "How did beliefs, learning, and artistic practices influence society?",
+        "example": "Buddhist monasteries connected religious practice with education.",
+        "shortTitle": "Cultural"
+      },
+      {
+        "id": "T",
+        "title": "Technology and innovation",
+        "question": "What techniques or tools changed what people could do?",
+        "example": "Inca roads and knotted records helped officials coordinate resources.",
+        "shortTitle": "Technology"
+      }
+    ]
+  },
+  "lesson": {
+    "schemaVersion": 1,
+    "id": "world-1-7",
+    "unitId": "world-1",
+    "code": "1.7",
+    "title": "Comparisons in the Period",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "summary": "Compare authority, resources, and beliefs using precise evidence and historical reasoning.",
+    "courseId": "world",
+    "order": 7,
+    "minutes": 8,
+    "learningGoals": [
+      "Make a defensible comparison of state formation using evidence from multiple regions.",
+      "Explain a similarity and a difference while accounting for chronology and local conditions."
+    ],
+    "bigIdea": "A strong comparison names a shared problem, supports both sides with specific evidence, and explains why the similarities or differences matter. State building followed several paths rather than a single global sequence.",
+    "context": "Use evidence from Topics 1.1 through 1.6 within c. 1200-1450. The Song ended before the rise of the Mexica and Inca empires, but all can be compared within this broad period. Make that chronology clear instead of imagining a single snapshot in which every state reached its height together.",
+    "sections": [
+      {
+        "id": "compare-governance",
+        "title": "Compare the same feature on both sides.",
+        "conceptTitle": "Compare the same feature on both sides.",
+        "lenses": [
+          "P",
+          "S"
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Begin with a dimension such as recruitment of officials, collection of revenue, or the power of local elites. “China had rice and Europe had knights” lists different facts without establishing a useful comparison. “Song rulers used examination-selected officials, while many European monarchs relied on landholding nobles” compares administration."
+          },
+          {
+            "type": "paragraph",
+            "text": "Both Song China and the Inca state used officials and records to organize resources. Their recruitment practices, information systems, and labor arrangements differed. A comparison should identify a specific difference without wrongly treating one society as lacking all government."
+          },
+          {
+            "type": "paragraph",
+            "text": "Maya and Hausa city-states show that shared cultural traditions did not require permanent political unity. Mali and Great Zimbabwe show that African societies also built substantial centralized states. Select cases that support a qualified claim rather than turning a regional tendency into an absolute rule."
+          }
+        ],
+        "takeaway": "Name the category, give evidence for each society, and explain the relationship."
+      },
+      {
+        "id": "compare-beliefs",
+        "title": "Shared legitimizing functions did not mean identical beliefs.",
+        "conceptTitle": "Shared legitimizing functions did not mean identical beliefs.",
+        "lenses": [
+          "C",
+          "P"
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Song Confucian education, Mali’s Islamic patronage, Khmer temple building, and Ethiopian Christian kingship all linked authority with meaningful cultural traditions. A defensible similarity is that rulers used established beliefs to strengthen legitimacy, not that they all followed the same religion."
+          },
+          {
+            "type": "paragraph",
+            "text": "The relationship between institutions differed. Song examination learning was closely linked to state service. In western Europe, the papacy and powerful clergy could support monarchs or compete with them. Religion could therefore reinforce power and provide an independent source of authority."
+          },
+          {
+            "type": "paragraph",
+            "text": "Merchants, missionaries, monks, and Sufis helped beliefs cross borders. Local customs could persist through conversion. Neither political conquest nor a shared religious label proves that all subjects practiced the same faith in the same way."
+          }
+        ],
+        "takeaway": "Compare a function, such as legitimacy or education, while preserving the distinctive content of each tradition."
+      },
+      {
+        "id": "compare-resources",
+        "title": "States needed resources, but collected them differently.",
+        "conceptTitle": "States needed resources, but collected them differently.",
+        "lenses": [
+          "E",
+          "In",
+          "T"
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Mali obtained resources from agriculture and trade, while Mexica rulers imposed tribute on subject communities. Inca administration organized labor duties and redistribution. These systems all supported political power, but taxes on exchange, tribute in goods, and service in labor should not be treated as interchangeable."
+          },
+          {
+            "type": "paragraph",
+            "text": "Agricultural techniques could support population and specialization across regions. Champa rice in China, Khmer water management, Mexica chinampas, and Andean terraces provide specific examples. Different environments encouraged different choices, and rulers depended on the knowledge and work of local producers."
+          },
+          {
+            "type": "paragraph",
+            "text": "Markets expanded in Song China and in parts of Europe, yet agriculture remained central. An explanation should avoid equating commercialization with modern industrialization or assuming that growing trade ended coercive labor."
+          }
+        ],
+        "takeaway": "Connect a source of resources to a political outcome rather than just saying a state became rich."
+      },
+      {
+        "id": "compare-change",
+        "title": "Track continuity, innovation, and uneven development.",
+        "conceptTitle": "Track continuity, innovation, and uneven development.",
+        "lenses": [
+          "P",
+          "C",
+          "S"
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Chinese dynasties reused and revised bureaucratic traditions. Successor states in Dar al-Islam maintained Islamic institutions despite political fragmentation. In South and Southeast Asia, rulers adapted imported traditions to local circumstances. These are continuities with changes, not exact copies of an earlier empire."
+          },
+          {
+            "type": "paragraph",
+            "text": "Mexica and Inca expansion illustrates growing political reach, while Maya cities and many European territories remained divided. The Mongol conquests changed the political map dramatically, with their exchange networks studied more fully in Unit 2. There was no universal movement from small communities to stable centralized empires."
+          },
+          {
+            "type": "paragraph",
+            "text": "Patriarchal structures appeared in many regions, but women’s work, property rights, education, and religious opportunities varied. Specific examples support comparison better than claims that women everywhere had identical experiences."
+          }
+        ],
+        "takeaway": "Use words such as “many,” “in this region,” and “over time” when the evidence requires them, not as a substitute for evidence."
+      },
+      {
+        "id": "compare-evidence",
+        "title": "Turn information into an APE response.",
+        "conceptTitle": "Turn information into an APE response.",
+        "lenses": [
+          "P",
+          "C",
+          "E"
+        ],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Answer: make a direct claim that addresses the verb in the question. Prove: describe a named development, institution, or example. Explain: connect that evidence to the claim by showing how or why it matters. Three disconnected facts do not make an explanation."
+          },
+          {
+            "type": "paragraph",
+            "text": "For a comparison, evidence must support both sides. For causation, spell out the mechanism between cause and effect. For continuity and change, establish what persisted and what changed over the relevant period. InSPECT helps you choose a category, but the category label is not itself historical evidence."
+          },
+          {
+            "type": "paragraph",
+            "text": "Consider what sources can show. A temple can indicate patronage and organized labor, but cannot prove that every subject shared its religion. A traveler’s account reflects an observer’s perspective. Written texts, oral histories, and material evidence are most useful when evaluated for their context and limits."
+          }
+        ],
+        "takeaway": "Try the unit writing quiz: one question, three parts, and three short APE responses."
+      }
+    ],
+    "readingGuide": {
+      "objectives": "N",
+      "readingLabel": "AMSCO Topic 1.7, supplied Unit 1 PDF pages 50-53",
+      "lenses": [
+        "In",
+        "S",
+        "P",
+        "E",
+        "C",
+        "T"
+      ],
+      "prompts": [
+        "Choose two states and compare the same method of maintaining authority in each.",
+        "Support one continuity and one innovation with named examples.",
+        "Revise a vague claim such as “all states were the same” into a specific, qualified comparison."
+      ]
+    },
+    "vocabulary": [
+      {
+        "id": "world-1-7-legitimacy",
+        "topicId": "world-1-7",
+        "term": "Legitimacy",
+        "definition": "The perceived justification for a ruler’s or institution’s authority."
+      },
+      {
+        "id": "world-1-7-centralization",
+        "topicId": "world-1-7",
+        "term": "Centralization",
+        "definition": "Concentration of decision making and administration in a central authority."
+      },
+      {
+        "id": "world-1-7-decentralization",
+        "topicId": "world-1-7",
+        "term": "Decentralization",
+        "definition": "Distribution of political authority among local or regional institutions."
+      },
+      {
+        "id": "world-1-7-continuity",
+        "topicId": "world-1-7",
+        "term": "Continuity",
+        "definition": "A pattern or institution that persists over a defined period."
+      },
+      {
+        "id": "world-1-7-innovation",
+        "topicId": "world-1-7",
+        "term": "Innovation",
+        "definition": "A new or adapted method, institution, or technique."
+      },
+      {
+        "id": "world-1-7-comparison",
+        "topicId": "world-1-7",
+        "term": "Historical comparison",
+        "definition": "An explanation of similarities or differences using a shared analytical category."
+      },
+      {
+        "id": "world-1-7-causation",
+        "topicId": "world-1-7",
+        "term": "Causation",
+        "definition": "An explanation of how and why one development contributes to another."
+      },
+      {
+        "id": "world-1-7-evidence",
+        "topicId": "world-1-7",
+        "term": "Historical evidence",
+        "definition": "Specific information from the past used to support or challenge a claim."
+      },
+      {
+        "id": "world-1-7-ape",
+        "topicId": "world-1-7",
+        "term": "APE",
+        "definition": "Answer, Prove, Explain: a scaffold for connecting a claim with evidence and reasoning."
+      },
+      {
+        "id": "world-1-7-inspect",
+        "topicId": "world-1-7",
+        "term": "InSPECT",
+        "definition": "A class framework for environment, society, politics, economics, culture, and technology."
+      }
+    ],
+    "connections": [
+      {
+        "id": "world-1-7-connection-1",
+        "topicId": "world-1-7",
+        "type": "Make the connection",
+        "title": "A claim needs two sides",
+        "body": "For a comparison, describe the same feature in two societies and explain the relationship. Two separate facts are only the beginning."
+      },
+      {
+        "id": "world-1-7-connection-2",
+        "topicId": "world-1-7",
+        "type": "Make the connection",
+        "title": "A cause needs a mechanism",
+        "body": "Connect an innovation to greater output, then connect that output to a political or social effect. Avoid saying one crop caused every economic change."
+      },
+      {
+        "id": "world-1-7-connection-3",
+        "topicId": "world-1-7",
+        "type": "Make the connection",
+        "title": "A period is not a photograph",
+        "body": "Song China, early Mexica expansion, and early Inca expansion belong within the unit’s broad dates, but their peaks did not occur simultaneously."
+      }
+    ],
+    "sourceIds": [
+      "reference-28",
+      "ced",
+      "heimler",
+      "albert",
+      "exam",
+      "reference-19"
+    ]
+  },
+  "bankPath": "world/banks/world-1-7.json",
+  "sources": [
+    {
+      "id": "reference-28",
+      "label": "Class reading: AMSCO Unit 1, Topic 1.7, supplied PDF pages 50-53. Original notes below; consult your own copy for the reading."
+    },
+    {
+      "id": "ced",
+      "label": "College Board: AP World History: Modern Course and Exam Description",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-world-history-modern-course-and-exam-description.pdf",
+      "note": "Course scope and learning objectives for Topics 1.1 through 1.7."
+    },
+    {
+      "id": "heimler",
+      "label": "Heimler's History: Unit 1 review, 1200-1450",
+      "url": "https://www.youtube.com/watch?v=Q5WHoq-YxFE",
+      "note": "Optional video overview. Use the current CED for exam requirements."
+    },
+    {
+      "id": "albert",
+      "label": "Albert: Comparing societies, 1200-1450",
+      "url": "https://www.albert.io/blog/ap-world-history-comparing-societies-1200-1450/",
+      "note": "Supplemental comparison review. Some Albert features require an account."
+    },
+    {
+      "id": "exam",
+      "label": "College Board: AP History exam updates for 2027",
+      "url": "https://apcentral.collegeboard.org/courses/ap-history-exam-updates",
+      "note": "Current assessment guidance. The APE exercise here is classroom practice, not an exact exam simulation."
+    },
+    {
+      "id": "reference-19",
+      "label": "Class framework: Early Religions + InSPECT, slides 5-17. InSPECT categories inform the reading guide and writing exercise."
+    }
+  ],
+  "assets": {}
+}

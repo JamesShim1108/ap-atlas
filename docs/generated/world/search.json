@@ -1,0 +1,51 @@
+[
+  {
+    "id": "world-1-1",
+    "title": "East Asia",
+    "summary": "Song China: an enduring government, changing economy, and influential culture.",
+    "unitId": "world-1",
+    "url": "#/topic/world-1-1"
+  },
+  {
+    "id": "world-1-2",
+    "title": "Dar al-Islam",
+    "summary": "Regional Muslim states, connected communities, and the movement of ideas across Afro-Eurasia.",
+    "unitId": "world-1",
+    "url": "#/topic/world-1-2"
+  },
+  {
+    "id": "world-1-3",
+    "title": "South and Southeast Asia",
+    "summary": "Hindu, Buddhist, and Muslim communities; inland kingdoms and maritime states.",
+    "unitId": "world-1",
+    "url": "#/topic/world-1-3"
+  },
+  {
+    "id": "world-1-4",
+    "title": "The Americas",
+    "summary": "Maya cities, Mexica tribute, Inca labor, and diverse North American communities.",
+    "unitId": "world-1",
+    "url": "#/topic/world-1-4"
+  },
+  {
+    "id": "world-1-5",
+    "title": "Africa",
+    "summary": "African kingdoms and cities, connected by agriculture, commerce, and varied beliefs.",
+    "unitId": "world-1",
+    "url": "#/topic/world-1-5"
+  },
+  {
+    "id": "world-1-6",
+    "title": "Developments in Europe",
+    "summary": "Religious institutions, divided political authority, and changing agricultural societies.",
+    "unitId": "world-1",
+    "url": "#/topic/world-1-6"
+  },
+  {
+    "id": "world-1-7",
+    "title": "Comparisons in the Period",
+    "summary": "Compare authority, resources, and beliefs using precise evidence and historical reasoning.",
+    "unitId": "world-1",
+    "url": "#/topic/world-1-7"
+  }
+]

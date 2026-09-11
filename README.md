@@ -1,7 +1,13 @@
-Run the focused checks from the repository root:
+# Page One
+
+Free lessons, reading guides, and practice for a growing collection of courses.
+
+See the [editing guide](handbook/authoring.md) for the file map, topic templates, image workflow, and code conventions.
 
 ```bash
-node --test tests/unit-1.test.mjs
+npm ci
+npm run build
+npm run check
 ```
 
-The checks cover all seven ready topics, lesson and concept relationships, unique question records, the 21-question unit pool, complete and weak-area quiz flows, writing draft transitions, tab-local persistence, study-guide rendering, and broken resource links. JavaScript syntax is also checked with `node --check` for the browser entry files. Browser visual and interaction testing must be performed separately in a browser.
+The checks cover content relationships, generated files, quiz and writing behavior, saved drafts, loading, images, syntax, and formatting. Browser visual review is separate. GitHub Pages serves `docs/` from `main`.

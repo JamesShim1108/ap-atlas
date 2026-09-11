@@ -1,0 +1,189 @@
+{
+  "course": {
+    "schemaVersion": 1,
+    "id": "world",
+    "title": "AP World History: Modern",
+    "shortTitle": "AP World",
+    "description": "Understand the people, ideas, and connections that shaped the world from c. 1200 to the present.",
+    "status": "ready",
+    "period": "c. 1200–present",
+    "order": 1,
+    "previewDescription": "Explore how states rose, belief systems spread, trade networks connected regions, and revolutions reshaped societies from c. 1200 to the present."
+  },
+  "unit": {
+    "schemaVersion": 1,
+    "id": "world-1",
+    "courseId": "world",
+    "number": 1,
+    "title": "The Global Tapestry",
+    "period": "c. 1200–1450",
+    "status": "ready",
+    "description": "Explore how societies organized power, shared beliefs, and built their economies across the world.",
+    "quizzes": [
+      {
+        "id": "world-1-practice",
+        "courseId": "world",
+        "unitId": "world-1",
+        "title": "Unit 1 practice",
+        "quizType": "unit",
+        "selections": [
+          {
+            "topicId": "world-1-1",
+            "questionIds": [
+              "q1",
+              "q5",
+              "q7"
+            ]
+          },
+          {
+            "topicId": "world-1-2",
+            "questionIds": [
+              "islam-q1",
+              "islam-q4",
+              "islam-q8"
+            ]
+          },
+          {
+            "topicId": "world-1-3",
+            "questionIds": [
+              "world-1-3-q1",
+              "world-1-3-q4",
+              "world-1-3-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-4",
+            "questionIds": [
+              "world-1-4-q1",
+              "world-1-4-q4",
+              "world-1-4-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-5",
+            "questionIds": [
+              "world-1-5-q1",
+              "world-1-5-q4",
+              "world-1-5-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-6",
+            "questionIds": [
+              "world-1-6-q1",
+              "world-1-6-q4",
+              "world-1-6-q6"
+            ]
+          },
+          {
+            "topicId": "world-1-7",
+            "questionIds": [
+              "world-1-7-q1",
+              "world-1-7-q4",
+              "world-1-7-q6"
+            ]
+          }
+        ]
+      }
+    ],
+    "topicCount": 7,
+    "firstTopic": {
+      "id": "world-1-1",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 1,
+      "code": "1.1",
+      "title": "East Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Song China: an enduring government, changing economy, and influential culture."
+    },
+    "hasGuide": true,
+    "writingQuizzes": [
+      {
+        "id": "world-1-saq",
+        "title": "Unit 1 writing quiz",
+        "partCount": 3
+      }
+    ]
+  },
+  "topics": [
+    {
+      "id": "world-1-1",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 1,
+      "code": "1.1",
+      "title": "East Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Song China: an enduring government, changing economy, and influential culture."
+    },
+    {
+      "id": "world-1-2",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 2,
+      "code": "1.2",
+      "title": "Dar al-Islam",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Regional Muslim states, connected communities, and the movement of ideas across Afro-Eurasia."
+    },
+    {
+      "id": "world-1-3",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 3,
+      "code": "1.3",
+      "title": "South and Southeast Asia",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Hindu, Buddhist, and Muslim communities; inland kingdoms and maritime states."
+    },
+    {
+      "id": "world-1-4",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 4,
+      "code": "1.4",
+      "title": "The Americas",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Maya cities, Mexica tribute, Inca labor, and diverse North American communities."
+    },
+    {
+      "id": "world-1-5",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 5,
+      "code": "1.5",
+      "title": "Africa",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "African kingdoms and cities, connected by agriculture, commerce, and varied beliefs."
+    },
+    {
+      "id": "world-1-6",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 6,
+      "code": "1.6",
+      "title": "Developments in Europe",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Religious institutions, divided political authority, and changing agricultural societies."
+    },
+    {
+      "id": "world-1-7",
+      "courseId": "world",
+      "unitId": "world-1",
+      "order": 7,
+      "code": "1.7",
+      "title": "Comparisons in the Period",
+      "period": "c. 1200–1450",
+      "status": "ready",
+      "summary": "Compare authority, resources, and beliefs using precise evidence and historical reasoning."
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+/* Course animation appearance. Timing lives in app/carousel.js. */
+.course-preview {
+  min-width: 0;
+}
+.course-preview {
+  position: relative;
+  overflow: hidden;
+}
+.preview-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 24px 4px;
+  color: var(--muted);
+  font: 0.875rem/1.5 var(--mono);
+}
+.preview-pause {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #24554840;
+  border-radius: 50%;
+  background: #f7faf280;
+  color: var(--green);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.15s;
+}
+.preview-pause:hover {
+  background: #f7faf2d9;
+}
+.preview-icon {
+  grid-area: 1/1;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.preview-icon-play {
+  display: none;
+  fill: currentColor;
+}
+.preview-pause[aria-pressed="true"] .preview-icon-pause {
+  display: none;
+}
+.preview-pause[aria-pressed="true"] .preview-icon-play {
+  display: block;
+}
+.preview-viewport {
+  overflow: hidden;
+  padding: 20px 0 25px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 88%, transparent);
+}
+.preview-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  will-change: transform;
+  transition: transform 0.58s cubic-bezier(0.22, 0.75, 0.25, 1);
+}
+.preview-card {
+  flex: 0 0 64%;
+  min-width: 0;
+  min-height: 352px;
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  border: 1px solid #9db8a9;
+  border-radius: 7px;
+  background: var(--soft);
+  color: var(--ink);
+  box-shadow: 5px 5px 0 #24554819;
+  opacity: 0.6;
+  transform: scale(0.84);
+  transition:
+    transform 0.58s cubic-bezier(0.22, 0.75, 0.25, 1),
+    opacity 0.58s ease;
+}
+.preview-track.is-resetting {
+  transition: none;
+}
+.preview-track.is-resetting .preview-card {
+  transition: none;
+}
+.preview-card.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+.preview-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 26px;
+  font: 0.8125rem/1.5 var(--mono);
+}
+.preview-code {
+  padding: 5px 9px;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 2px;
+}
+.preview-label {
+  color: #405e51;
+}
+.preview-card h3 {
+  font: 400 2.1875rem/1.15 var(--serif);
+  margin-bottom: 12px;
+}
+.preview-card .preview-period {
+  color: #405e51;
+  font: 0.875rem/1.6 var(--mono);
+  margin: 0 0 16px;
+}
+.preview-card .preview-description {
+  color: #405e51;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0 0 24px;
+}
+.preview-foot {
+  color: #405e51;
+  border-top: 1px solid #9db8a9;
+  padding-top: 15px;
+  margin-top: auto;
+  font-size: 0.875rem;
+}
+.preview-caption {
+  padding: 0 24px;
+  margin: 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+@media (max-width: 1100px) {
+  .preview-card {
+    flex-basis: 68%;
+    padding: 22px;
+  }
+}
+@media (max-width: 800px) {
+  .course-preview {
+    width: calc(100% + 48px);
+    margin-left: -24px;
+  }
+  .preview-card {
+    flex-basis: 60%;
+    padding: 26px;
+  }
+}
+@media (max-width: 480px) {
+  .preview-card {
+    flex-basis: 68%;
+    padding: 21px;
+  }
+  .preview-card h3 {
+    font-size: 1.8125rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .preview-track {
+    transition: none;
+  }
+  .preview-card {
+    transition: none;
+  }
+  .preview-pause {
+    display: none;
+  }
+}
