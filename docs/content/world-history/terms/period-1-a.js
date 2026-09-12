@@ -1,0 +1,161 @@
+// Verbatim class vocabulary. Only PDF line wrapping and term/definition separators
+// are removed. Do not correct source wording here without a revised class list.
+export const termSet = {
+  schemaVersion: 1,
+  id: "world-period-1-a",
+  courseId: "world",
+  title: "Period 1 Terms List A",
+  source: "Period 1 Terms List A.pdf",
+  cards: [
+    {
+      id: "caliph",
+      term: "Caliph",
+      definition: "The successor to Muhammad as head of the Islamic community.",
+    },
+    {
+      id: "sunni",
+      term: "Sunni",
+      definition:
+        "Followers of the majority interpretation within Islam; included the Umayyads.",
+    },
+    {
+      id: "shia",
+      term: "Shi’a",
+      definition: "Followers of Ali’s interpretation of Islam.",
+    },
+    { id: "allah", term: "Allah", definition: "Islamic term for God." },
+    {
+      id: "ramadan",
+      term: "Ramadan",
+      definition:
+        "The ninth month of the Islamic year that requires daily fasting from sunrise to sunset.",
+    },
+    {
+      id: "saladin",
+      term: "Saladin",
+      definition: "12th-century Muslim ruler; reconquered most of the crusader kingdoms.",
+    },
+    {
+      id: "sufis",
+      term: "Sufis",
+      definition: "Islamic mystics; spread Islam to many Afro-Asian regions.",
+    },
+    {
+      id: "sultan",
+      term: "Sultan",
+      definition: "Word meaning “victorious”; came to designate Muslim rulers.",
+    },
+    {
+      id: "mali",
+      term: "Mali",
+      definition:
+        "State of the Malinke people, centered between the Senegal and Niger rivers.",
+    },
+    {
+      id: "axum",
+      term: "Axum",
+      definition:
+        "(1st-6th centuries C.E.) Developing in the Ethiopian highlands and traded with India and the Mediterranean areas to gain Greek and Arabian cultural influences; conversion of the king to Christianity in 350 C.E. laid the basis for Ethiopian Christian culture.",
+    },
+    {
+      id: "songhai",
+      term: "Songhai",
+      definition:
+        "Successor state to Mali; dominated middle reaches of the Niger valley; capital at Gao.",
+    },
+    {
+      id: "hausa",
+      term: "Hausa",
+      definition:
+        "peoples of northern Nigeria who formed states after the Songhay, combining Muslim and pagan traditions",
+    },
+    {
+      id: "great-zimbabwe",
+      term: "Great Zimbabwe",
+      definition:
+        "With massive stone buildings and walls, incorporates the greatest early buildings in sub-Saharan Africa.",
+    },
+    {
+      id: "mansa-musa",
+      term: "Mansa Musa",
+      definition:
+        "First Muslim ruler of Mali, performed the Hajj, wealthiest leader in history",
+    },
+    {
+      id: "ibn-battuta",
+      term: "Ibn Battuta",
+      definition:
+        "Traveled along Silk Roads, Indian Ocean trade routes, and Trans-Saharan trade routes recording history along the way.",
+    },
+    {
+      id: "margery-kempe",
+      term: "Margery Kempe",
+      definition:
+        "English pilgrim who went to Jerusalem and documented her travels. Mystic who wrote about personal relationship and messages with Jesus.",
+    },
+    {
+      id: "al-andalus",
+      term: "Al-Andalus",
+      definition: "Umayyad Islamic empire in the Iberian Peninsula (Spain and Portugal)",
+    },
+    {
+      id: "neo-confucianism",
+      term: "Neo-Confucianism",
+      definition: "Combination of Daoist and Buddhist ideologies with Confucianism",
+    },
+    {
+      id: "caravanserai",
+      term: "caravanserai",
+      definition:
+        "rest stops along Silk and Trans-Saharan trade routes that allowed travelers to rest and care for their animals",
+    },
+    {
+      id: "diasporic-communities",
+      term: "diasporic communities",
+      definition:
+        "groups of people who settled new areas to participate in trade networks, creating new relationships and opportunities in their new homes",
+    },
+    {
+      id: "theravada-buddhism",
+      term: "Theravada Buddhism",
+      definition:
+        "form of Buddhism as a philosophy centered on humans and self-improvement to escape reincarnation and Buddha is an important figure to model behavior but not a god",
+    },
+    {
+      id: "mahayana-buddhism",
+      term: "Mahayana Buddhism",
+      definition:
+        "form of Buddhism that includes religious elements like gods and views Buddha and other spiritual leaders as boddhisatva; more ritualized prayers and ceremonies",
+    },
+    {
+      id: "rajput",
+      term: "Rajput",
+      definition:
+        "Hindu kingdoms that failed to centralize in Northern India (present day Pakistan) and were repeatedly attacked by Muslim warriors",
+    },
+    {
+      id: "srivijaya",
+      term: "Srivijaya",
+      definition:
+        "Southeast Asian kingdom (ca. 671-1025 CE) centered in Sunda and Malacca Straits between China and India to control trade; heavily influenced by Buddhism",
+    },
+    {
+      id: "majapahit",
+      term: "Majapahit",
+      definition:
+        "Southeast Asian empire (1292-1527 CE) centered in modern-day Indonesia to control Indian Ocean trade; heavily influenced by Hinduism",
+    },
+    {
+      id: "khmer",
+      term: "Khmer",
+      definition:
+        "Southeast Asian empire (802-1431 CE) centered in modern-day Cambodia to control trade between India and China; heavily influenced by Hinduism and Buddhism",
+    },
+    {
+      id: "sukhothai",
+      term: "Sukhothai",
+      definition:
+        "Southeast Asia empire (1238-1438 CE) that broke away from Khmer and created government influenced by Theravada Buddhism; tribute state of China",
+    },
+  ],
+};

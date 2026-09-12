@@ -20,6 +20,8 @@
     "status": "soon",
     "description": "",
     "quizzes": [],
+    "termSets": [],
+    "topicQuizzes": [],
     "topicCount": 0,
     "firstTopic": null,
     "hasGuide": false,

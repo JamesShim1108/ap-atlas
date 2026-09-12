@@ -128,3 +128,34 @@ Use semantic HTML, input labels, buttons for actions, and links for navigation. 
 The homepage downloads a compact catalog, not every lesson. A course has a unit index. Opening a topic loads that lesson and its quick/topic question bank. Unit practice loads the selected banks. Guides and writing exercises have separate payloads. Route and search indexes are generated per course. The search index is ready for future use; this change does not add a search UI.
 
 Validation rejects duplicate IDs, invalid question selections, broken source references, missing images, incorrect dimensions, unknown blocks, and stale output. Content validates before new output is written. Adding thousands of topics grows the authored folders and offline build work, without making the homepage download all their readings.
+
+# Unit Study Hubs and class Terms
+
+Unit pages use one reusable study-mode dashboard. Available practice, writing,
+reading, and guide links come from the unit's generated metadata. Unfinished units
+still have a hub, but unavailable modes are not clickable.
+
+Class term sets live in the course's `terms/` directory. Each JavaScript module
+exports `termSet` with `schemaVersion`, permanent `id`, `courseId`, exact `title`,
+`source` filename, and ordered `cards` containing `id`, `term`, and `definition`.
+Reference the set's ID in a unit's `termSetIds` array. The build discovers sets and
+generates routes, set counts, and revision fingerprints automatically.
+
+Period 1 Terms List A and B are shared by Units 1 and 2, which cover 1200-1450.
+Each set has one canonical file. Never derive class Terms from topic vocabulary,
+add supplementary terms, or correct source definitions without a revised source.
+PDF line wraps and term/definition separators are formatting, not definition text.
+The source's capitalization, punctuation, dates, and spelling remain unchanged.
+
+After editing a revised source, run `npm run build` and `npm run check`. For the
+current sets, `node scripts/verify-term-sources.mjs path-to-A.pdf path-to-B.pdf`
+compares every entry against the full supplied PDF text. Update the test's source
+fingerprints only after this audit succeeds for an approved source revision.
+The PDFs are not duplicated in the public repository.
+
+Terms UI lives in `docs/app/terms/views.js`; interactions in `controller.js`;
+pure flashcard state transitions in `engine.js`; tab-session storage in `store.js`.
+All modes use the same cards. Shuffle and filters operate on copied ID lists.
+Filtered rounds snapshot their membership so auto-advance cannot skip a card.
+Restart retains classifications; Reset Progress clears this set only and starts
+all cards again. Changing a set's content invalidates its prior session revision.

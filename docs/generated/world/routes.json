@@ -41,5 +41,20 @@
   },
   "writing": {
     "world-1-saq": "world/writing/world-1-saq.json"
+  },
+  "terms": {
+    "world-1": "world/units/world-1.json",
+    "world-2": "world/units/world-2.json",
+    "world-3": "world/units/world-3.json",
+    "world-4": "world/units/world-4.json",
+    "world-5": "world/units/world-5.json",
+    "world-6": "world/units/world-6.json",
+    "world-7": "world/units/world-7.json",
+    "world-8": "world/units/world-8.json",
+    "world-9": "world/units/world-9.json"
+  },
+  "term-set": {
+    "world-period-1-a": "world/terms/world-period-1-a.json",
+    "world-period-1-b": "world/terms/world-period-1-b.json"
   }
 }

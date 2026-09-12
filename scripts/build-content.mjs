@@ -15,6 +15,7 @@ import {
   validateBlocks,
 } from "./lib/validate.mjs";
 import { loadAssets, mergeAssets, usedAssets } from "./lib/assets.mjs";
+import { validateTermSet } from "./lib/terms.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
@@ -143,7 +144,15 @@ export async function compileContent(root = projectRoot) {
     const units = [],
       topics = new Map(),
       questionIds = new Set();
-    const routes = { unit: {}, topic: {}, quiz: {}, guide: {}, writing: {} };
+    const routes = {
+      unit: {},
+      topic: {},
+      quiz: {},
+      guide: {},
+      writing: {},
+      terms: {},
+      "term-set": {},
+    };
     function route(type, id, path) {
       requireId(id, `${folder} route`);
       requireValue(
@@ -153,6 +162,26 @@ export async function compileContent(root = projectRoot) {
       );
       requireValue(!routes[type][id], folder, `duplicate ${type} route ${id}`);
       routes[type][id] = path;
+    }
+
+    // One canonical set can serve multiple units, without copying its definitions.
+    const termsRoot = join(courseRoot, "terms");
+    const termSets = new Map();
+    if (await exists(termsRoot)) {
+      for (const filename of (await readdir(termsRoot))
+        .filter((name) => name.endsWith(".js"))
+        .sort()) {
+        const file = join(termsRoot, filename);
+        const set = await readModule(file, "termSet");
+        validateTermSet(set, course.id, file);
+        requireValue(!termSets.has(set.id), file, "duplicate term-set ID");
+        set.revision = createHash("sha256")
+          .update(json(set.cards))
+          .digest("hex")
+          .slice(0, 16);
+        termSets.set(set.id, set);
+        route("term-set", set.id, `${course.id}/terms/${set.id}.json`);
+      }
     }
 
     // Discover topic folders once. All navigation and quiz ownership derive from these records.
@@ -224,6 +253,19 @@ export async function compileContent(root = projectRoot) {
       "unit numbers must be unique",
     );
     units.sort((a, b) => a.unit.number - b.unit.number);
+    for (const set of termSets.values()) {
+      const owners = units.filter(({ unit }) => unit.termSetIds?.includes(set.id));
+      requireValue(owners.length > 0, termsRoot, `unreferenced term set ${set.id}`);
+      emit(routes["term-set"][set.id], {
+        course,
+        set,
+        units: owners.map(({ unit }) => ({
+          id: unit.id,
+          number: unit.number,
+          title: unit.title,
+        })),
+      });
+    }
     const readyTopics = [];
     for (const record of units) {
       const { unit, unitRoot } = record;
@@ -241,15 +283,37 @@ export async function compileContent(root = projectRoot) {
           topic.lesson.status === "ready",
       );
       readyTopics.push(...availableTopics.map((topic) => topicSummary(topic.lesson)));
+      const setIds = unit.termSetIds || [];
+      requireValue(
+        Array.isArray(setIds) && new Set(setIds).size === setIds.length,
+        unitRoot,
+        "duplicate term-set references",
+      );
+      const unitTermSets = setIds.map((id) => {
+        const set = termSets.get(id);
+        requireValue(Boolean(set), unitRoot, `unknown term set ${id}`);
+        return {
+          id: set.id,
+          title: set.title,
+          source: set.source,
+          count: set.cards.length,
+        };
+      });
       const unitInfo = {
         ...unit,
-        quizzes: unit.quizzes || [],
+        quizzes: unit.status === "ready" ? unit.quizzes || [] : [],
+        termSets: unitTermSets,
+        topicQuizzes: availableTopics.flatMap(({ bank }) =>
+          bank.quizzes
+            .filter((quiz) => quiz.quizType === "topic")
+            .map((quiz) => ({ id: quiz.id, title: quiz.title })),
+        ),
         topicCount: availableTopics.length,
         firstTopic: availableTopics.length
           ? topicSummary(availableTopics[0].lesson)
           : null,
         hasGuide: Boolean(guide) && unit.status === "ready",
-        writingQuizzes: writing.map((quiz) => ({
+        writingQuizzes: (unit.status === "ready" ? writing : []).map((quiz) => ({
           id: quiz.id,
           title: quiz.title,
           partCount: quiz.parts.length,
@@ -262,6 +326,8 @@ export async function compileContent(root = projectRoot) {
         unit: unitInfo,
         topics: record.topics.map((topic) => topicSummary(topic.lesson)),
       });
+      // The set picker needs metadata only. Cards load when a set is selected.
+      route("terms", unit.id, routes.unit[unit.id]);
       if (unit.status !== "ready") continue;
       for (const topic of availableTopics) {
         const { lesson, bank, assets } = topic;

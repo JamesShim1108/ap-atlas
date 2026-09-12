@@ -8,6 +8,7 @@ export const unit = {
   title: "Networks of Exchange",
   period: "c. 1200–1450",
   status: "soon",
+  termSetIds: ["world-period-1-a", "world-period-1-b"],
   description: "",
   quizzes: [],
 };

@@ -10,10 +10,12 @@ const content = createContentStore();
 const loadRoute = createRouteLoader(content);
 const attemptStore = createAttemptStore();
 const writingStores = new Map();
+let termsStore = null;
 const main = document.getElementById("main");
 let currentPage = () => "",
   currentQuiz = null,
-  currentWriting = null;
+  currentWriting = null,
+  currentTerms = null;
 let stopCarousel = () => {},
   currentRoute = parseRoute(location.hash),
   routeGeneration = 0;
@@ -42,6 +44,7 @@ async function selectPage(route, data, generation) {
       description: "Choose a course to continue studying.",
     };
   const title =
+    data.set?.title ||
     data.quiz?.title ||
     data.lesson?.title ||
     data.guide?.title ||
@@ -59,17 +62,24 @@ async function selectPage(route, data, generation) {
     selected.html = () => courseListPage(data);
     selected.title = "Courses";
   } else if (route.type === "course") selected.html = () => coursePage(data);
-  else if (route.type === "unit")
-    selected.html = () =>
-      data.unit.status === "ready"
-        ? unitPage(data, attemptStore.peek)
-        : emptyPage(
-            data.unit.title,
-            "This material is being prepared.",
-            `/course/${data.course.id}`,
-            "Back to course",
-          );
-  else if (["topic", "quiz", "results"].includes(route.type)) {
+  else if (route.type === "unit") selected.html = () => unitPage(data, attemptStore.peek);
+  else if (route.type === "terms") {
+    const { termsIndexPage } = await import("./terms/views.js");
+    selected.title = `Unit ${data.unit.number} terms`;
+    selected.html = () => termsIndexPage(data);
+  } else if (route.type === "term-set") {
+    const { createTermsController } = await import("./terms/controller.js");
+    const { createTermsStore } = await import("./terms/store.js");
+    if (generation !== routeGeneration) return null;
+    termsStore ||= createTermsStore();
+    const unit =
+      data.units.find((item) => item.id === route.params.get("unit")) || data.units[0];
+    selected.terms = createTermsController({ ...data, unit }, termsStore, {
+      repaint,
+      mode: route.params.get("view") === "list" ? "list" : "cards",
+    });
+    selected.html = selected.terms.page;
+  } else if (["topic", "quiz", "results"].includes(route.type)) {
     const { createQuizController } = await import("./quiz/controller.js");
     if (generation !== routeGeneration) return null;
     const controller = createQuizController(data, attemptStore, { navigate, repaint });
@@ -109,6 +119,7 @@ async function render(focus = false) {
   stopCarousel();
   currentQuiz = null;
   currentWriting = null;
+  currentTerms = null;
   main.setAttribute("aria-busy", "true");
   main.innerHTML = '<div class="page-loading" role="status">Loading...</div>';
   try {
@@ -118,6 +129,7 @@ async function render(focus = false) {
     if (generation !== routeGeneration || !page) return;
     currentQuiz = page.quiz || null;
     currentWriting = page.writing || null;
+    currentTerms = page.terms || null;
     currentPage = page.html;
     pageTitle(page.title, page.description);
     repaint();
@@ -159,7 +171,9 @@ function focusDestination(route, data, focus) {
             "writing",
             ...(data?.lesson.sections.map((item) => item.id) || []),
           ]
-        : [];
+        : route.type === "unit"
+          ? ["learn", "practice", "writing"]
+          : [];
   if (section && allowed.includes(section)) {
     const element = document.getElementById(section);
     if (element) {
@@ -176,12 +190,14 @@ function focusDestination(route, data, focus) {
 // One delegated listener per event keeps handlers intact when pages are replaced.
 document.addEventListener("input", (event) => currentWriting?.input(event));
 document.addEventListener("change", (event) => {
+  if (currentTerms?.change(event)) return;
   if (!currentWriting?.change(event)) currentQuiz?.change(event);
 });
 document.addEventListener("submit", (event) => {
   if (!currentWriting?.submit(event)) currentQuiz?.submit(event);
 });
 document.addEventListener("click", (event) => {
+  if (currentTerms?.click(event)) return;
   if (currentWriting?.click(event)) return;
   if (event.target.closest(".skip-link")) {
     event.preventDefault();
@@ -204,5 +220,6 @@ document.addEventListener("click", (event) => {
     navigate(`/quiz/${control.dataset.quiz}`);
   }
 });
+document.addEventListener("keydown", (event) => currentTerms?.keydown(event));
 window.addEventListener("hashchange", () => render(true));
 render();

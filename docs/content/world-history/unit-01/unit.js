@@ -8,6 +8,7 @@ export const unit = {
   title: "The Global Tapestry",
   period: "c. 1200–1450",
   status: "ready",
+  termSetIds: ["world-period-1-a", "world-period-1-b"],
   description:
     "Explore how societies organized power, shared beliefs, and built their economies across the world.",
   quizzes: [

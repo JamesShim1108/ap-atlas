@@ -18,8 +18,27 @@
     "title": "Networks of Exchange",
     "period": "c. 1200–1450",
     "status": "soon",
+    "termSetIds": [
+      "world-period-1-a",
+      "world-period-1-b"
+    ],
     "description": "",
     "quizzes": [],
+    "termSets": [
+      {
+        "id": "world-period-1-a",
+        "title": "Period 1 Terms List A",
+        "source": "Period 1 Terms List A.pdf",
+        "count": 27
+      },
+      {
+        "id": "world-period-1-b",
+        "title": "Period 1 Terms List B",
+        "source": "Period 1 Terms List B.pdf",
+        "count": 29
+      }
+    ],
+    "topicQuizzes": [],
     "topicCount": 0,
     "firstTopic": null,
     "hasGuide": false,

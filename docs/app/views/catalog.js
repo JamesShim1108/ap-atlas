@@ -106,12 +106,11 @@ export function coursePage({ course, units }) {
     <div class="course-layout"><div><div class="section-heading"><h2>Explore the units</h2></div>
       <div class="unit-list">${units
         .map((unit) => {
-          const ready = unit.status === "ready",
-            tag = ready ? "a" : "div";
-          return `<${tag} ${ready ? `href="#/unit/${esc(unit.id)}"` : ""} class="unit-row ${ready ? "is-ready" : ""}">
+          const ready = unit.status === "ready";
+          return `<a href="#/unit/${esc(unit.id)}" class="unit-row is-ready">
           <span class="unit-number">${String(unit.number).padStart(2, "0")}</span><div><h3>${esc(unit.title)}</h3><p>${esc(unit.period)}</p></div>
-          <div class="status">${badge(unit.status, ready ? `${unit.topicCount} topics ready` : null)}${ready ? `<span class="big-arrow" aria-hidden="true">&#8594;</span>` : ""}</div>
-        </${tag}>`;
+          <div class="status">${badge(ready || unit.termSets?.length ? "ready" : "soon", ready ? `${unit.topicCount} topics ready` : unit.termSets?.length ? "Terms available" : "In preparation")}<span class="big-arrow" aria-hidden="true">&#8594;</span></div>
+        </a>`;
         })
         .join("")}</div>
     </div><aside class="side-note"><p class="eyebrow">Start small</p><h3>One topic is enough for today.</h3>
@@ -120,18 +119,79 @@ export function coursePage({ course, units }) {
   </div>`;
 }
 
-export function unitPage(data, peekAttempt) {
+export function unitPage(data, peekAttempt = () => null) {
   const { unit, topics } = data;
   const crumbs = contextCrumbs(data);
   crumbs[crumbs.length - 1] = [`Unit ${unit.number}`];
-  return `<div class="container">${breadcrumbs(crumbs)}
-    <div class="page-intro"><div class="unit-titleline"><p class="eyebrow">Unit ${unit.number} · ${esc(unit.period)}</p>${badge("ready", `${unit.topicCount} of ${topics.length} topics available`)}</div>
-      <h1>${esc(unit.title)}</h1><p>${esc(unit.description)}</p>
-    </div>
-    <div class="course-layout"><div><div class="section-heading"><h2>Choose a topic</h2><small class="muted">Learn → Review → Practice</small></div>
+  const quizzes = unit.quizzes || [],
+    writing = unit.writingQuizzes || [];
+  const practice =
+    quizzes.length === 1 ? `/quiz/${quizzes[0].id}` : `/unit/${unit.id}?section=practice`;
+  const modes = [
+    {
+      title: "Practice Quiz",
+      label: "01 · Test yourself",
+      text: "Check your understanding and find what to review.",
+      path: practice,
+      available: Boolean(quizzes.length || unit.topicQuizzes?.length),
+    },
+    {
+      title: "Terms",
+      label: "02 · Build recall",
+      text: unit.termSets.length
+        ? `${unit.termSets.length} class sets. Lists and flashcards.`
+        : "Class term sets will appear here.",
+      path: `/terms/${unit.id}`,
+      available: true,
+      pending: !unit.termSets.length,
+    },
+    {
+      title: "Writing Practice",
+      label: "03 · Explain it",
+      text: "Practice a response and review your reasoning.",
+      path:
+        writing.length === 1
+          ? `/writing/${writing[0].id}`
+          : `/unit/${unit.id}?section=writing`,
+      available: writing.length > 0,
+    },
+    {
+      title: "Reading / Learn",
+      label: "04 · Understand",
+      text: "Explore the lessons, one topic at a time.",
+      path: `/unit/${unit.id}?section=learn`,
+      available: unit.topicCount > 0,
+    },
+    ...(unit.hasGuide
+      ? [
+          {
+            title: "Study Guide",
+            label: "05 · Connect ideas",
+            text: "Timelines, comparisons, and reading prompts.",
+            path: `/guide/${unit.id}`,
+            available: true,
+          },
+        ]
+      : []),
+  ];
+  return `<div class="container unit-hub">${breadcrumbs(crumbs)}
+    <header class="study-heading"><p class="eyebrow">Unit ${unit.number} · ${esc(unit.period)} · Study Hub</p>
+      <h1>${esc(unit.title)}</h1><p>What do you want to practice?</p>
+    </header>
+    <nav class="study-mode-grid" aria-label="Unit study modes">${modes
+      .map((mode) => {
+        const body = `<span class="eyebrow">${mode.label}</span><h2>${mode.title}</h2><p>${mode.text}</p><span class="study-mode__entry">${!mode.available ? "Coming soon" : mode.pending ? "No sets yet" : `Open ${arrow}`}</span>`;
+        return mode.available
+          ? `<a class="study-mode" href="#${esc(mode.path)}">${body}</a>`
+          : `<div class="study-mode study-mode--soon" aria-disabled="true">${body}</div>`;
+      })
+      .join("")}</nav>
+    ${unit.description ? `<p class="hub-description">${esc(unit.description)}</p>` : '<p class="hub-description">More study modes will become available as this unit is prepared.</p>'}
+    <section id="learn" class="hub-section" aria-labelledby="learn-title">
+    <div class="course-layout"><div><div class="section-heading"><h2 id="learn-title">Choose a topic</h2><small class="muted">Learn → Review → Practice</small></div>
       <div class="topic-list">${topics
         .map((topic) => {
-          const ready = topic.status === "ready",
+          const ready = unit.status === "ready" && topic.status === "ready",
             tag = ready ? "a" : "div";
           return `<${tag} ${ready ? `href="#/topic/${esc(topic.id)}"` : ""} class="topic-row ${ready ? "ready" : ""}">
           <span class="topic-code">${esc(topic.code)}</span><div><h3>${esc(topic.title)}, ${esc(topic.period)}</h3><p>${esc(topic.summary)}</p></div>
@@ -139,11 +199,13 @@ export function unitPage(data, peekAttempt) {
         </${tag}>`;
         })
         .join("")}</div>
-      <div class="unit-tools">
-        ${unit.hasGuide ? `<div class="unit-tool"><p class="eyebrow">REVIEW</p><h3>Unit study guide</h3><p>Timelines, comparisons, and reading prompts.</p>${link(`/guide/${unit.id}`, "Open study guide", "btn secondary")}</div>` : ""}
+      ${topics.length ? "" : '<p class="study-empty">Lessons for this unit are being prepared.</p>'}
+      <div id="practice" class="unit-tools">
         ${unit.quizzes.map((quiz) => `<div class="unit-tool"><p class="eyebrow">PRACTICE</p><h3>${esc(quiz.title)}</h3><p>${quiz.selections.reduce((sum, selection) => sum + selection.questionIds.length, 0)} questions selected from the topic quizzes.</p>${quizEntry(quiz, peekAttempt(quiz.id), "Start unit practice")}</div>`).join("")}
-        ${unit.writingQuizzes.map((quiz) => `<div class="unit-tool writing-tool"><p class="eyebrow">WRITE</p><h3>${esc(quiz.title)}</h3><p>${quiz.partCount} parts. Write your responses and review your reasoning.</p>${link(`/writing/${quiz.id}`, "Open writing quiz", "btn")}</div>`).join("")}
+        ${!quizzes.length ? (unit.topicQuizzes || []).map((quiz) => `<div class="unit-tool"><h3>${esc(quiz.title)}</h3>${quizEntry(quiz, peekAttempt(quiz.id))}</div>`).join("") : ""}
       </div>
+      <div id="writing" class="unit-tools">${writing.map((quiz) => `<div class="unit-tool writing-tool"><p class="eyebrow">WRITE</p><h3>${esc(quiz.title)}</h3><p>${quiz.partCount} parts. Write your responses and review your reasoning.</p>${link(`/writing/${quiz.id}`, "Open writing quiz", "btn")}</div>`).join("")}</div>
     </div><aside class="side-note"><p class="eyebrow">Make the connection</p><h3>Explain it in your own words.</h3><p>Compare ideas across topics and support your explanation with specific evidence.</p></aside></div>
+    </section>
   </div>`;
 }

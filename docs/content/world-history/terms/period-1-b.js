@@ -1,0 +1,173 @@
+// Verbatim class vocabulary. Preserve punctuation and spelling from the source.
+export const termSet = {
+  schemaVersion: 1,
+  id: "world-period-1-b",
+  courseId: "world",
+  title: "Period 1 Terms List B",
+  source: "Period 1 Terms List B.pdf",
+  cards: [
+    {
+      id: "tatars",
+      term: "Tatars",
+      definition:
+        "Mongols who conquered Russian cities during the 13th century; left Russian church and aristocracy intact.",
+    },
+    {
+      id: "constantinople",
+      term: "Constantinople",
+      definition:
+        "Capital of the Byzantine Empire; constructed on the site of Byzantium, an old Greek city on the Bosporus.",
+    },
+    {
+      id: "orthodox-christian-church",
+      term: "Orthodox Christian Church",
+      definition:
+        "Eastern church which was created in 1053 after the schism from the western Roman church; its head is the patriarch of Constantinople.",
+    },
+    {
+      id: "manorialism",
+      term: "Manorialism",
+      definition:
+        "economic and social system based on agriculture that defined relationships between landlords/landowners and people who worked for them; outlined duties and rights of each group",
+    },
+    {
+      id: "serfs",
+      term: "Serfs",
+      definition:
+        "agricultural laborers who worked for the landowner in exchange for protection but could not leave farms and fewer individual rights",
+    },
+    {
+      id: "three-field-system",
+      term: "Three-field system",
+      definition:
+        "practice of dividing land into thirds, rotating between two different crops and pasturage—an improvement making use of manure.",
+    },
+    {
+      id: "feudalism",
+      term: "Feudalism",
+      definition:
+        "political and social system in Medieval Europe that gave more rights to landowners but required them to support the monarch and provide shelter and work for people who lived on their land. A fragmented society.",
+    },
+    {
+      id: "vassals",
+      term: "Vassals",
+      definition:
+        "members of the military elite who received land or special privileges from a lord in return for military or economic service and loyalty.",
+    },
+    {
+      id: "magna-carta",
+      term: "Magna Carta",
+      definition:
+        "Great charter issued by King John of England in 1215; represented the principle of mutual limits and obligations between rulers and feudal aristocracy, and the supremacy of law.",
+    },
+    {
+      id: "investiture",
+      term: "Investiture",
+      definition: "the practice of appointing church clergy by secular leaders",
+    },
+    {
+      id: "black-death",
+      term: "Black Death",
+      definition:
+        "reduced Europe's population by up to 1/2 and changed social, economic, cultural, and political systems because of high death rate and inability to prevent and control spread.",
+    },
+    {
+      id: "monasticism",
+      term: "Monasticism",
+      definition:
+        "religious practice of an individual or group separating from the secular world and focusing only on religion; monks/nuns living in their own communities and spending their time praying, studying religion, and helping others",
+    },
+    {
+      id: "aztecs",
+      term: "Aztecs",
+      definition:
+        "the Mexica; established tribute systems of human sacrifice to control diverse empires.",
+    },
+    {
+      id: "tenochtitlan",
+      term: "Tenochtitlan",
+      definition:
+        "founded circa 1325 on a marshy island in Lake Texcoco; became center of Aztec power.",
+    },
+    {
+      id: "chinampas",
+      term: "Chinampas",
+      definition:
+        "beds of aquatic weeds, mud, and earth placed in frames made of cane and rooted in lakes to create “floating islands”; system of irrigated agriculture used by Aztecs.",
+    },
+    {
+      id: "inca",
+      term: "Inca",
+      definition:
+        "centered at Cuzco; created an empire in the Andes Mountains using advanced transportation and farming techniques.",
+    },
+    {
+      id: "mita",
+      term: "Mita",
+      definition:
+        "Inca labor tribute system, performed once a year on public works projects",
+    },
+    {
+      id: "quipu",
+      term: "Quipu",
+      definition:
+        "system of knotted strings utilized by the Incas in place of a writing system.",
+    },
+    {
+      id: "mayans",
+      term: "Mayans",
+      definition:
+        "individual ruler in each city-state, developed agricultural technology and a calendar in Mesoamerica.",
+    },
+    {
+      id: "chaco",
+      term: "Chaco",
+      definition:
+        "created large housing structures using stone and clay, located in present day SW United States",
+    },
+    {
+      id: "cahokia",
+      term: "Cahokia",
+      definition: "built large earthen mounds in present day Southern Illinois",
+    },
+    {
+      id: "mesa-verde",
+      term: "Mesa Verde",
+      definition: "built multi story homes into the sides of cliffs in SW United States",
+    },
+    {
+      id: "chinggis-khan",
+      term: "Chinggis Khan",
+      definition:
+        "born in 1170s, united Mongols into more central group as supreme ruler (khan) in 1206, began Mongol Empire with the conquest of states in Central Asia",
+    },
+    { id: "khanate", term: "Khanate", definition: "kingdoms/provinces of the Mongols" },
+    {
+      id: "pax-mongolica",
+      term: "Pax Mongolica",
+      definition: "Mongolian peace, increased trade across Eurasia",
+    },
+    {
+      id: "uyghur-script",
+      term: "Uyghur Script",
+      definition: "written form of the Mongol language",
+    },
+    {
+      id: "mamluks",
+      term: "Mamluks",
+      definition:
+        "Muslim slave warriors; established dynasty in Egypt; led by Baibars defeated Mongols in 1260.",
+    },
+    {
+      id: "kublai-khan",
+      term: "Kublai Khan",
+      definition:
+        "grandson of Chinggis Khan; conquered Song China; established Yuan dynasty in 1271.",
+    },
+    {
+      id: "white-lotus-society",
+      term: "White Lotus Society",
+      definition: "secret religious society dedicated to overthrow the Yuan dynasty.",
+    },
+  ],
+};
